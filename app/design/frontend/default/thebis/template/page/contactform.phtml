@@ -1,0 +1,70 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+ 
+?>
+<?php
+/**
+ * Template for Mage_Contactform_Html
+ */
+?>
+
+<div class="box simple_contact">
+ 
+<form id="contactform" name="contactform" action="<?php echo $this->getUrl('contactform/') ?>index/sendemail" method="post">
+ 
+    <fieldset class="group-select">
+        <h4 class="legend">Thebis_Contactform sample</h4>
+        <ul>
+        <li>
+                <div class="input-box">
+                    <label for="name">Gimme your name <span class="required">*</span></label><br />
+ 
+                    <input name="name" id="name" title="Name" value="" class="required-entry input-text" type="text" />
+                </div>
+ 
+                <div class="input-box">
+                    <label for="email">And your email <span class="required">*</span></label><br />
+                    <input name="email" id="email" title="Email" value="" class="required-entry input-text validate-email" type="text" />
+                </div>
+ 
+                <div class="clear"></div>
+ 
+                <div class="input-box">
+           &nbsp;        <label for="comment">Some comment?</label><br />
+ 
+                    <textarea name="comment" id="comment" title="Comment" class="required-entry input-text" style="height:100px;" cols="50" rows="3"></textarea>
+                </div>
+                </li>
+                </ul>
+    </fieldset>
+    <div class="button-set">
+        <p class="required">* Required Fields</p>
+        <button class="form-button" type="submit"><span>Submit</span></button>
+ 
+    </div>
+</form>
+ 
+</div>

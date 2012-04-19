@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<product_detail>
+          <active>true</active>
+          <codePool>local</codePool>
+          <depends>
+            <Mage_Page />
+          </depends>
+		</product_detail>
+    </modules>
+</config>
