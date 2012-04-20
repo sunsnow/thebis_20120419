@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <templates_master translate="label" module="easylightbox">
+            <label>Templates-master</label>
+            <sort_order>196</sort_order>
+        </templates_master>
+    </tabs>
+    <sections>
+        <easy_lightbox translate="label" module="easylightbox">
+            <label>Easy Lightbox</label>
+            <tab>templates_master</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enable EasyLightbox</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+						 <defaulzoom translate="label">
+                            <label>Keep Magento zoom</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </defaulzoom>
+                        <mainImageSize translate="label comment">
+                            <label>Size of main image</label>
+                            <comment>Size in pixels width_height. (Default 265_265). </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </mainImageSize>
+                        <popupImageSize translate="label comment">
+                            <label>Size of popup image</label>
+                            <comment>Size in pixels width_height. (Default 500_500). </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </popupImageSize>
+                        <additionalImageSize translate="label comment">
+                            <label>Size of additional images</label>
+                            <comment>Size in pixels width_height. (Default 60_60)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </additionalImageSize>
+                        <productName translate="label">
+                            <label>Replace empty image label with product name</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </productName>
+                        <animate translate="label">
+                            <label>Enable lightbox animation</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </animate>
+                        <overlayOpacity translate="label comment">
+                            <label>Overlay opacity</label>
+                            <comment>Controls transparency of shadow overlay (0 - 1, 0.8 by default)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </overlayOpacity>
+                        <resizeSpeed translate="label comment">
+                            <label>Resize speed</label>
+                            <comment>Controls the speed of the image resizing animations (1=slowest and 10=fastest, 7 by default)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </resizeSpeed>
+                        <borderSize translate="label comment">
+                            <label>Border size</label>
+                            <comment>Border width around image in lightbox (10 by default)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </borderSize>
+                        <labelImage translate="label comment">
+                            <label>Label 'Image'</label>
+                            <comment>When grouping images this is used to write: 'Image # of #'</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </labelImage>
+                        <labelOf translate="label comment">
+                            <label>Label 'of'</label>
+                            <comment>When grouping images this is used to write: 'Image # of #'</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </labelOf>
+                    </fields>
+                </general>
+            </groups>
+        </easy_lightbox>
+    </sections>
+</config>
