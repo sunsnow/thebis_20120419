@@ -1146,17 +1146,6 @@ display:none;
 	}
 	
 	#product_info_container #product-options-wrapper dd .input-box {
-		font-size:12px;
-		margin-left:3px;
-	}
-	
-	#product_info_container #product-options-wrapper dd .input-box .price-notice,
-	#product_info_container #product-options-wrapper dd .input-box .price-notice span.price {
-		color:#1d789a;
-		font-weight:bold;
-	}
-	
-	#product_info_container #product-options-wrapper dd .input-box {
 		margin-bottom:10px;
 	}
 	
@@ -1164,7 +1153,7 @@ display:none;
 		float:left;
 		font-size:12px;
 		line-height:24px;
-		margin:4px 0 4px 3px;
+		margin:4px 0 4px 0;
 		display:block;
 	}
 	
@@ -1181,6 +1170,7 @@ display:none;
 	#product_info_container #product-options-wrapper dd .options-list li {
 		font-size:12px;
 		height:28px;
+		line-height:28px;
 	}
 	
 	#product_info_container #product-options-wrapper dd .options-list li .price-notice,
@@ -1824,7 +1814,7 @@ p.required {
 #col-main-winkelwagen #winkelwagen_container form p.product-name {
 	float:left;
 	margin-left:35px;
-	padding:0 0 4px 0;
+	padding:9px 0 4px 0;
 }
 
 #col-main-winkelwagen #winkelwagen_container form .product-imageproduct-image {
