@@ -34,5 +34,11 @@
 <?php echo ($this->getProduct()->getDocumentatie()) ?>
 
 
+<?php if($this->getProduct()->getDocumentatie_bestand_1 ()): ?>
+<div class="product-specs">
+<p><a href="/media/handleidingen/<?php echo $this->getProduct()->getSupport_file_1() ?>"><img src="http://www.thebis.nl.testbyte.nl/media/handleidingen/pdf_icon.jpg"><?php echo $this->getProduct()->getDocumentatie_bestand_1_fed () ?></a></p>
+</div>
+<?php endif; ?>
+
 
 

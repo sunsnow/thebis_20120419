@@ -42,7 +42,7 @@
     rel="lightbox[rotation]" 
     title="<?php echo $maintitle ;?>"
     onclick="return false;"
-><img src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize($mainImageSize[0], $mainImageSize[1]); ?>" alt="<?php echo $this->htmlEscape($_product->getImageLabel());?>"
+><img class="prod-img" src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize($mainImageSize[0], $mainImageSize[1]); ?>" alt="<?php echo $this->htmlEscape($_product->getImageLabel());?>"
 /></a>
 
 
@@ -73,7 +73,6 @@
 
 <?php if (count($this->getGalleryImages()) > 0): ?>
 <div class="more-views">
-    <h4><?php echo $this->__('More Views') ?></h4>
     <ul>
     <?php foreach ($this->getGalleryImages() as $_image): ?>
 	<?php
