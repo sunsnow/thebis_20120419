@@ -207,7 +207,8 @@ Product view
                     <action method="addTab" translate="title" module="catalog"><alias>package</alias><title>In de verpakking</title><block>catalog/product_view_attributes</block><template>catalog/product/view/verpakking.phtml</template></action>
 					<action method="addTab" translate="title" module="catalog"><alias>guarantee</alias><title>Garantie</title><block>catalog/product_view_attributes</block><template>catalog/product/view/garantie.phtml</template></action>
                     <action method="addTab" translate="title" module="catalog"><alias>documentation</alias><title>Documentatie</title><block>catalog/product_view_attributes</block><template>catalog/product/view/documentatie.phtml</template></action>
-                </block>
+					<block type="fileuploader/fileuploader" name="product.attachments" template="fileuploader/attachments.phtml"/>
+				</block>
 				
                 <block type="core/text_list" name="product.info.extrahint" as="extrahint" translate="label">
                     <label>Product View Extra Hint</label>

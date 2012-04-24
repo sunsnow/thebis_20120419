@@ -1,5 +1,5 @@
 /**
- * Magento
+ * Magentooooo
  *
  * NOTICE OF LICENSE
  *
@@ -1088,20 +1088,38 @@ display:none;
 ---------------------------------------------- */	
 	
 	#product_info_container #product_tabs_specs_contents #tab_detail{
-	width:100%;
-	height:100%;
+		width:100%;
+		height:100%;
 	}
 	
 	#product_info_container #product_tabs_specs_contents #tab_detail p{
-	line-height:17.7px;
+		display:block;
+		width:707px;
+		padding:10px 0 10px 0;
 	}
 	
-	#product_info_container #product_tabs_specs_contents #tab_detail p strong{
-	display:block;
-	width:707px;
-	padding:6px 0 6px 11px;
-	margin-left:-10px;
-	background-color:#edf8fc;
+	#product_info_container #product_tabs_specs_contents #tab_detail strong{
+		display:block;
+		width:707px;
+		padding:10px 0 10px 11px;
+		margin-left:-10px;
+		background-color:#edf8fc;
+	}
+	
+	#product_info_container #product_tabs_description_contents .collateral-box,
+	#product_info_container #product_tabs_specs_contents .collateral-box,
+	#product_info_container #product_tabs_package_contents .collateral-box,
+	#product_info_container #product_tabs_guarantee_contents .collateral-box {
+		display:none;
+	}
+	
+	#product_info_container #product_tabs_documentation_contents .collateral-box {
+		display:block;
+		margin-top:20px;
+	}
+	
+	#product_info_container #product_tabs_documentation_contents .collateral-box .head {
+		display:none;
 	}
 	
 /* ----------------------------------------------
