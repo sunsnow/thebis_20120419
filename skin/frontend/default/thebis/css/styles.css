@@ -988,7 +988,6 @@ display:none;
 		margin-left:10px;
 	}
 	
-	
 	#product_info_container .product-view  .product-essential .product-img-box .more-views {
 		float:left;
 		margin-top:30px;
@@ -998,7 +997,7 @@ display:none;
 	#product_info_container .product-view  .product-essential .product-img-box .more-views ul li {
 		float:left;
 		margin-right:9px;
-		margin-bottom:6px;
+		margin-bottom:9px;
 		border:1px solid #b2dced;
 	}
 
