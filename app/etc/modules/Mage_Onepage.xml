@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Mage_Onepage>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Mage_Onepage>
+    </modules>
+</config>

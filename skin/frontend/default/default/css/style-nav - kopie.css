@@ -1,0 +1,192 @@
+.nav-container {
+    background: url(../images/bkg_nav0.jpg) repeat-y scroll 50% 0 #0A263D;
+}
+#nav {
+    font-size: 13px;
+    margin: 0 auto;
+    padding: 0 16px;
+    width: 918px;
+}
+#nav li {
+    /*text-align: left;
+	position:relative;*/
+	float:left;
+}
+#nav li.over {
+    z-index: 998;
+}
+#nav a, #nav a:hover {
+    display: block;
+    line-height: 1.3em;
+    text-decoration: none;
+}
+#nav span {
+    cursor: pointer;
+    display: block;
+    max-width:120px;
+	white-space:normal;
+}
+#nav li ul span {
+    white-space: normal;
+}
+#nav ul li.parent a {
+    /*background: url(../images/bkg_nav2.gif) no-repeat scroll 100% 100% transparent;*/
+	background:none;
+	
+}
+#nav ul li.parent li a {
+    background-image: none;
+}
+#nav li.active a {
+    color: #D96708;
+}
+#nav a {
+    color: #A7C6DD;
+    float: left;
+    font-weight: bold;
+    padding: 5px 12px 6px 8px;
+}
+#nav li.over a, #nav a:hover {
+    color: #D96708;
+}
+#nav ul li, #nav ul li.active {
+    background:#ECF3F6;
+    float: none;
+    margin: 0;
+    padding-bottom: 1px;
+	position:relative;
+}
+#nav ul li.last {
+    background: none repeat scroll 0 0 #ECF3F6;
+    padding-bottom: 0;
+}
+#nav ul a, #nav ul a:hover {
+    background: none repeat scroll 0 0 transparent;
+    float: none;
+}
+#nav ul li a {
+    font-weight: normal !important;
+}
+#nav ul, #nav div {
+    /*border: 1px solid #899BA5;*/
+    top:27px;
+    width: 15em;
+	
+}
+#nav div ul {
+    border: medium none;
+    position: static;
+    width: auto;
+}
+#nav ul ul, #nav ul div {
+    top: 5px;
+	
+}
+#nav ul li a {
+    background: none repeat scroll 0 0 #ECF3F6;
+}
+#nav ul li a:hover {
+    background: none repeat scroll 0 0 #D5E4EB;
+}
+#nav ul li a, #nav ul li a:hover {
+    color: #2F2F2F !important;
+}
+#nav ul span, #nav ul li.last li span {
+    padding: 5px 40px;
+}
+#nav li ul.shown-sub, #nav li div.shown-sub {
+    left: -5px;
+    z-index: 999;
+	
+}
+ul.level2{
+	margin-left:10px;	
+}
+ul.level2 > li > a > span{
+color:red !important;
+}
+#nav li.over  div{
+    left: -5px;
+    z-index: 999;
+	
+}
+#nav li .shown-sub ul.shown-sub, #nav li .shown-sub li div.shown-sub {
+	text-align:left;
+	
+
+}
+/* 0 Level */
+#nav li { float:left; position:relative; padding:6px 0; color:#FFFFFF; word-wrap:break-word; }
+#nav li.active a { }
+/*#nav a { color: gray; float: left; font-weight: bold; padding: 0px 12px 0px 8px; }*/
+#nav li.over a,
+#nav a:hover { }
+
+/* 1st Level */
+#nav ul li,
+#nav li.active a { color:#FFFFFF;}
+#nav ul li.last {  padding-bottom:0; }
+
+#nav ul a,
+#nav ul a:hover { float:none; padding:0; background:none; }
+#nav ul li a { font-weight:normal; }
+
+/* 2nd Level */
+#nav ul,
+#nav div { top:26px; left:10px; position:static; border:none;}
+#nav div ul { position:static; width:auto; border:none; }
+
+/* 3rd+ Level */
+#nav ul ul,
+#nav ul div { top:5px; }
+
+#nav ul li a {  }
+#nav ul li a:hover {  }
+#nav ul li a{color:#333;}
+#nav ul li a:hover {text-decoration:underline!important; color:#a72d2c!important; }
+#nav ul span,
+#nav ul li.last li span { padding:3px 3 4px 3; }
+
+/* Show menu */
+#nav li ul.shown-sub,
+#nav li div.shown-sub { left:-5px; z-index:999; }
+#nav li .shown-sub ul.shown-sub,
+#nav li .shown-sub li div.shown-sub { left:100px; }
+#nav li.level0.final-item{border-right:none;}
+#nav ul li.level a{font-weight:bold;}
+#nav ul li.level1 li a{font-weight:normal;}
+#nav .menu{position:absolute; left:-10000px;}
+#nav li.nav-3 ul.shown-sub, #nav li.nav-3 div.shown-sub, 
+#nav li.nav-4 ul.shown-sub, #nav li.nav-4 div.shown-sub, 
+#nav li.nav-5 ul.shown-sub, #nav li.nav-5 div.shown-sub {left:-150px;}
+#nav li.nav-6 ul.shown-sub, #nav li.nav-6 div.shown-sub, 
+#nav li.nav-7 ul.shown-sub, #nav li.nav-7 div.shown-sub, 
+#nav li.nav-8 ul.shown-sub, #nav li.nav-8 div.shown-sub{left:auto; right:-5px}
+
+#nav .menu.children1 { width:225px;}
+#nav .menu.children2 { width:425px;}
+#nav .menu.children3 { width:625px;}
+#nav .menu.children4 { width:825px; }
+#nav .menu.children5 { width:1025px;}
+#nav .menu.children6 { width:1225px;}
+#nav .menu.children7 { width:1425px;}
+
+
+#nav .menu ul.level0 {margin:14px 0 5px 0; width:auto; overflow:hidden}
+#nav .menu.children1  ul.level0{ width:225px; }
+#nav .menu.children2  ul.level0{ width:414px; overflow:hidden }
+#nav .menu.children3  ul.level0{ width:621px; }
+#nav .menu.children4  ul.level0{ width:828px; }
+#nav .menu.children5  ul.level0{ width:1035px; }
+#nav .menu.children6  ul.level0{ width:1242px; }
+#nav .menu.children7  ul.level0{ width:1449px; }
+
+#nav .menu ul.level0{color:#FFFFFF; float:left; background:#ECF3F6; border: 1px solid #899BA5;}
+#nav .menu li.level1{width:200px; float:left; padding:0; margin-left:7px; }
+#nav .menu{ width:auto; overflow:hidden}
+
+#nav ul.level0 li a span{color:#F3686D; font-weight:bold; font-size:14px;border-bottom: 1px dashed #899BA5; font-family:Verdana, Arial, Helvetica, sans-serif;}
+#nav ul.level0 li ul li a span{color:#2F2F2F; font-weight:normal; text-decoration:none; border:0 none; font-size:13px; font-family:Verdana, Arial, Helvetica, sans-serif;}
+#nav ul.level0 li ul li a span:hover{color:#2F2F2F !important; text-decoration:underline;}
+#nav ul.level0 li ul li {word-wrap:break-word;}
+#nav ul.level0 li ul.level1 li {}

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+	<reference name="head">		
+			<action method="addItem"><type>skin_css</type><name>css/style-nav.css</name><params/></action>	
+			<action method="addJs"><script>mynav/jquery_pol.js</script></action>
+			<action method="addJs"><script>mynav/script.js</script></action>
+			</reference>
+    </default>
+	
+    <easyexploded_index_index>
+		
+        <reference name="content">
+            <block type="easyexploded/easyexploded" name="easyexploded" template="easyexploded/easyexploded.phtml" />
+        </reference>
+    </easyexploded_index_index>
+</layout> 
