@@ -147,7 +147,7 @@ color:red !important;
 /* 1st Level */
 #nav ul li,
 #nav li.active a { background-image: url('../img/hover_menu.png'); color:#fff; background-repeat:repeat-x;}
-#nav ul li.last {  padding-bottom:0; }
+#nav ul li.last { padding-bottom:0; }
 
 #nav ul a,
 #nav ul a:hover { float:none; padding:0; background:none; }
@@ -240,4 +240,4 @@ color:red !important;
 #nav ul.level0 li ul li a span{color:#2F2F2F; font-weight:normal; text-decoration:none; border:0 none; font-size:13px;}
 #nav ul.level0 li ul li a span:hover{color:#fff !important; text-decoration:underline;}
 #nav ul.level0 li ul li {word-wrap:break-word;}
-#nav ul.level0 li ul.level1 li {}
+#nav ul.level0 li ul.level1 li {width: 100%;}

@@ -961,8 +961,9 @@ display:none;
 	#product_info_container {
 		float:left;
 		width:718px;
-		height:1200px;
+		/*min-height:1200px;*/
 		border:1px solid #b2dced;
+		padding-bottom: 35px;
 	}
 	
 	#product_info_container p.note-msg {
@@ -1013,17 +1014,33 @@ display:none;
 		font-size:12px;
 		margin-top:34px;
 		margin-left:18px;
-		line-height:15px;
+		line-height:14px;
+	}
+	
+	#product_info_container .product-view  .product-collateral .std {
+		float:left;
 	}
 
 	#product_info_container .product-view  .product-collateral .box-description {
 		float:left;
-		height:340px; /*240px;*/ 
+		/*height:340px; /*240px;*/ 
 		overflow:hidden;
 	}
 	
 		#product_info_container .box-collateral .std p {
 		margin-bottom: 10px;
+		line-height; 14px;
+	  }
+	  
+	  #product_info_container .box-collateral .std a:link 
+    #product_info_container .box-collateral .std a:visited {
+		color:#071d25;
+		text-decoration:none;
+		}
+	  
+	  #product_info_container .box-collateral .std a:hover {
+		color:#1d789a;
+		text-decoration:none;
 	  }
 	  
 	  /*#product_info_container .box-collateral .std p {
@@ -1526,7 +1543,7 @@ display:none;
 	}
 
 /********************** Tabs */
-.product-tabs                   { float:left; width:100%; height:33px; background:url(../img/bg_tabs.png) repeat-x; }
+.product-tabs                   { float:left; margin-top:30px; width:100%; height:33px; background:url(../img/bg_tabs.png) repeat-x; }
 .product-tabs-content {float:left; width:698px; font-size:12px; margin-top:30px; clear:both; padding:0 10px 0 10px;} 
 .product-tabs ul{    list-style-image:none;    list-style-position:outside; list-style-type:none;}
 .product-tabs li                { float:left; height:33px;}
@@ -2311,6 +2328,17 @@ p.required {
     clear: both;
     display: block;
     width: 260px;
+}
+
+  .account-login ul.messages li.error-msg ul li span {
+    float: left;
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-left: 25px;
+    margin-right: 0;
+    margin-top: 10px;
+    width: 100%;
+    color:#FF6D07;
 }
 	
 #col-main-fullwidth .col2-set .col-1 {
