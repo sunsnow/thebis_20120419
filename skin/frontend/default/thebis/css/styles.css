@@ -964,6 +964,12 @@ display:none;
 		height:1200px;
 		border:1px solid #b2dced;
 	}
+	
+	#product_info_container p.note-msg {
+		float:left;
+		font-size:12px;
+		margin:10px 0 0 15px;
+	}
 
 	#product_info_container .product-view {
 		float:left;
@@ -998,7 +1004,7 @@ display:none;
 	#product_info_container .product-view  .product-essential .product-img-box .more-views ul li {
 		float:left;
 		margin-right:9px;
-		margin-bottom:6px;
+		margin-bottom:9px;
 		border:1px solid #b2dced;
 	}
 
