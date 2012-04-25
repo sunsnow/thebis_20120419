@@ -33,7 +33,7 @@
 ?>
 <div class="account-create">
     <div class="page-title">
-        <h3><?php echo $this->__('Create an Account') ?></h3>
+        <h3><?php echo $this->__('Account aanmaken') ?></h3>
     </div>
     <?php echo $this->getChildHtml('form_fields_before')?>
     <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
@@ -41,23 +41,23 @@
         <div class="fieldset">
             <input type="hidden" name="success_url" value="<?php echo $this->getSuccessUrl() ?>" />
             <input type="hidden" name="error_url" value="<?php echo $this->getErrorUrl() ?>" />
-            <h2 class="legend"><?php echo $this->__('Personal Information') ?></h2>
+            <h2 class="legend"><?php echo $this->__('Persoonlijke gegevens') ?></h2>
             <ul class="form-list">
                 <li class="fields">
                     <?php echo $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getFormData())->setForceUseCustomerAttributes(true)->toHtml() ?>
                 </li>
                 <li>
-                    <label for="email_address" class="required"><em>*</em><?php echo $this->__('Email Address') ?></label>
+                    <label for="email_address" class="required"><em>*</em><?php echo $this->__('E-mailadres') ?></label>
                     <div class="input-box">
-                        <input type="text" name="email" id="email_address" value="<?php echo $this->htmlEscape($this->getFormData()->getEmail()) ?>" title="<?php echo $this->__('Email Address') ?>" class="input-text validate-email required-entry" />
+                        <input type="text" name="email" id="email_address" value="<?php echo $this->htmlEscape($this->getFormData()->getEmail()) ?>" title="<?php echo $this->__('E-mailadres') ?>" class="input-text validate-email required-entry" />
                     </div>
                 </li>
                 <?php if ($this->isNewsletterEnabled()): ?>
                 <li class="control">
                     <div class="input-box">
-                        <input type="checkbox" name="is_subscribed" title="<?php echo $this->__('Sign Up for Newsletter') ?>" value="1" id="is_subscribed"<?php if($this->getFormData()->getIsSubscribed()): ?> checked="checked"<?php endif; ?> class="checkbox" />
+                        <input type="checkbox" name="is_subscribed" title="<?php echo $this->__('Inschrijven op nieuwsbrief') ?>" value="1" id="is_subscribed"<?php if($this->getFormData()->getIsSubscribed()): ?> checked="checked"<?php endif; ?> class="checkbox" />
                     </div>
-                    <label for="is_subscribed"><?php echo $this->__('Sign Up for Newsletter') ?></label>
+                    <label for="is_subscribed"><?php echo $this->__('Inschrijven op nieuwsbrief') ?></label>
                 </li>
                 <?php endif ?>
             <?php $_dob = $this->getLayout()->createBlock('customer/widget_dob') ?>
@@ -148,19 +148,19 @@
         </div>
     <?php endif; ?>
         <div class="fieldset">
-            <h2 class="legend"><?php echo $this->__('Login Information') ?></h2>
+            <h2 class="legend"><?php echo $this->__('Login-gegevens') ?></h2>
             <ul class="form-list">
                 <li class="fields">
                     <div class="field">
-                        <label for="password" class="required"><em>*</em><?php echo $this->__('Password') ?></label>
+                        <label for="password" class="required"><em>*</em><?php echo $this->__('Wachtwoord') ?></label>
                         <div class="input-box">
-                            <input type="password" name="password" id="password" title="<?php echo $this->__('Password') ?>" class="input-text required-entry validate-password" />
+                            <input type="password" name="password" id="password" title="<?php echo $this->__('Wachtwoord') ?>" class="input-text required-entry validate-password" />
                         </div>
                     </div>
                     <div class="field">
-                        <label for="confirmation" class="required"><em>*</em><?php echo $this->__('Confirm Password') ?></label>
+                        <label for="confirmation" class="required"><em>*</em><?php echo $this->__('Bevestig wachtwoord') ?></label>
                         <div class="input-box">
-                            <input type="password" name="confirmation" title="<?php echo $this->__('Confirm Password') ?>" id="confirmation" class="input-text required-entry validate-cpassword" />
+                            <input type="password" name="confirmation" title="<?php echo $this->__('Bevestig wachtwoord') ?>" id="confirmation" class="input-text required-entry validate-cpassword" />
                         </div>
                     </div>
                 </li>

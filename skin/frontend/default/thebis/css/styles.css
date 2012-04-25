@@ -2301,7 +2301,7 @@ p.required {
 	width: 350px;
 }
 	
-#col-main-fullwidth .account-create .page-title { 
+#col-main-fullwidth #my_account_container .account-create .page-title { 
 	float:left;
 	width:960px; 
 	height:26px; 
@@ -2311,7 +2311,7 @@ p.required {
 	background-repeat:repeat-x;
 }
 
-#col-main-fullwidth .account-create .page-title h1 { 
+#col-main-fullwidth #my_account_container .account-create .page-title h1 { 
 	font-family: Tahoma, Arial, Helvetica, sans-serif;
 	font-size:15px;
 	width:958px;
@@ -2319,7 +2319,7 @@ p.required {
 	font-size:12px;
 }
   
- #col-main-fullwidth .account-create .fieldset { 
+ #col-main-fullwidth #my_account_container .fieldset { 
 	top: 25px;
 	height: 100%;
 	float: none;
@@ -2327,7 +2327,7 @@ p.required {
 	padding: 0;
 }
 
-#col-main-fullwidth .account-create .fieldset h2.legend {
+#col-main-fullwidth #my_account_container .account-create .fieldset h2.legend {
 	background: none;
 	border-bottom: 1px solid #B2DCED;
 	font-family: Tahoma, Arial, Helvetica, sans-serif;
@@ -2339,11 +2339,11 @@ p.required {
 	padding: 2px 10px;
  	}
  
- #col-main-fullwidth	.account-create .fieldset p {
+ #col-main-fullwidth #my_account_container .account-create .fieldset p {
 	margin: 0 0 1em;
  }
 
- #col-main-fullwidth	.account-create .fieldset label {
+ #col-main-fullwidth #my_account_container .account-create .fieldset label {
    color: #555555;
    float: left;
    font-weight: bold;
@@ -2354,14 +2354,14 @@ p.required {
    margin-bottom: 15px;
  }
  -	
- #col-main-fullwidth	.account-create .fieldset.required em {
+#col-main-fullwidth #my_account_container .account-create .fieldset.required em {
    color: #15566F;
    float: left;
    font-style: normal;
    width:100%;
 }
 	
- #col-main-fullwidth .account-create .fieldset .input-box {
+ #col-main-fullwidth #my_account_container .account-create .fieldset .input-box {
    float: left !important;
    /*position:relative;*/
    margin-bottom: 0px;
@@ -2370,20 +2370,12 @@ p.required {
    width: 350px;
 }
  
-#col-main-fullwidth .account-create .fieldset li {
-  
+ 
+ 
+ 
+#col-main-fullwidth #my_account_container .account-create form#form-validate {
+	float:left;
 }
- 
-#col-main-fullwidth .account-create .fieldset .fields .name-firstname {
- 
-}
- 
- #col-main-fullwidth .account-create .fieldset .fields .name-lastname {
- 
-}
-
-
-
 
 
 
