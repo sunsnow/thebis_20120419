@@ -1111,6 +1111,24 @@ display:none;
 		background-color:#edf8fc;
 	}
 	
+	#product_info_container #product_tabs_description_contents .std h4 {
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	clear: both;
+  color:#15566F;
+  padding-top: 10px; 
+  }
+
+  #product_info_container #product_tabs_description_contents .std p {
+  border-bottom: #B2DCED 1px solid; 
+  padding-top: 10px;
+  padding-bottom: 10px; 
+  line-height: 18px; 
+  height: auto; 
+  font-size: 12px; 
+  }
+	
 	#product_info_container #product_tabs_description_contents .collateral-box,
 	#product_info_container #product_tabs_specs_contents .collateral-box,
 	#product_info_container #product_tabs_package_contents .collateral-box,
