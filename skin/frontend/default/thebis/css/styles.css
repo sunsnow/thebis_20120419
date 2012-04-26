@@ -964,6 +964,7 @@ display:none;
 		min-height:750px;
 		border:1px solid #b2dced;
 		padding-bottom: 35px;
+		color:#071D25;
 	}
 	
 	#product_info_container #mainblock-title {
@@ -1027,11 +1028,11 @@ display:none;
 		line-height:14px;
 	}
 	
-	#product_info_container .product-view  .product-collateral .std {
+	#product_info_container .product-view .product-collateral .std {
 		float:left;
 	}
 
-	#product_info_container .product-view  .product-collateral .box-description {
+	#product_info_container .product-view .product-collateral .box-description {
 		float:left;
 		/*height:340px; /*240px;*/ 
 		overflow:hidden;
@@ -1053,9 +1054,26 @@ display:none;
 		text-decoration:none;
 	  }
 	  
-	  /*#product_info_container .box-collateral .std p {
+	  #product_info_container .product-view .box-collateral.box-additional {
+		float:left;
+		overflow:hidden;
+		line-height: 24px;
+	}
+	   
+	  #product_info_container .product-view .product-collateral .box-additional #product-attribute-specs-table.data-table {
 		margin-bottom: 10px;
-	  }*/
+	  }
+	  
+	  #product_info_container .product-view .product-collateral .box-additional #product-attribute-specs-table.data-table a:link,
+    #product_info_container .product-view .product-collateral .box-additional #product-attribute-specs-table.data-table a:visited {
+		color:#071d25;
+		text-decoration:underline;
+	  }
+	  
+	  #product_info_container .product-view .product-collateral .box-additional #product-attribute-specs-table.data-table a:hover {
+		color:#1d789a;
+		text-decoration:none;
+	  }
 	
 	#product_info_container .product-view  .product-collateral #product_bottom {
 		width:420px;
@@ -2129,7 +2147,6 @@ p.required {
 	background-position:top left;
 }
 
-
 #col-main-winkelwagen #winkelwagen_container .cart-collaterals form#discount-coupon-form input {
 	float:left;
 	width:156px;
@@ -2589,17 +2606,15 @@ p.required {
 	color:#fff;
 }
 
-<<<<<<< HEAD
  #col-main-fullwidth #my_account_container .account-create p.back-link a {
 	color:#15566F;
 	margin-left:10px;
 }
 
-=======
 /* ----------------------------------------------
 	My account dashboard
 ---------------------------------------------- */
-.dashboard {
+.my-account .dashboard {
   /*position: relative;*/
   float:left;
   width: 715px;
@@ -2608,7 +2623,7 @@ p.required {
   border:1px solid #b2dced;
 }
 
-.dashboard .page-title {
+.my-account .dashboard .page-title {
   float:left;
 	width:701px; 
 	height:26px; 
@@ -2618,23 +2633,37 @@ p.required {
 	background-repeat:repeat-x;
 }
 
-.dashboard .page-content {
+.my-account .dashboard .page-content {
   padding:10px;
   font-size: 14px;
   line-height: 18px;
 }
->>>>>>> 21b517ddc317b59f81af9f6ee5373d95aff955dd
 
-div#wrapper div.page div.col-right div.block {
+.customer-account-index .col-right .block {
   border:1px solid #b2dced;
 }
 
-div#wrapper div.page div.col-right div.block div.block-title {
+.customer-account-index .col-right .block-title {
   margin-bottom:10px;
   width: 204px;
 }
-.block-content ul {
+
+.customer-account-index .col-right .block-content {
+}
+
+.customer-account-index .col-right .block-account .block-content ul {
   margin:10px;
   font-size: 14px;
   line-height: 18px;
+}
+
+.customer-account-index .col-right .block-account .block-content ul li a:link,
+.customer-account-index .col-right .block-account .block-content ul li a:visited {
+  color:#071d25;
+	text-decoration:none; 
+}
+
+.customer-account-index .col-right .block-account .block-content ul li a:hover {
+  color:#1d789a;
+	text-decoration:none;
 }
