@@ -966,6 +966,16 @@ display:none;
 		padding-bottom: 35px;
 	}
 	
+	#product_info_container #mainblock-title {
+		float:left;
+		width:704px; 
+		height:26px; 
+		color:#fff;
+		padding:10px 0 0 14px;
+		background-image: url('../img/bg_titlebar.png');
+		background-repeat:repeat-x;	 
+	}
+	
 	#product_info_container p.note-msg {
 		float:left;
 		font-size:12px;
@@ -2568,6 +2578,11 @@ p.required {
  #col-main-fullwidth #my_account_container .account-create .buttons-set .button:hover {
 	background: url(../img/bg_button_kassa.png) 0 0 repeat-x;
 	color:#fff;
+}
+
+ #col-main-fullwidth #my_account_container .account-create p.back-link a {
+	color:#15566F;
+	margin-left:10px;
 }
 
 

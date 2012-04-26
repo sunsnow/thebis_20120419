@@ -160,7 +160,7 @@ color:red !important;
 
 /* 3rd+ Level */
 #nav ul ul,
-#nav ul div { top:5px; }
+#nav ul div { top:5px;}
 
 #nav ul li a {  }
 #nav ul li a:hover {  }
@@ -168,6 +168,32 @@ color:red !important;
 #nav ul li a:hover {text-decoration:underline!important; color:#fff!important; }
 #nav ul span,
 #nav ul li.last li span { padding:3px 3 4px 3; }
+
+ul.level0 li.level1 ul.level1 li.level2{
+display:none;
+}
+
+ul.level0 li:hover ul.level1 li.level2{
+display:block;
+}
+
+ul.level0 li ul.level1 {
+
+}
+
+ul.level0 li ul.level1 li:active {
+position:absolute;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Show menu */
 #nav li ul.shown-sub,
@@ -196,6 +222,11 @@ color:red !important;
 #nav li.level0.nav-6 .level-top span{margin-left:28px;}
 #nav li.level0.nav-7{width:111px;}
 #nav li.level0.nav-7 .level-top span{margin-left:26px;}
+
+
+
+
+
 
 
 #nav li.level0.final-item{border-right:none;}
