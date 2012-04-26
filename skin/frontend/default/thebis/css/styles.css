@@ -2604,6 +2604,7 @@ p.required {
 .dashboard .page-content {
   padding:10px;
   font-size: 14px;
+  line-height: 18px;
 }
 
 div#wrapper div.page div.col-right div.block {
@@ -2612,8 +2613,10 @@ div#wrapper div.page div.col-right div.block {
 
 div#wrapper div.page div.col-right div.block div.block-title {
   margin-bottom:10px;
+  width: 204px;
 }
 .block-content ul {
   margin:10px;
   font-size: 14px;
+  line-height: 18px;
 }
