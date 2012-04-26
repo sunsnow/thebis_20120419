@@ -961,7 +961,7 @@ display:none;
 	#product_info_container {
 		float:left;
 		width:718px;
-		/*min-height:1200px;*/
+		min-height:750px;
 		border:1px solid #b2dced;
 		padding-bottom: 35px;
 	}
@@ -974,7 +974,7 @@ display:none;
 
 	#product_info_container .product-view {
 		float:left;
-		margin-bottom:74px;
+		margin-bottom:25px;
 	}
 	
 	#product_info_container .product-view  .product-essential {
@@ -1032,7 +1032,7 @@ display:none;
 		line-height; 14px;
 	  }
 	  
-	  #product_info_container .box-collateral .std a:link 
+	  #product_info_container .box-collateral .std a:link, 
     #product_info_container .box-collateral .std a:visited {
 		color:#071d25;
 		text-decoration:none;
@@ -1129,9 +1129,13 @@ display:none;
 	}
 	
 	#product_info_container #product_tabs_specs_contents #tab_detail strong{
-		display:block;
+		font-family: Tahoma, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		font-weight: normal;
+    display:block;
 		width:707px;
 		padding:10px 0 10px 11px;
+		margin-top: 10px;
 		margin-left:-10px;
 		background-color:#edf8fc;
 		color:#15566F;
@@ -1174,12 +1178,17 @@ display:none;
   float: left;
   clear: both;
   width: 707px;*/
+  line-height: 18px;
   } 
   
   #product_info_container #product_tabs_specs_contents tr {
   /*clear: both;
   width: 707px;*/
-  }   
+  }
+  
+  #product_info_container #product_tabs_specs_contents tbody {
+  margin-bottom: 10px;
+  }    
   
   #product_info_container #product_tabs_specs_contents .collateral-box {
   	display:none;
@@ -2558,7 +2567,7 @@ p.required {
     font-family:Tahoma,Arial,Helvetica,sans-serif;
     font-size:15px;
     height:30px;
-	margin-top:-18px;
+	  margin-top:-18px;
     text-align:center;
     text-decoration:none;
     vertical-align:baseline;
@@ -2570,5 +2579,41 @@ p.required {
 	color:#fff;
 }
 
+/* ----------------------------------------------
+	My account dashboard
+---------------------------------------------- */
+.dashboard {
+  /*position: relative;*/
+  float:left;
+  width: 715px;
+  height: 400px;
+  margin-right: 20px;
+  border:1px solid #b2dced;
+}
 
+.dashboard .page-title {
+  float:left;
+	width:701px; 
+	height:26px; 
+	color:#fff;
+	padding:10px 0 10px 14px;
+	background-image: url('../img/bg_titlebar.png');
+	background-repeat:repeat-x;
+}
 
+.dashboard .page-content {
+  padding:10px;
+  font-size: 14px;
+}
+
+div#wrapper div.page div.col-right div.block {
+  border:1px solid #b2dced;
+}
+
+div#wrapper div.page div.col-right div.block div.block-title {
+  margin-bottom:10px;
+}
+.block-content ul {
+  margin:10px;
+  font-size: 14px;
+}
