@@ -2628,54 +2628,22 @@ p.required {
 	width:701px; 
 	height:26px; 
 	color:#fff;
-	padding:10px 0 10px 14px;
+	padding:10px 0 0 14px;
 	background-image: url('../img/bg_titlebar.png');
 	background-repeat:repeat-x;
 }
 
 .my-account .dashboard .page-content {
-  padding:10px;
-  font-size: 14px;
-  line-height: 18px;
+  float: left;
+  padding:14px;
+  font-size: 12px;
+  line-height: 24px;
 }
 
-/* ----------------------------------------------
-	My accountgegevens bijwerken
----------------------------------------------- */
-.my-account .dashboard {
-  /*position: relative;*/
-  float:left;
-  width: 715px;
-  min-height: 625px;
-  margin-right: 20px;
+.customer-account-index .col-right .block-account {
   border:1px solid #b2dced;
-}
-
-.my-account .dashboard .page-title {
-  float:left;
-	width:701px; 
-	height:26px; 
-	color:#fff;
-	padding:10px 0 10px 14px;
-	background-image: url('../img/bg_titlebar.png');
-	background-repeat:repeat-x;
-}
-
-.my-account .dashboard .page-title h1 {
-  font-family: Tahoma, Arial, Helvetica, sans-serif;
-	font-size:15px; 
-}
-
-.my-account .dashboard .page-content {
-  clear: both;
-  padding:10px;
-  font-size: 14px;
-  line-height: 18px;
-}
-.customer-account-index .col-right .block {
-  border:1px solid #b2dced;
-}
-
+ }
+ 
 .customer-account-index .col-right .block-title {
   margin-bottom:10px;
   width: 204px;
@@ -2686,7 +2654,7 @@ p.required {
 
 .customer-account-index .col-right .block-account .block-content ul {
   margin:10px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 18px;
 }
 
@@ -2698,5 +2666,440 @@ p.required {
 
 .customer-account-index .col-right .block-account .block-content ul li a:hover {
   color:#1d789a;
+	text-decoration:none;
+}
+
+.customer-account-index .col-right .block-account .block-content ul li.current {
+  color:#FF6D07;
+	text-decoration:none;
+}
+
+/* ----------------------------------------------
+	My accountgegevens bijwerken
+---------------------------------------------- */
+
+.my-account .dashboard .page-content .buttons-set {
+  left: -10px;
+  padding-left:0;
+}
+
+.my-account .dashboard .page-title h1 {
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size:15px; 
+}
+
+.customer-account-edit .col-right .block-account {
+  border:1px solid #b2dced;
+}
+
+.customer-account-edit .col-right .block-title {
+  margin-bottom:10px;
+  width: 204px;
+}
+
+.customer-account-edit .col-right .block-content {
+}
+
+.customer-account-edit .col-right .block-compare {
+  float:left;
+  margin-top:20px;
+  border:1px solid #b2dced;
+  font-size: 14px;
+}
+
+.customer-account-edit .col-right .block-compare .block-title{
+  
+}
+
+.customer-account-edit .col-right .block-compare .block-content {
+  float:left;
+  padding:10px 0 10px 19px;
+  font-size: 12px;
+  width: 197px;
+}
+
+.customer-account-edit .col-right .block-account .block-content ul {
+  margin:10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.customer-account-edit .col-right .block-account .block-content ul li a:link,
+.customer-account-edit .col-right .block-account .block-content ul li a:visited {
+  color:#071d25;
+	text-decoration:none; 
+}
+
+.customer-account-edit .col-right .block-account .block-content ul li a:hover {
+  color:#1d789a;
+	text-decoration:none;
+}
+
+.customer-account-edit .col-right .block-account .block-content ul li.current {
+  color:#FF6D07;
+	text-decoration:none;
+}
+
+/* ----------------------------------------------
+	My account nieuw adres toevoegen
+---------------------------------------------- */
+
+.customer-address-form .col-right .block-account {
+  border:1px solid #b2dced;
+}
+
+.customer-address-form .col-right .block-title {
+  margin-bottom:10px;
+  width: 204px;
+}
+
+.customer-address-form .col-right .block-content {
+}
+
+.customer-address-form .col-right .block-compare {
+  float:left;
+  margin-top:20px;
+  border:1px solid #b2dced;
+  font-size: 14px;
+}
+
+.customer-account-form .col-right .block-compare .block-content {
+  float:left;
+  padding:10px 0 10px 19px;
+  font-size: 12px;
+  width: 197px;
+}
+
+.customer-address-form .col-right .block-account .block-content ul {
+  margin:10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.customer-address-form .col-right .block-account .block-content ul li a:link,
+.customer-address-form .col-right .block-account .block-content ul li a:visited {
+  color:#071d25;
+	text-decoration:none; 
+}
+
+.customer-address-form .col-right .block-account .block-content ul li a:hover {
+  color:#1d789a;
+	text-decoration:none;
+}
+
+.customer-address-form .col-right .block-account .block-content ul li.current {
+  color:#FF6D07;
+	text-decoration:none;
+}
+
+/* ----------------------------------------------
+	My account mijn orders
+---------------------------------------------- */
+
+.sales-order-history .col-right .block-account {
+  border:1px solid #b2dced;
+}
+
+.sales-order-history .col-right .block-title {
+  margin-bottom:10px;
+  width: 204px;
+}
+
+.sales-order-history .col-right .block-content {
+}
+
+.sales-order-history .col-right .block-compare {
+  float:left;
+  margin-top:20px;
+  border:1px solid #b2dced;
+  font-size: 14px;
+}
+
+.sales-order-history .col-right .block-compare .block-content {
+  float:left;
+  padding:10px 0 10px 19px;
+  font-size: 12px;
+  width: 197px;
+}
+
+.sales-order-history .col-right .block-account .block-content ul {
+  margin:10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sales-order-history .col-right .block-account .block-content ul li a:link,
+.sales-order-history .col-right .block-account .block-content ul li a:visited {
+  color:#071d25;
+	text-decoration:none; 
+}
+
+.sales-order-history .col-right .block-account .block-content ul li a:hover {
+  color:#1d789a;
+	text-decoration:none;
+}
+
+.sales-order-history .col-right .block-account .block-content ul li.current {
+  color:#FF6D07;
+	text-decoration:none;
+}
+
+/* ----------------------------------------------
+	My account billing agreements
+---------------------------------------------- */
+
+.sales-billing-agreement-index .col-right .block-account {
+  border:1px solid #b2dced;
+}
+
+.sales-billing-agreement-index .col-right .block-title {
+  margin-bottom:10px;
+  width: 204px;
+}
+
+.sales-billing-agreement-index .col-right .block-content {
+}
+
+.sales-billing-agreement-index .col-right .block-compare {
+  float:left;
+  margin-top:20px;
+  border:1px solid #b2dced;
+  font-size: 14px;
+}
+
+.sales-billing-agreement-index .col-right .block-compare .block-content {
+  float:left;
+  padding:10px 0 10px 19px;
+  font-size: 12px;
+  width: 197px;
+}
+
+.sales-billing-agreement-index .col-right .block-account .block-content ul {
+  margin:10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sales-billing-agreement-index .col-right .block-account .block-content ul li a:link,
+.sales-billing-agreement-index .col-right .block-account .block-content ul li a:visited {
+  color:#071d25;
+	text-decoration:none; 
+}
+
+.sales-billing-agreement-index .col-right .block-account .block-content ul li a:hover {
+  color:#1d789a;
+	text-decoration:none;
+}
+
+.sales-billing-agreement-index .col-right .block-account .block-content ul li.current {
+  color:#FF6D07;
+	text-decoration:none;
+}
+
+/* ----------------------------------------------
+	My account recurring profiles
+---------------------------------------------- */
+
+.sales-recurring-profile-index .col-right .block-account {
+  border:1px solid #b2dced;
+}
+
+.sales-recurring-profile-index .col-right .block-title {
+  margin-bottom:10px;
+  width: 204px;
+}
+
+.sales-recurring-profile-index .col-right .block-content {
+}
+
+.sales-recurring-profile-index .col-right .block-compare {
+  float:left;
+  margin-top:20px;
+  border:1px solid #b2dced;
+  font-size: 14px;
+}
+
+.sales-recurring-profile-index .col-right .block-compare .block-content {
+  float:left;
+  padding:10px 0 10px 19px;
+  font-size: 12px;
+  width: 197px;
+}
+
+.sales-recurring-profile-index .col-right .block-account .block-content ul {
+  margin:10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sales-recurring-profile-index .col-right .block-account .block-content ul li a:link,
+.sales-recurring-profile-index .col-right .block-account .block-content ul li a:visited {
+  color:#071d25;
+	text-decoration:none; 
+}
+
+.sales-recurring-profile-index .col-right .block-account .block-content ul li a:hover {
+  color:#1d789a;
+	text-decoration:none;
+}
+
+.sales-recurring-profile-index .col-right .block-account .block-content ul li.current {
+  color:#FF6D07;
+	text-decoration:none;
+}
+
+/* ----------------------------------------------
+	My account productreviews 
+---------------------------------------------- */
+
+.review-customer-index .col-right .block-account {
+  border:1px solid #b2dced;
+}
+
+.review-customer-index .col-right .block-title {
+  margin-bottom:10px;
+  width: 204px;
+}
+
+.review-customer-index .col-right .block-content {
+}
+
+.review-customer-index .col-right .block-compare {
+  float:left;
+  margin-top:20px;
+  border:1px solid #b2dced;
+  font-size: 12px;
+}
+
+.review-customer-index .col-right .block-compare .block-content {
+  float:left;
+  padding:10px 0 10px 19px;
+  font-size: 12px;
+  width: 197px;
+}
+
+.review-customer-index .col-right .block-account .block-content ul {
+  margin:10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.review-customer-index .col-right .block-account .block-content ul li a:link,
+.review-customer-index .col-right .block-account .block-content ul li a:visited {
+  color:#071d25;
+	text-decoration:none; 
+}
+
+.review-customer-index .col-right .block-account .block-content ul li a:hover {
+  color:#1d789a;
+	text-decoration:none;
+}
+
+.review-customer-index .col-right .block-account .block-content ul li.current {
+  color:#FF6D07;
+	text-decoration:none;
+}
+
+/* ----------------------------------------------
+	My account mijn tags 
+---------------------------------------------- */
+
+.tag-customer-index .col-right .block-account {
+  border:1px solid #b2dced;
+}
+
+.tag-customer-index .col-right .block-title {
+  margin-bottom:10px;
+  width: 204px;
+}
+
+.tag-customer-index .col-right .block-content {
+}
+
+.tag-customer-index .col-right .block-compare {
+  float:left;
+  margin-top:20px;
+  border:1px solid #b2dced;
+  font-size: 14px;
+}
+
+.tag-customer-index .col-right .block-compare .block-content {
+  float:left;
+  padding:10px 0 10px 19px;
+  font-size: 12px;
+  width: 197px;
+}
+
+.tag-customer-index .col-right .block-account .block-content ul {
+  margin:10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.tag-customer-index .col-right .block-account .block-content ul li a:link,
+.tag-customer-index .col-right .block-account .block-content ul li a:visited {
+  color:#071d25;
+	text-decoration:none; 
+}
+
+.tag-customer-index .col-right .block-account .block-content ul li a:hover {
+  color:#1d789a;
+	text-decoration:none;
+}
+
+.tag-customer-index .col-right .block-account .block-content ul li.current {
+  color:#FF6D07;
+	text-decoration:none;
+}
+
+/* ----------------------------------------------
+	My account mijn download-producten 
+---------------------------------------------- */
+
+.downloadable-customer-products .col-right .block-account {
+  border:1px solid #b2dced;
+}
+
+.downloadable-customer-products .col-right .block-title {
+  margin-bottom:10px;
+  width: 204px;
+}
+
+.downloadable-customer-products .col-right .block-content {
+}
+
+.downloadable-customer-products .col-right .block-compare {
+  float:left;
+  margin-top:20px;
+  border:1px solid #b2dced;
+  font-size: 14px;
+}
+
+.downloadable-customer-products .col-right .block-compare .block-content {
+  float:left;
+  padding:10px 0 10px 19px;
+  font-size: 12px;
+  width: 197px;
+}
+
+.downloadable-customer-products .col-right .block-account .block-content ul {
+  margin:10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.downloadable-customer-products .col-right .block-account .block-content ul li a:link,
+.downloadable-customer-products .col-right .block-account .block-content ul li a:visited {
+  color:#071d25;
+	text-decoration:none; 
+}
+
+.downloadable-customer-products .col-right .block-account .block-content ul li a:hover {
+  color:#1d789a;
+	text-decoration:none;
+}
+
+.downloadable-customer-products .col-right .block-account .block-content ul li.current {
+  color:#FF6D07;
 	text-decoration:none;
 }
