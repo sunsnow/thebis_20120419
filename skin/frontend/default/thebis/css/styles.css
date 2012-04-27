@@ -2675,6 +2675,7 @@ font-weight:bold;
 
 .my-account .dashboard .page-content .box-recent .box-head a {
 float:right;
+color:#1D789A;
 }
 
 .my-account .dashboard .page-content .box-recent table#my-orders-table {
@@ -2847,11 +2848,97 @@ margin-top:10px;
 	padding:0;
 	margin:0;
 	background:none;
+	margin-top:10px;
+	margin-bottom:20px;
 	border-bottom:1px solid #B2DCED;
 }
 
+.my-account .dashboard .page-content #form-validate .fieldset{
+	float:left;
+	height:auto;
+	margin:0;
+	position:0;
+	top:0;
+	margin-bottom:20px;
+}
 
+.my-account .dashboard .page-content #form-validate .buttons-set {
+	width:688px;
+	border-bottom:none;
+	border-top:1px solid #B2DCED;
+	margin-top:20px;
+	margin:0;
+	padding-right:0;
+	position:static;
+}
 
+.my-account .dashboard .page-content #form-validate .buttons-set button {
+	background:none repeat scroll 0 0 #FFFFFF;
+    border:1px solid #FF6D07;
+    color:#FF6D07;
+    cursor:pointer;
+    display:block;
+    font-family:Tahoma,Arial,Helvetica,sans-serif;
+    font-size:15px;
+	margin-top:-15px;
+    height:30px;
+    text-align:center;
+    text-decoration:none;
+    vertical-align:baseline;
+    width:150px;
+}
+
+.my-account .dashboard .page-content #form-validate .buttons-set button:hover {
+	background: url(../img/bg_button_kassa.png) 0 0 repeat-x;
+	color:#fff;
+}
+
+.my-account .dashboard .page-content #form-validate .fieldset ul.form-list label {
+	width:auto;
+}
+
+.my-account .dashboard .page-content #form-validate .fieldset ul.form-list .customer-name em {
+	float:right;
+}
+
+.my-account .dashboard .page-content #form-validate .fieldset li {
+	clear:both;
+	float:left;
+}
+
+.my-account .dashboard .page-content #form-validate .fieldset ul.form-list .customer-name .name-firstname {
+	float:left;
+	width:280px;
+}
+
+.my-account .dashboard .page-content #form-validate .fieldset ul.form-list .input-box {
+	width:250px;
+	height:24px;
+	margin-left:0;
+	top:0;
+	clear:both;
+	display:block;
+}
+
+.my-account .dashboard .page-content #form-validate .fieldset ul.form-list input {
+	float:left;
+	width:250px;
+	padding-left:3px;
+}
+
+.my-account .dashboard .page-content #form-validate .fieldset ul.form-list .customer-name .name-lastname {
+	float:left;
+}
+
+.my-account .dashboard .page-content #form-validate .fieldset ul.form-list li.control {
+	float:left;
+}
+
+.my-account .dashboard .page-content #form-validate .fieldset ul.form-list li.control input {
+	width:auto;
+	margin-top:5px;
+	display:block;
+}
 
 
 
