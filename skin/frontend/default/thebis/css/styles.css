@@ -2640,6 +2640,166 @@ p.required {
   line-height: 24px;
 }
 
+.my-account .dashboard .page-content .welcome-msg {
+  float: left;
+  margin-bottom:30px;
+}
+
+.my-account .dashboard .page-content .welcome-msg p {
+  margin-top:5px;
+}
+
+.my-account .dashboard .page-content .welcome-msg p.hello {
+font-size:14px;
+}
+
+
+.my-account .dashboard .page-content .box-recent {
+float:left;
+margin-bottom:16px;
+}
+
+.my-account .dashboard .page-content .box-recent .box-head {
+float:left;
+width:688px;
+text-align:right;
+}
+
+.my-account .dashboard .page-content .box-recent .box-head h2 {
+float:left;
+color:#15566F;
+margin-bottom:5px;
+font-size:14px;
+font-weight:bold;
+}
+
+.my-account .dashboard .page-content .box-recent .box-head a {
+float:right;
+}
+
+.my-account .dashboard .page-content .box-recent table#my-orders-table {
+width:688px;
+margin-bottom:30px;
+font-size:12px;
+}
+
+.my-account .dashboard .page-content .box-recent table#my-orders-table a:link,
+.my-account .dashboard .page-content .box-recent table#my-orders-table a:visited {
+color:#1d789a;
+text-decoration:none;
+}
+
+.my-account .dashboard .page-content .box-recent table#my-orders-table a:hover {
+color:#1d789a;
+text-decoration:none;
+}
+
+.my-account .dashboard .page-content .box-recent table#my-orders-table td,
+.my-account .dashboard .page-content .box-recent table#my-orders-table th {
+padding-left:6px;
+}
+
+.my-account .dashboard .page-content .box-recent table#my-orders-table thead {
+font-size:11px;
+background-color:#d9eaf0;
+}
+
+.my-account .dashboard .page-content .box-recent table#my-orders-table tbody .nobr {
+white-space:nowrap !important;
+}
+
+.my-account .dashboard .page-content .box-info {
+float:left;
+width:688px;
+clear:both;
+}
+
+.my-account .dashboard .page-content .box-info .col2-set a:link,
+.my-account .dashboard .page-content .box-info .col2-set a:visited {
+color:#1d789a;
+}
+
+.my-account .dashboard .page-content .box-info .col2-set {
+float:left;
+width:688px;
+clear:both;
+margin-bottom:28px;
+}
+
+.my-account .dashboard .page-content .box-info .col2-set .col-1{
+float:left;
+width:334px;
+}
+
+.my-account .dashboard .page-content .box-info .col2-set .col-1 h4,
+.my-account .dashboard .page-content .box-info .col2-set .col-2 h4{
+font-weight:bold;
+}
+
+.my-account .dashboard .page-content .box-info .col2-set .col-1 .box .box-title h3 {
+float:left;
+color:#15566F;
+font-size:14px;
+font-weight:bold;
+}
+
+.my-account .dashboard .page-content .box-info .col2-set .col-1 .box .box-title {
+float:left;
+width:334px;
+border-bottom:1px solid #B2DCED;
+}
+
+.my-account .dashboard .page-content .box-info .col2-set .col-1 .box .box-title a,
+.my-account .dashboard .page-content .box-info .col2-set .col-2 .box .box-title a,
+.my-account .dashboard .page-content .box-info .col2-set .box .box-title a {
+float:right;
+}
+
+.my-account .dashboard .page-content .box-info .col2-set .col-1 .box-content,
+.my-account .dashboard .page-content .box-info .col2-set .col-2 .box-content{
+float:left;
+clear:both;
+margin-top:10px;
+}
+
+
+.my-account .dashboard .page-content .box-info .col2-set .col-2{
+float:left;
+width:334px;
+margin-left:16px;
+}
+
+.my-account .dashboard .page-content .box-info .col2-set .col-2 .box .box-title h3{
+float:left;
+color:#15566F;
+font-size:14px;
+font-weight:bold;
+}
+
+.my-account .dashboard .page-content .box-info .col2-set .col-2 .box .box-title {
+float:left;
+width:338px;
+border-bottom:1px solid #B2DCED;
+}
+
+.my-account .dashboard .page-content .box-info .col2-set .box .box-title {
+float:left;
+width:688px;
+border-bottom:1px solid #B2DCED;
+}
+
+.my-account .dashboard .page-content .box-info .col2-set .box .box-title h3 {
+float:left;
+color:#15566F;
+font-size:14px;
+font-weight:bold;
+}
+
+.my-account .dashboard .page-content .box-info .col2-set .box .box-content {
+float:left;
+margin-top:10px;
+}
+
 .customer-account-index .col-right .block-account {
   border:1px solid #b2dced;
  }
@@ -2661,22 +2821,39 @@ p.required {
 .customer-account-index .col-right .block-account .block-content ul li a:link,
 .customer-account-index .col-right .block-account .block-content ul li a:visited {
   color:#071d25;
-	text-decoration:none; 
+  text-decoration:none; 
 }
 
 .customer-account-index .col-right .block-account .block-content ul li a:hover {
   color:#1d789a;
-	text-decoration:none;
+  text-decoration:none;
 }
 
 .customer-account-index .col-right .block-account .block-content ul li.current {
   color:#FF6D07;
-	text-decoration:none;
+  text-decoration:none;
 }
 
 /* ----------------------------------------------
 	My accountgegevens bijwerken
 ---------------------------------------------- */
+
+.my-account .dashboard .page-content #form-validate .fieldset h2.legend {
+	float:left;
+	width:688px;
+	color:#15566F;
+	font-size:14px;
+	font-weight:bold;
+	padding:0;
+	margin:0;
+	background:none;
+	border-bottom:1px solid #B2DCED;
+}
+
+
+
+
+
 
 .my-account .dashboard .page-content .buttons-set {
   left: -10px;
@@ -2831,12 +3008,12 @@ p.required {
 .sales-order-history .col-right .block-account .block-content ul li a:link,
 .sales-order-history .col-right .block-account .block-content ul li a:visited {
   color:#071d25;
-	text-decoration:none; 
+  text-decoration:none; 
 }
 
 .sales-order-history .col-right .block-account .block-content ul li a:hover {
   color:#1d789a;
-	text-decoration:none;
+  text-decoration:none;
 }
 
 .sales-order-history .col-right .block-account .block-content ul li.current {
@@ -3091,7 +3268,7 @@ p.required {
 .downloadable-customer-products .col-right .block-account .block-content ul li a:link,
 .downloadable-customer-products .col-right .block-account .block-content ul li a:visited {
   color:#071d25;
-	text-decoration:none; 
+	text-decoration:none;
 }
 
 .downloadable-customer-products .col-right .block-account .block-content ul li a:hover {
