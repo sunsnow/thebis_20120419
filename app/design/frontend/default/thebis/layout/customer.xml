@@ -236,7 +236,11 @@ Customer account pages, rendered for all tabs in dashboard
             <remove name="right.reports.product.viewed"></remove>
       			<remove name="top.search"></remove>
       			<remove name="right.waarom"></remove>
+<<<<<<< HEAD
 				<remove name="minicart"></remove>
+=======
+      			<remove name="catalog.compare.sidebar"></remove>
+>>>>>>> deaa32b91737cbf8711f2ae3ec2731506fef7f3d
         </reference>
     </customer_account>
 
