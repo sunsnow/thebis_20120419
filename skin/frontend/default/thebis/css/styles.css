@@ -2299,7 +2299,7 @@ p.required {
 	Account aanmaak of login pagina
 ---------------------------------------------- */
 
-#col-main-fullwidth {
+#col-main-fullwidth #my_account_container {
   float:left;
 	width:958px;
 	border:1px solid #b2dced;
@@ -3102,4 +3102,152 @@ p.required {
 .downloadable-customer-products .col-right .block-account .block-content ul li.current {
   color:#FF6D07;
 	text-decoration:none;
+}
+
+/* ----------------------------------------------
+	My account nieuwsbriefabonnement 
+---------------------------------------------- */
+
+.newsletter-manage-index .col-right .block-account {
+  border:1px solid #b2dced;
+}
+
+.newsletter-manage-index .col-right .block-title {
+  margin-bottom:10px;
+  width: 204px;
+}
+
+.newsletter-manage-index .col-right .block-content {
+}
+
+.newsletter-manage-index .col-right .block-compare {
+  float:left;
+  margin-top:20px;
+  border:1px solid #b2dced;
+  font-size: 14px;
+}
+
+.newsletter-manage-index .col-right .block-compare .block-content {
+  float:left;
+  padding:10px 0 10px 19px;
+  font-size: 12px;
+  width: 197px;
+}
+
+.newsletter-manage-index .col-right .block-account .block-content ul {
+  margin:10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.newsletter-manage-index .col-right .block-account .block-content ul li a:link,
+.newsletter-manage-index .col-right .block-account .block-content ul li a:visited {
+  color:#071d25;
+	text-decoration:none; 
+}
+
+.newsletter-manage-index .col-right .block-account .block-content ul li a:hover {
+  color:#1d789a;
+	text-decoration:none;
+}
+
+.newsletter-manage-index .col-right .block-account .block-content ul li.current {
+  color:#FF6D07;
+	text-decoration:none;
+}
+
+/* ----------------------------------------------
+	My account logout succes 
+---------------------------------------------- */
+
+#my_account_container .dashboard {
+  /*position: relative;*/
+  float:left;
+  width: 955px;
+  min-height: 325px;
+  margin-right: 20px;
+}
+
+#my_account_container .dashboard .page-title {
+  float:left;
+	width:944px; 
+	height:26px; 
+	color:#fff;
+	padding:10px 0 0 14px;
+	background-image: url('../img/bg_titlebar.png');
+	background-repeat:repeat-x;
+}
+
+#my_account_container .dashboard .page-content {
+  float: left;
+  padding:14px;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+#my_account_container .dashboard .page-title h1 {
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size:15px; 
+}
+
+/* ----------------------------------------------
+	My account bestelling detailoverzicht 
+---------------------------------------------- */
+
+.sales-order-view .col-right .block-account {
+  border:1px solid #b2dced;
+}
+
+.sales-order-view .col-right .block-title {
+  margin-bottom:10px;
+  width: 204px;
+}
+
+.sales-order-view .col-right .block-content {
+}
+
+.sales-order-view .col-right .block-compare {
+  float:left;
+  margin-top:20px;
+  border:1px solid #b2dced;
+  font-size: 14px;
+}
+
+.sales-order-view .col-right .block-compare .block-content {
+  float:left;
+  padding:10px 0 10px 19px;
+  font-size: 12px;
+  width: 197px;
+}
+
+.sales-order-view .col-right .block-account .block-content ul {
+  margin:10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sales-order-view .col-right .block-account .block-content ul li a:link,
+.sales-order-view .col-right .block-account .block-content ul li a:visited {
+  color:#071d25;
+	text-decoration:none; 
+}
+
+.sales-order-view .col-right .block-account .block-content ul li a:hover {
+  color:#1d789a;
+	text-decoration:none;
+}
+
+.sales-order-view .col-right .block-account .block-content ul li.current {
+  color:#FF6D07;
+	text-decoration:none;
+}
+
+div.my-account div.order-items.order-details {
+  /*position: relative;*/
+  float:left;
+  width: 600px;
+  min-height: 325px;
+  margin-right: 20px;
+  border:1px solid #b2dced;
+  
 }

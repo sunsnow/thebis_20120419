@@ -236,6 +236,7 @@ Customer account pages, rendered for all tabs in dashboard
             <remove name="right.reports.product.viewed"></remove>
       			<remove name="top.search"></remove>
       			<remove name="right.waarom"></remove>
+      			<remove name="catalog.compare.sidebar"></remove>
         </reference>
     </customer_account>
 
