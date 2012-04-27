@@ -23,30 +23,25 @@
  * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
-
-/**
- * Product additional attributes template
- *
- * @see Mage_Catalog_Block_Product_View_Attributes
- */
 ?>
-<?php
-    $_helper = $this->helper('catalog/output');
-    $_product = $this->getProduct()
-?>
-<?php if($_additional = $this->getAdditionalData()): ?>
-    <h2><?php echo $this->__('Product Information') ?>:</h2>
-    <table class="data-table" id="product-attribute-specs-table">
-        <col width="30%" />
-        <col />
-        <tbody>
-        <?php foreach ($_additional as $_data): ?>
-            <tr>
-                <th class="label"><?php echo $this->htmlEscape($this->__($_data['label'])) ?></th>
-                <td class="data"><?php echo $_helper->productAttribute($_product, $_data['value'], $_data['code']) ?></td>
-            </tr>
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<div class="dashboard">
+<div class="page-title">
+    <h1><?php echo $this->__('My Tags') ?></h1>
+</div>
+<div class="page-content">
+<?php if($this->getTags()): ?>
+    <p><?php echo $this->__('Click on a tag to view your corresponding products.') ?></p>
+    <ul class="tags-list">
+        <?php foreach ($this->getTags() as $_tag): ?>
+            <li><a href="<?php echo $this->getUrl('tag/customer/view', array('tagId' => $_tag->getTagId())) ?>" style="font-size:<?php echo $_tag->getRatio()*70+75 ?>%;"><?php echo $this->htmlEscape($_tag->getName()) ?></a></li>
         <?php endforeach; ?>
-        </tbody>
-    </table>
-    <script type="text/javascript">decorateTable('product-attribute-specs-table')</script>
-<?php endif;?>
+    </ul>
+<?php else: ?>
+    <p><?php echo $this->__('You have not tagged any products yet.') ?></p>
+<?php endif; ?>
+<div class="buttons-set">
+    <p class="back-link"><a href="<?php echo $this->escapeUrl($this->getBackUrl()) ?>"><small>&laquo; </small><?php echo $this->__('Back') ?></a></p>
+</div>
+</div>
+</div>
