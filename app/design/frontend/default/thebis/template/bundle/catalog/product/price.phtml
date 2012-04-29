@@ -102,7 +102,7 @@ if ($_product->getPriceType() == 1) {
         <?php else: ?>
             <?php if ($_minimalPriceTax <> $_maximalPriceTax): ?>
             <p class="price-from">
-                <span class="price-label"><?php echo $this->__('Prijs vanaf') ?>:</span>
+                <span class="price-label"><?php echo $this->__('Vanaf') ?>:</span>
                 <?php if ($this->displayBothPrices()): ?>
                     <span class="price-excluding-tax">
                         <span class="label"><?php echo Mage::helper('tax')->__('Excl. Tax:') ?></span>
