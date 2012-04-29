@@ -259,7 +259,7 @@ legend {
 	
 	#header #header_top_right #topnav ul.links {
 		float:left;
-		padding-left:26px;
+		padding-left:20px;
 		margin-top:-3px;
 	}
 	
@@ -352,7 +352,7 @@ legend {
 	#main #col-main #thebis_toppers_container  #top_items_row01 { 
 		float:left;
 		width:704px; 
-		height:236px; 
+		min-height:236px; 
 		margin-top:15px;
 		padding:0 0 0 14px;
 		overflow:hidden;		
@@ -360,7 +360,7 @@ legend {
 
 	#main #col-main #thebis_toppers_container #top_items_row02 { 
 		width:704px; 
-		height:247px; 
+		min-height:247px; 
 		margin-top:15px;
 		padding:0 0 0 14px;
 		float:left;
@@ -433,7 +433,7 @@ legend {
 	
 	#col-main .category-products .first {
 		float:left;
-		border:none;
+		border-left:none;
 	}
 
 	#col-main .category-products .last {
@@ -464,7 +464,12 @@ legend {
 	
 	#col-main .category-products .products-grid {
 		float:left;
+<<<<<<< HEAD
 		border:none;
+=======
+    border:none;
+    margin-bottom:15px;
+>>>>>>> ffbe2928629430c9d329e504cb3b72a0da069bc3
 	}
 	
 	#col-main .category-products .products-grid .item .btn-details {
@@ -1648,6 +1653,9 @@ display:none;
 }
 .form-list li.control label {
     float: none;
+    left: 25px;
+    top: -25px;
+    width: 100%;
 }
 .form-list li.control input.radio, .form-list li.control input.checkbox {
     margin-right: 4px;
@@ -1873,7 +1881,7 @@ p.required {
 	border-bottom: 1px solid #B2DCED;
 	/*padding-right:15px;*/
   margin: 0 10px;
-  padding: 20px 20px;
+  padding: 10px 20px 20px 20px;
   clear: both;
 }
     .buttons-set .btn-submit {
@@ -2639,6 +2647,7 @@ p.required {
   padding:14px;
   font-size: 12px;
   line-height: 24px;
+  margin-top:20px;
 }
 
 .my-account .dashboard .page-content .welcome-msg {
@@ -2651,155 +2660,166 @@ p.required {
 }
 
 .my-account .dashboard .page-content .welcome-msg p.hello {
-font-size:14px;
+  font-size:14px;
 }
 
 
 .my-account .dashboard .page-content .box-recent {
-float:left;
-margin-bottom:16px;
+  float:left;
+  margin-bottom:16px;
 }
 
 .my-account .dashboard .page-content .box-recent .box-head {
-float:left;
-width:688px;
-text-align:right;
+  float:left;
+  width:688px;
+  text-align:right;
 }
 
 .my-account .dashboard .page-content .box-recent .box-head h2 {
-float:left;
-color:#15566F;
-margin-bottom:5px;
-font-size:14px;
-font-weight:bold;
+  float:left;
+  color:#15566F;
+  margin-bottom:5px;
+  font-size:14px;
+  font-weight:bold;
 }
 
 .my-account .dashboard .page-content .box-recent .box-head a {
-float:right;
-color:#1D789A;
+  float:right;
+  color:#1D789A;
 }
 
 .my-account .dashboard .page-content .box-recent table#my-orders-table {
-width:688px;
-margin-bottom:30px;
-font-size:12px;
+  width:688px;
+  margin-bottom:30px;
+  font-size:12px;
 }
 
 .my-account .dashboard .page-content .box-recent table#my-orders-table a:link,
 .my-account .dashboard .page-content .box-recent table#my-orders-table a:visited {
-color:#1d789a;
-text-decoration:none;
+  color:#1d789a;
+  text-decoration:none;
 }
 
 .my-account .dashboard .page-content .box-recent table#my-orders-table a:hover {
-color:#1d789a;
-text-decoration:none;
+  color:#1d789a;
+  text-decoration:none;
 }
 
 .my-account .dashboard .page-content .box-recent table#my-orders-table td,
 .my-account .dashboard .page-content .box-recent table#my-orders-table th {
-padding-left:6px;
+  padding-left:6px;
+}
+   
+.my-account .dashboard .page-content .box-recent table#my-orders-table thead {
+  font-size:11px;
+  background-color:#d9eaf0;
 }
 
-.my-account .dashboard .page-content .box-recent table#my-orders-table thead {
-font-size:11px;
-background-color:#d9eaf0;
+.my-account .dashboard .page-content .box-account table#my-orders-table.data-table thead tr.first {
+  text-transform:uppercase;
 }
+
+.my-account .dashboard .page-content .box-account table#my-orders-table.data-table tbody tr.first td.a-center,
+.my-account .dashboard .page-content table#my-orders-table.data-table tbody tr td.a-center,
+.my-account .dashboard .page-content table#my-orders-table.data-table tbody tr.last td.a-center {
+  text-align:right;
+}
+.my-account div.dashboard div.page-content table#my-orders-table.data-table tbody tr.last td.a-center
 
 .my-account .dashboard .page-content .box-recent table#my-orders-table tbody .nobr {
-white-space:nowrap !important;
+  white-space:nowrap !important;
 }
 
 .my-account .dashboard .page-content .box-info {
-float:left;
-width:688px;
-clear:both;
+  float:left;
+  width:688px;
+  clear:both;
 }
 
 .my-account .dashboard .page-content .box-info .col2-set a:link,
 .my-account .dashboard .page-content .box-info .col2-set a:visited {
-color:#1d789a;
+  color:#1d789a;
 }
 
 .my-account .dashboard .page-content .box-info .col2-set {
-float:left;
-width:688px;
-clear:both;
-margin-bottom:28px;
+  float:left;
+  width:688px;
+  clear:both;
+  margin-bottom:28px;
 }
 
 .my-account .dashboard .page-content .box-info .col2-set .col-1{
-float:left;
-width:334px;
+  float:left;
+  width:334px;
 }
 
 .my-account .dashboard .page-content .box-info .col2-set .col-1 h4,
 .my-account .dashboard .page-content .box-info .col2-set .col-2 h4{
-font-weight:bold;
+  font-weight:bold;
 }
 
 .my-account .dashboard .page-content .box-info .col2-set .col-1 .box .box-title h3 {
-float:left;
-color:#15566F;
-font-size:14px;
-font-weight:bold;
+  float:left;
+  color:#15566F;
+  font-size:14px;
+  font-weight:bold;
 }
 
 .my-account .dashboard .page-content .box-info .col2-set .col-1 .box .box-title {
-float:left;
-width:334px;
-border-bottom:1px solid #B2DCED;
+  float:left;
+  width:334px;
+  border-bottom:1px solid #B2DCED;
 }
 
 .my-account .dashboard .page-content .box-info .col2-set .col-1 .box .box-title a,
 .my-account .dashboard .page-content .box-info .col2-set .col-2 .box .box-title a,
 .my-account .dashboard .page-content .box-info .col2-set .box .box-title a {
-float:right;
+  float:right;
 }
 
 .my-account .dashboard .page-content .box-info .col2-set .col-1 .box-content,
 .my-account .dashboard .page-content .box-info .col2-set .col-2 .box-content{
-float:left;
-clear:both;
-margin-top:10px;
+  float:left;
+  clear:both;
+  margin-top:10px;
 }
 
 
 .my-account .dashboard .page-content .box-info .col2-set .col-2{
-float:left;
-width:334px;
-margin-left:16px;
+  float:left;
+  width:334px;
+  margin-left:16px;
 }
 
 .my-account .dashboard .page-content .box-info .col2-set .col-2 .box .box-title h3{
-float:left;
-color:#15566F;
-font-size:14px;
-font-weight:bold;
+  float:left;
+  color:#15566F;
+  font-size:14px;
+  font-weight:bold;
 }
 
 .my-account .dashboard .page-content .box-info .col2-set .col-2 .box .box-title {
-float:left;
-width:338px;
-border-bottom:1px solid #B2DCED;
+  float:left;
+  width:338px;
+  border-bottom:1px solid #B2DCED;
 }
 
 .my-account .dashboard .page-content .box-info .col2-set .box .box-title {
-float:left;
-width:688px;
-border-bottom:1px solid #B2DCED;
+  float:left;
+  width:688px;
+  border-bottom:1px solid #B2DCED;
 }
 
 .my-account .dashboard .page-content .box-info .col2-set .box .box-title h3 {
-float:left;
-color:#15566F;
-font-size:14px;
-font-weight:bold;
+  float:left;
+  color:#15566F;
+  font-size:14px;
+  font-weight:bold;
 }
 
 .my-account .dashboard .page-content .box-info .col2-set .box .box-content {
-float:left;
-margin-top:10px;
+  float:left;
+  margin-top:10px;
 }
 
 .customer-account-index .col-right .block-account {
@@ -2834,6 +2854,46 @@ margin-top:10px;
 .customer-account-index .col-right .block-account .block-content ul li.current {
   color:#FF6D07;
   text-decoration:none;
+}
+
+.my-account .dashboard .page-content table#my-orders-table {
+  width:688px;
+  margin-bottom:30px;
+  font-size:12px;
+  line-height:18px;
+}
+
+.my-account .dashboard .page-content table#my-orders-table a:link,
+.my-account .dashboard .page-content table#my-orders-table a:visited {
+  color:#1d789a;
+  text-decoration:none;
+}
+
+.my-account .dashboard .page-content table#my-orders-table a:hover {
+  color:#1d789a;
+  text-decoration:none;
+}
+
+.my-account .dashboard .page-content table#my-orders-table td,
+.my-account .dashboard .page-content table#my-orders-table th {
+  padding-left:6px;
+}
+   
+.my-account .dashboard .page-content table#my-orders-table thead {
+  font-size:11px;
+  background-color:#d9eaf0;
+}
+
+.my-account .dashboard .page-content table#my-orders-table.data-table thead tr.first {
+  text-transform:uppercase;
+}
+
+.my-account .dashboard .page-content table#my-orders-table.data-table tbody tr.first td.a-center {
+  text-align:right;
+}
+
+.my-account .dashboard .page-content table#my-orders-table tbody .nobr {
+  white-space:nowrap !important;
 }
 
 /* ----------------------------------------------
@@ -2881,7 +2941,7 @@ margin-top:10px;
     display:block;
     font-family:Tahoma,Arial,Helvetica,sans-serif;
     font-size:15px;
-	margin-top:-15px;
+	  margin-top:-15px;
     height:30px;
     text-align:center;
     text-decoration:none;
@@ -2896,6 +2956,13 @@ margin-top:10px;
 
 .my-account .dashboard .page-content #form-validate .fieldset ul.form-list label {
 	width:auto;
+}
+
+.my-account .dashboard .page-content #form-validate .fieldset ul.form-list li.control label {
+  float: none;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 .my-account .dashboard .page-content #form-validate .fieldset ul.form-list .customer-name em {
@@ -2939,9 +3006,7 @@ margin-top:10px;
 	width:auto;
 	margin-top:5px;
 	display:block;
-}
-
-
+} 
 
 .my-account .dashboard .page-content .buttons-set {
   left: -10px;
@@ -3061,6 +3126,30 @@ margin-top:10px;
 	My account mijn orders
 ---------------------------------------------- */
 
+div.my-account div.dashboard div.pager {
+  color:#071D25;
+  /*float: left;*/
+  text-align:bottom;
+}
+div.my-account div.dashboard div.pager .limiter{
+  color:#071D25;
+  float:right;
+}
+  
+div.my-account div.dashboard div.pager-bottom {
+  /*float:left;*/
+  color:#071D25;
+  margin-left:16px;
+  font-size:12px;
+}
+
+div.my-account div.dashboard div.pager-bottom .limiter{
+  color:#071D25;
+  float:right;
+  margin-right:10px;
+  font-size:12px;
+}
+
 .sales-order-history .col-right .block-account {
   border:1px solid #b2dced;
 }
@@ -3107,7 +3196,113 @@ margin-top:10px;
 .sales-order-history .col-right .block-account .block-content ul li.current {
   color:#FF6D07;
 	text-decoration:none;
+} 
+
+.my-account .dashboard .order-items order-details {
+  float:left;
+  margin-bottom:16px;
 }
+
+.my-account .dashboard .page-content .box-recent .box-head {
+  float:left;
+  width:688px;
+  text-align:right;
+}
+
+.my-account .dashboard .page-content .box-recent .box-head h2 {
+  float:left;
+  color:#15566F;
+  margin-bottom:5px;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.my-account .dashboard .page-content .box-recent .box-head a {
+  float:right;
+  color:#1D789A;
+}
+
+div.my-account div.dashboard div.order-items table#my-orders-table.data-table {
+  width:688px;
+  margin-bottom:30px;
+  font-size:12px;
+}
+
+div.my-account div.dashboard div.order-items table#my-orders-table.data-table a:link,
+div.my-account div.dashboard div.order-items table#my-orders-table.data-table a:visited {
+  color:#1d789a;
+  text-decoration:none;
+}
+
+div.my-account div.dashboard div.order-items table#my-orders-table.data-table a:hover {
+  color:#1d789a;
+  text-decoration:none;
+}
+
+div.my-account div.dashboard div.order-items table#my-orders-table.data-table td,
+div.my-account div.dashboard div.order-items table#my-orders-table.data-table th {
+  font-size: 11x;
+  padding:2px 6px;
+}
+   
+div.my-account div.dashboard div.order-items table#my-orders-table.data-table thead {
+  font-size:11px;
+  background-color:#d9eaf0;
+  text-transform:uppercase;
+}
+
+div.my-account div.dashboard div.order-items table#my-orders-table.data-table thead tr.first {
+  line-height: 18px;
+}
+
+div.my-account div.dashboard div.order-items table#my-orders-table.data-table tr {
+  line-height: 18px;
+}
+
+div.my-account div.dashboard div.order-items table#my-orders-table.data-table tbody .nobr {
+  white-space:nowrap !important;
+}
+
+div.my-account div.dashboard div.order-items h2.table-caption {
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+} 
+
+div.my-account div.dashboard div.order-items table#my-orders-table.data-table td.a-right {
+  text-align: right;
+}
+
+div.my-account div.dashboard div.order-items table#my-orders-table.data-table td div.option-label,
+div.my-account div.dashboard div.order-items table#my-orders-table.data-table td div.option-value {
+  margin-left: 16px;
+  font-style:italic;
+}
+
+div.my-account div.dashboard div.order-items table#my-orders-table.data-table tfoot tr.subtotal td.last span.price {
+  border-top:1px solid #b2dced;
+}
+
+div.my-account div.dashboard div.order-items table#my-orders-table.data-table tfoot tr.grand_total td.last strong span.price {
+  border-top:1px solid #b2dced;
+}
+
+/*div.my-account div.dashboard div.buttons-set,*/
+div.my-account div.dashboard div.order-items div.buttons-set {
+  border-bottom-color: #B2DCED;
+  border-bottom-style: solid;
+  border-bottom-width: 0px;
+  clear: both;
+  float: none;
+  height: auto;
+  margin: 0;
+  padding: 0 0 40px 0;
+  position: relative;
+  width: auto;
+} 
+
+
 
 /* ----------------------------------------------
 	My account billing agreements
@@ -3510,9 +3705,124 @@ margin-top:10px;
 div.my-account div.order-items.order-details {
   /*position: relative;*/
   float:left;
-  width: 600px;
+  /*width: 600px;*/
   min-height: 325px;
+  margin-top: 28px;
   margin-right: 20px;
-  border:1px solid #b2dced;
+  padding-left:14px;
+  font-size: 12px;
   
+}
+
+div.my-account div.order-items table#my-orders-table.data-table h3 {
+  font-size: 12px;  
+}
+
+div.my-account div.dashboard div.page-title.title-buttons div.extra-buttons {
+  font-size:12px;
+  margin-top:25px;
+}
+
+/* ----------------------------------------------
+	My account order verzending
+---------------------------------------------- */
+
+.sales-order-shipment .col-right .block-account {
+  border:1px solid #b2dced;
+}
+
+.sales-order-shipment .col-right .block-title {
+  margin-bottom:10px;
+  width: 204px;
+}
+
+.sales-order-shipment .col-right .block-content {
+}
+
+.sales-order-shipment .col-right .block-compare {
+  float:left;
+  margin-top:20px;
+  border:1px solid #b2dced;
+  font-size: 14px;
+}
+
+.sales-order-shipment .col-right .block-compare .block-content {
+  float:left;
+  padding:10px 0 10px 19px;
+  font-size: 12px;
+  width: 197px;
+}
+
+.sales-order-shipment .col-right .block-account .block-content ul {
+  margin:10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sales-order-shipment .col-right .block-account .block-content ul li a:link,
+.sales-order-shipment .col-right .block-account .block-content ul li a:visited {
+  color:#071d25;
+	text-decoration:none; 
+}
+
+.sales-order-shipment .col-right .block-account .block-content ul li a:hover {
+  color:#1d789a;
+	text-decoration:none;
+}
+
+.sales-order-shipment .col-right .block-account .block-content ul li.current {
+  color:#FF6D07;
+	text-decoration:none;
+}
+
+/* ----------------------------------------------
+	My account adresboek
+---------------------------------------------- */
+
+.customer-address-index .col-right .block-account {
+  border:1px solid #b2dced;
+}
+
+.customer-address-index .col-right .block-title {
+  margin-bottom:10px;
+  width: 204px;
+}
+
+.customer-address-index .col-right .block-content {
+}
+
+.customer-address-index .col-right .block-compare {
+  float:left;
+  margin-top:20px;
+  border:1px solid #b2dced;
+  font-size: 14px;
+}
+
+.customer-address-index .col-right .block-compare .block-content {
+  float:left;
+  padding:10px 0 10px 19px;
+  font-size: 12px;
+  width: 197px;
+}
+
+.customer-address-index .col-right .block-account .block-content ul {
+  margin:10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.customer-address-index .col-right .block-account .block-content ul li a:link,
+.customer-address-index .col-right .block-account .block-content ul li a:visited {
+  color:#071d25;
+	text-decoration:none; 
+}
+
+.customer-address-index .col-right .block-account .block-content ul li a:hover {
+  color:#1d789a;
+	text-decoration:none;
+}
+
+.customer-address-index .col-right .block-account .block-content ul li.current {
+  color:#FF6D07;
+	text-decoration:none;
 }

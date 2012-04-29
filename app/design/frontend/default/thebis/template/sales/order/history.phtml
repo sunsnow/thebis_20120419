@@ -30,7 +30,7 @@
     <div class="page-title">
         <h1><?php echo $this->__('My Orders') ?></h1>
     </div>
-    <div class="page-content">
+    <div class="page-content"> 
         <?php echo $this->getPagerHtml(); ?>
         <?php if($_orders->getSize()): ?>
         <table class="data-table" id="my-orders-table">
@@ -44,8 +44,8 @@
                 <tr>
                     <th><?php echo $this->__('Order #') ?></th>
                     <th><?php echo $this->__('Date') ?></th>
-                    <th><?php echo $this->__('Ship To') ?></th>
-                    <th><span class="nobr"><?php echo $this->__('Order Total') ?></span></th>
+                    <th style="width:100px;"><?php echo $this->__('Ship To') ?></th>
+                    <th style="width:100px;"><span class="nobr"><?php echo $this->__('Order Total') ?></span></th>
                     <th><span class="nobr"><?php echo $this->__('Order Status') ?></span></th>
                     <th>&nbsp;</th>
                 </tr>
@@ -72,9 +72,9 @@
             </tbody>
         </table>
     </div>
-</div>
+
 <script type="text/javascript">decorateTable('my-orders-table');</script>
-<?php echo $this->getPagerHtml(); ?>
+<div class="pager-bottom"><?php echo $this->getPagerHtml(); ?></div>
 <?php else: ?>
     <p><?php echo $this->__('You have placed no orders.'); ?></p>
 <?php endif ?>

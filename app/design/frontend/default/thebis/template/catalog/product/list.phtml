@@ -35,7 +35,11 @@
 <?php
     $_productCollection=$this->getLoadedProductCollection();
     $_helper = $this->helper('catalog/output');
+<<<<<<< HEAD
 	$this->setData('column_count',4);
+=======
+    $this->setData('column_count',4);
+>>>>>>> ffbe2928629430c9d329e504cb3b72a0da069bc3
 ?>
 <?php if(!$_productCollection->count()): ?>
 <p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
