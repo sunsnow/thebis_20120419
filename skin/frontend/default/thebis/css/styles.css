@@ -464,6 +464,7 @@ legend {
 	
 	#col-main .category-products .products-grid {
 		float:left;
+		border:none;
 	}
 	
 	#col-main .category-products .products-grid .item .btn-details {
@@ -1519,7 +1520,7 @@ display:none;
 	border:none;
 }
 
-#product_info_container #category_list_container .category-products .products-grid .item .price-box-bundle .price-from {
+.category-products .products-grid .item .price-box-bundle .price-from {
 	color:#1D789A;
     float:left;
     font-size:14px;
@@ -1527,7 +1528,7 @@ display:none;
     width:162px;
 }
 
-#product_info_container #category_list_container .category-products .products-grid .item .price-box-bundle .price-to {
+.category-products .products-grid .item .price-box-bundle .price-to {
 	display:none;
 }
 
