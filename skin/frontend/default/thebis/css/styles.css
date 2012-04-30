@@ -464,8 +464,12 @@ legend {
 	
 	#col-main .category-products .products-grid {
 		float:left;
+<<<<<<< HEAD
+		border:none;
+=======
     border:none;
     margin-bottom:15px;
+>>>>>>> ffbe2928629430c9d329e504cb3b72a0da069bc3
 	}
 	
 	#col-main .category-products .products-grid .item .btn-details {
@@ -3643,7 +3647,7 @@ div.my-account div.dashboard div.order-items div.buttons-set {
 
 #my_account_container .dashboard .page-title h1 {
   font-family: Tahoma, Arial, Helvetica, sans-serif;
-	font-size:15px; 
+  font-size:15px; 
 }
 
 /* ----------------------------------------------
@@ -3685,12 +3689,12 @@ div.my-account div.dashboard div.order-items div.buttons-set {
 .sales-order-view .col-right .block-account .block-content ul li a:link,
 .sales-order-view .col-right .block-account .block-content ul li a:visited {
   color:#071d25;
-	text-decoration:none; 
+  text-decoration:none; 
 }
 
 .sales-order-view .col-right .block-account .block-content ul li a:hover {
   color:#1d789a;
-	text-decoration:none;
+  text-decoration:none;
 }
 
 .sales-order-view .col-right .block-account .block-content ul li.current {
@@ -3758,17 +3762,17 @@ div.my-account div.dashboard div.page-title.title-buttons div.extra-buttons {
 .sales-order-shipment .col-right .block-account .block-content ul li a:link,
 .sales-order-shipment .col-right .block-account .block-content ul li a:visited {
   color:#071d25;
-	text-decoration:none; 
+  text-decoration:none; 
 }
 
 .sales-order-shipment .col-right .block-account .block-content ul li a:hover {
   color:#1d789a;
-	text-decoration:none;
+  text-decoration:none;
 }
 
 .sales-order-shipment .col-right .block-account .block-content ul li.current {
   color:#FF6D07;
-	text-decoration:none;
+  text-decoration:none;
 }
 
 /* ----------------------------------------------
@@ -3810,7 +3814,7 @@ div.my-account div.dashboard div.page-title.title-buttons div.extra-buttons {
 .customer-address-index .col-right .block-account .block-content ul li a:link,
 .customer-address-index .col-right .block-account .block-content ul li a:visited {
   color:#071d25;
-	text-decoration:none; 
+  text-decoration:none; 
 }
 
 .customer-address-index .col-right .block-account .block-content ul li a:hover {
@@ -3820,5 +3824,84 @@ div.my-account div.dashboard div.page-title.title-buttons div.extra-buttons {
 
 .customer-address-index .col-right .block-account .block-content ul li.current {
   color:#FF6D07;
-	text-decoration:none;
+  text-decoration:none;
 }
+
+/* ----------------------------------------------
+	Wachtwoord vergeten?
+---------------------------------------------- */
+
+#my_account_container #password_vergeten .page-title {
+  float:left;
+	width:944px; 
+	height:26px; 
+	color:#fff;
+	padding:10px 0 0 14px;
+	background-image: url('../img/bg_titlebar.png');
+	background-repeat:repeat-x;
+}
+
+#my_account_container #password_vergeten .page-title h1 {
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  font-size:15px; 
+}
+
+#my_account_container #password_vergeten  #form-validate .fieldset h2.legend {
+	float:left;
+	width:930px;
+	color:#15566F;
+	font-size:14px;
+	font-weight:bold;
+	padding:0;
+	margin:0;
+	background:none;
+	margin-top:30px;
+	margin-bottom:20px;
+	margin-left:14px;
+	border-bottom:1px solid #B2DCED;
+}
+
+#my_account_container #password_vergeten .fieldset p {
+  float:left;
+  clear:both;
+  margin-left:14px;
+}
+
+#col-main-fullwidth #my_account_container #password_vergeten .fieldset ul {
+	clear:both;
+	margin-top:14px; 
+	margin-left:14px;
+}
+
+#col-main-fullwidth #my_account_container #password_vergeten .buttons-set {
+	width:908px;
+	margin-left:14px;
+	border-bottom:none;
+	border-top:1px solid #B2DCED;
+	padding:0;
+	position:static;
+}
+
+#col-main-fullwidth #my_account_container #password_vergeten .buttons-set .button {
+	background:none repeat scroll 0 0 #FFFFFF;
+    border:1px solid #FF6D07;
+    color:#FF6D07;
+    cursor:pointer;
+    display:block;
+    font-family:Tahoma,Arial,Helvetica,sans-serif;
+    font-size:15px;
+	margin-top:-15px;
+    height:30px;
+    text-align:center;
+    text-decoration:none;
+    vertical-align:baseline;
+    width:150px;
+}
+
+#col-main-fullwidth #my_account_container #password_vergeten .buttons-set .button:hover {
+	background: url(../img/bg_button_kassa.png) 0 0 repeat-x;
+	color:#fff;
+}
+
+	
+
