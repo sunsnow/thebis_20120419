@@ -2313,6 +2313,7 @@ p.required {
 	width:958px;
 	border:1px solid #b2dced;
 	font-size:12px;
+	min-height: 275px;
 }
 
 #col-main-fullwidth .account-login .page-title { 
@@ -3874,7 +3875,7 @@ div.my-account div.dashboard div.page-title.title-buttons div.extra-buttons {
 }
 
 #col-main-fullwidth #my_account_container #password_vergeten .buttons-set {
-	width:908px;
+	width:928px;
 	margin-left:14px;
 	border-bottom:none;
 	border-top:1px solid #B2DCED;
