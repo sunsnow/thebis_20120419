@@ -2633,7 +2633,8 @@ p.required {
 }
 
 .my-account .dashboard .page-title {
-  float:left;
+	float:left;
+	position:relative;
 	width:701px; 
 	height:26px; 
 	color:#fff;
@@ -3123,7 +3124,7 @@ p.required {
 }
 
 /* ----------------------------------------------
-	My account mijn orders
+	My account Dashboard > Mijn orders
 ---------------------------------------------- */
 
 div.my-account div.dashboard div.pager {
@@ -3134,6 +3135,7 @@ div.my-account div.dashboard div.pager {
 div.my-account div.dashboard div.pager .limiter{
   color:#071D25;
   float:right;
+  margin-bottom:10px;
 }
   
 div.my-account div.dashboard div.pager-bottom {
@@ -3201,6 +3203,33 @@ div.my-account div.dashboard div.pager-bottom .limiter{
 .my-account .dashboard .order-items order-details {
   float:left;
   margin-bottom:16px;
+}
+
+.my-account .dashboard .buttons-set {
+	border-top:1px solid #B2DCED;
+	border-bottom:none;
+	margin-top:15px;
+	padding:0;
+	width:690px;
+}
+
+.my-account .dashboard .buttons-set p.back-link {
+	color:#15566F;
+	margin-top:20px;
+	margin-left:10px;
+	font-size:12px;
+}
+
+.my-account .dashboard .buttons-set p.back-link a {
+	color:#15566F;
+}
+
+.my-account .dashboard .page-content .amount{
+	float:left;
+}
+
+.my-account .dashboard .pager-bottom .amount{
+	float:left;
 }
 
 .my-account .dashboard .page-content .box-recent .box-head {
@@ -3301,8 +3330,6 @@ div.my-account div.dashboard div.order-items div.buttons-set {
   position: relative;
   width: auto;
 } 
-
-
 
 /* ----------------------------------------------
 	My account billing agreements
@@ -3654,6 +3681,44 @@ div.my-account div.dashboard div.order-items div.buttons-set {
 	My account bestelling detailoverzicht 
 ---------------------------------------------- */
 
+.my-account .dashboard .page-content .order-date {
+	margin-bottom:20px;
+}
+
+.my-account .dashboard .page-content .order-info dt,
+.my-account .dashboard .page-content .order-info dd #order-info-tabs{
+	display:none;
+}
+
+.my-account .dashboard .page-content .order-info-box {
+	float:left;
+	clear:both;
+}
+
+.my-account .dashboard .page-content .order-info-box h2 {
+	border-bottom:1px solid #B2DCED;
+    color:#15566F;
+    float:left;
+    font-size:14px;
+    font-weight:bold;
+    width:334px;
+}
+
+.my-account .dashboard .page-content .order-info-box .col-1,
+.my-account .dashboard .page-content .order-info-box .col-2 {
+	float:left;
+	width:334px;
+}
+
+.my-account .dashboard .page-content .order-info-box .col-1 {
+	margin-bottom:20px;
+ }
+
+.my-account .dashboard .page-content .order-info-box .col-2 {
+	margin-left:16px;
+ }
+
+
 .sales-order-view .col-right .block-account {
   border:1px solid #b2dced;
 }
@@ -3707,7 +3772,6 @@ div.my-account div.order-items.order-details {
   float:left;
   /*width: 600px;*/
   min-height: 325px;
-  margin-top: 28px;
   margin-right: 20px;
   padding-left:14px;
   font-size: 12px;
@@ -3719,8 +3783,14 @@ div.my-account div.order-items table#my-orders-table.data-table h3 {
 }
 
 div.my-account div.dashboard div.page-title.title-buttons div.extra-buttons {
+  position:absolute;
   font-size:12px;
-  margin-top:25px;
+  top:50px;
+  right:14px;
+}
+
+div.my-account div.dashboard div.page-title.title-buttons div.extra-buttons a {
+	color:#1D789A;
 }
 
 /* ----------------------------------------------
@@ -3778,6 +3848,76 @@ div.my-account div.dashboard div.page-title.title-buttons div.extra-buttons {
 /* ----------------------------------------------
 	My account adresboek
 ---------------------------------------------- */
+
+.my-account .dashboard .page-title .button {
+	position:absolute;
+	right:15px;
+	top:52px;
+	background:none repeat scroll 0 0 #FFFFFF;
+    border:1px solid #FF6D07;
+    color:#FF6D07;
+    cursor:pointer;
+    display:block;
+    font-family:Tahoma,Arial,Helvetica,sans-serif;
+    font-size:15px;
+    height:30px;
+    text-align:center;
+    text-decoration:none;
+    vertical-align:baseline;
+    width:150px;
+}
+
+.my-account .dashboard .page-title .button:hover {
+	background: url(../img/bg_button_kassa.png) 0 0 repeat-x;
+	color:#fff;
+}
+
+.my-account .dashboard .page-content .addresses-list {
+	float:left;
+	margin-top:35px;
+}
+
+.my-account .dashboard .page-content .addresses-list a {
+	color:#1D789A;
+    text-decoration:none;
+}
+
+.my-account .dashboard .page-content .addresses-list ol li h3 {
+	font-weight:bold;
+	font-size:12px;
+}
+
+.my-account .dashboard .page-content .addresses-list ol {
+	float:left;
+	margin-top:10px;
+}
+
+.my-account .dashboard .page-content .addresses-list ol li.item {
+	margin-bottom:20px;
+}
+
+.my-account .dashboard .page-content .addresses-list h2{
+    float:left;
+	width:334px;
+	color:#15566F;
+    font-size:14px;
+    font-weight:bold;
+	border-bottom:1px solid #B2DCED;
+}
+
+.my-account .dashboard .page-content .addresses-list .addresses-primary {
+  float:left;
+  width:334px;
+}
+
+
+.my-account .dashboard .page-content .addresses-list .addresses-additional {
+  float:left;
+  width:334px;
+  margin-left:16px;
+}
+
+
 
 .customer-address-index .col-right .block-account {
   border:1px solid #b2dced;
