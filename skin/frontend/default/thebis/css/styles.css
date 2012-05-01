@@ -594,7 +594,7 @@ legend {
 	
 	.col-right .form-search input.input-text {
 		float:left; 
-		width:166px;
+		width:164px;
 		line-height:22px;
 	}
 
@@ -900,7 +900,7 @@ display:none;
 
 #main .col-right #waarom_thebis .waarom_vlak .reden {
 	float:left;
-	width:120px;
+	width:140px;
 	margin-left:42px;
 	line-height:16px;
 	color:#071d25;
