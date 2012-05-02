@@ -4047,6 +4047,151 @@ div.my-account div.dashboard div.page-title.title-buttons div.extra-buttons a {
 	background: url(../img/bg_button_kassa.png) 0 0 repeat-x;
 	color:#fff;
 }
-
 	
+/* ----------------------------------------------
+	Print order
+---------------------------------------------- */
+body.sales-order-print {
+	background:#fff;
+	font-size:12px;
+	padding:25px 30px;
+	color:#071D25;
+	width:auto;
+}
+
+body.sales-order-print h1 {
+	font-size:14px;
+	margin-top:10px;
+	font-weight:bold;
+	color:#15566F;
+}
+
+body.sales-order-print h2 {
+    color:#15566F;
+	margin-bottom:10px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+body.sales-order-print p.order-date {
+	margin-bottom:20px;
+	font-size:12px;
+	border-bottom:1px solid #B2DCED;
+	padding:0 0 10px 0;
+	color:#071D25;
+}
+
+body.sales-order-print .col2-set {
+	clear:both;
+	display:block;
+	overflow:hidden;
+	margin-bottom:15px;
+	line-height:17px;
+	color:#071D25;
+}
+
+body.sales-order-print .col2-set .col-1 {
+	float:left;
+	width:48%;
+}
+
+body.sales-order-print .col2-set .col-2 {
+	float:right;
+	width:48%;
+}
+
+body.sales-order-print .buttons-set {
+	width:100%;
+	height:auto;
+	float:none;
+	margin:0;
+	padding:0;
+}
+
+body.sales-order-print .buttons-set .button {
+	background:none repeat scroll 0 0 #FFFFFF;
+    border:1px solid #FF6D07;
+    color:#FF6D07;
+    cursor:pointer;
+    display:block;
+    font-family:Tahoma,Arial,Helvetica,sans-serif;
+    font-size:15px;
+	margin-top:10px;
+    height:30px;
+    text-align:center;
+    text-decoration:none;
+    vertical-align:baseline;
+    width:150px;
+}
+
+body.sales-order-print .buttons-set .button:hover{
+	background: url(../img/bg_button_kassa.png) 0 0 repeat-x;
+	color:#fff;
+}
+
+body.sales-order-print table#my-orders-table {
+  width:100%;
+  margin-bottom:30px;
+  font-size:12px;
+  line-height:18px;
+  color:#071D25;
+  border:0 none;
+  border-spacing:0;
+  empty-cells:show;
+  font-size:100%;
+}
+
+body.sales-order-print table#my-orders-table h3{
+	font-size:12px;
+	font-weight:bold;
+}
+
+body.sales-order-print table#my-orders-table a:link,
+body.sales-order-print table#my-orders-table a:visited {
+  color:#1d789a;
+  text-decoration:none;
+}
+
+body.sales-order-print table#my-orders-table a:hover {
+  color:#1d789a;
+  text-decoration:none;
+}
+
+body.sales-order-print table#my-orders-table td,
+body.sales-order-print table#my-orders-table th {
+  padding:5px 10px 5px 10px;
+  white-space:nowrap;
+}
+   
+body.sales-order-print table#my-orders-table thead {
+  font-size:11px;
+  background-color:#d9eaf0;
+}
+
+body.sales-order-print table#my-orders-table tfoot {
+  background-color:#D9EAF0;
+}
+
+body.sales-order-print table#my-orders-table .a-right {
+	text-align:right !important;
+}
+
+body.sales-order-print table#my-orders-table .grand_total,
+body.sales-order-print table#my-orders-table .grand_total td.last .price {
+	font-size:14px;
+	font-weight:bold;
+}
+
+body.sales-order-print table#my-orders-table.data-table thead tr.first {
+  text-transform:uppercase;
+}
+
+body.sales-order-print table#my-orders-table.data-table tbody tr.first td.a-center {
+  text-align:right;
+}
+
+body.sales-order-print table#my-orders-table tbody .nobr {
+  white-space:nowrap !important;
+}
+
 
