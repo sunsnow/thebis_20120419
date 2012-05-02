@@ -3227,10 +3227,12 @@ div.my-account div.dashboard div.pager-bottom .limiter{
 
 .my-account .dashboard .page-content .amount{
 	float:left;
+	margin-top: 5px;
 }
 
 .my-account .dashboard .pager-bottom .amount{
 	float:left;
+	margin-top: 5px;
 }
 
 .my-account .dashboard .page-content .box-recent .box-head {
@@ -3775,6 +3777,7 @@ div.my-account div.order-items.order-details {
   min-height: 325px;
   margin-right: 20px;
   padding-left:14px;
+  padding-bottom: 34px;
   font-size: 12px;
   
 }
@@ -3860,7 +3863,7 @@ div.my-account div.dashboard div.page-title.title-buttons div.extra-buttons a {
     cursor:pointer;
     display:block;
     font-family:Tahoma,Arial,Helvetica,sans-serif;
-    font-size:15px;
+    font-size:13px;
     height:30px;
     text-align:center;
     text-decoration:none;
@@ -3886,6 +3889,7 @@ div.my-account div.dashboard div.page-title.title-buttons div.extra-buttons a {
 .my-account .dashboard .page-content .addresses-list ol li h3 {
 	font-weight:bold;
 	font-size:12px;
+	color: #071D25;
 }
 
 .my-account .dashboard .page-content .addresses-list ol {
