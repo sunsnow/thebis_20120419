@@ -95,8 +95,7 @@
                 </tbody>
             </table>
             <script type="text/javascript">decorateTable('shopping-cart-table')</script>
-        </fieldset>
-    </form>
+
 	<div id="cart_detail_left">
 			<?php echo $this->getChildHtml('crosssell') ?>
 		<?php if($this->getContinueShoppingUrl()): ?>
@@ -104,6 +103,9 @@
         <?php endif; ?>
         <button type="submit" title="<?php echo $this->__('Update Shopping Cart') ?>" class="button btn-update"><span><span><?php echo $this->__('Winkelwagen bijwerken') ?></span></span></button>
 	</div>
+</fieldset>
+</form>
+
 	<div id="cart_detail_right">
 	<div class="totals">
             <?php echo $this->getChildHtml('totals'); ?>  

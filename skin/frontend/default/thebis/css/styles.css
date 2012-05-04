@@ -259,7 +259,6 @@ legend {
 	
 	#header #header_top_right #topnav ul.links {
 		float:left;
-		padding-left:20px;
 		margin-top:-3px;
 	}
 	
@@ -319,6 +318,10 @@ legend {
 	background-repeat:no-repeat;	
 }
 
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
 
 /* ----------------------------------------------
 	Homepagina Content
@@ -464,12 +467,8 @@ legend {
 	
 	#col-main .category-products .products-grid {
 		float:left;
-<<<<<<< HEAD
 		border:none;
-=======
-    border:none;
-    margin-bottom:15px;
->>>>>>> ffbe2928629430c9d329e504cb3b72a0da069bc3
+		margin-bottom:15px;
 	}
 	
 	#col-main .category-products .products-grid .item .btn-details {
@@ -1958,7 +1957,8 @@ p.required {
 	margin-bottom:12px;
 }
 
-#col-main-winkelwagen #winkelwagen_container ul.messages li.success-msg span {
+#col-main-winkelwagen #winkelwagen_container ul.messages li.success-msg span,
+#col-main-winkelwagen #winkelwagen_container ul.messages li.error-msg span {
 	color:#071D25;
 	margin:20px 0 0 12px;
 	height:10px;
@@ -2376,16 +2376,39 @@ p.required {
     width: 260px;
 }
 
-  .account-login ul.messages li.error-msg ul li span {
+  .account-login ul.messages li.error-msg ul li span,
+  .account-login ul.messages li.success-msg ul li span {
     float: left;
     font-size: 12px;
     margin-bottom: 0;
     margin-left: 25px;
     margin-right: 0;
-    margin-top: 10px;
+    margin-top: 22px;
     width: 100%;
     color:#FF6D07;
-}
+  }
+
+  .account-login ul.messages li.error-msg ul li span a,
+  .account-login ul.messages li.success-msg ul li span a {
+	color:#1D789A;
+  }
+
+  .account-create ul.messages li.error-msg ul li span,
+  .account-create ul.messages li.success-msg ul li span {
+    float: left;
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-left: 25px;
+    margin-right: 0;
+    margin-top: 22px;
+    width: 100%;
+    color:#FF6D07;
+  }
+
+  .account-create ul.messages li.error-msg ul li span a,
+  .account-create ul.messages li.success-msg ul li span a {
+	color:#1D789A;
+  }
 	
 #col-main-fullwidth .col2-set .col-1 {
     float: left;
@@ -2927,6 +2950,7 @@ p.required {
 
 .my-account .dashboard .page-content #form-validate .buttons-set {
 	width:688px;
+	height:auto;
 	border-bottom:none;
 	border-top:1px solid #B2DCED;
 	margin-top:20px;
@@ -2978,7 +3002,6 @@ p.required {
 
 .my-account .dashboard .page-content #form-validate .fieldset ul.form-list .customer-name .name-firstname {
 	float:left;
-	width:280px;
 }
 
 .my-account .dashboard .page-content #form-validate .fieldset ul.form-list .input-box {
@@ -3865,7 +3888,7 @@ div.my-account div.dashboard div.page-title.title-buttons div.extra-buttons a {
     text-align:center;
     text-decoration:none;
     vertical-align:baseline;
-    width:150px;
+	padding:0 5px 0 5px;
 }
 
 .my-account .dashboard .page-title .button:hover {
@@ -3918,8 +3941,6 @@ div.my-account div.dashboard div.page-title.title-buttons div.extra-buttons a {
   margin-left:16px;
 }
 
-
-
 .customer-address-index .col-right .block-account {
   border:1px solid #b2dced;
 }
@@ -3967,6 +3988,24 @@ div.my-account div.dashboard div.page-title.title-buttons div.extra-buttons a {
   color:#FF6D07;
   text-decoration:none;
 }
+
+/* ----------------------------------------------
+	My account adresboek > Adres toevoegen
+---------------------------------------------- */
+
+.my-account .dashboard .page-content #form-validate .fieldset ul.form-list li.wide .input-box,
+.my-account .dashboard .page-content #form-validate .fieldset ul.form-list li.wide .input-box input {
+	width:520px;
+} 
+
+.my-account .dashboard .page-content #form-validate .fieldset ul.form-list li.fields .field {
+	float:left;
+	margin-right:20px;
+}
+
+
+
+
 
 /* ----------------------------------------------
 	Wachtwoord vergeten?
