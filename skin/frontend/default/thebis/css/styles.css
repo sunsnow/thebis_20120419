@@ -916,6 +916,62 @@ display:none;
 }
 
 /* ----------------------------------------------
+	Sidebar > Cart (Layered Nav)
+---------------------------------------------- */
+
+#main .col-right .block-layered-nav {
+	float:left;
+	margin-top:16px;
+	border:1px solid #B2DCED;
+}
+
+#main .col-right .block-layered-nav .block-content {
+	float:left;
+	padding:10px 0 10px 17px;
+	font-size:12px;
+}
+
+#main .col-right .block-layered-nav .block-content .block-subtitle {
+	margin-bottom:5px;
+}
+
+#main .col-right .block-layered-nav .block-content a {
+	color:#1D789A;
+}
+
+#main .col-right .block-layered-nav .block-content dt {
+	font-weight:bold;
+	margin:7px 0;
+}
+
+#main .col-right .block-layered-nav .block-content .currently {
+	float:left;
+	margin-bottom:15px;
+}
+
+#main .col-right .block-layered-nav .block-content .currently ol li,
+#main .col-right .block-layered-nav .block-content .currently ol li span,
+#main .col-right .block-layered-nav .block-content .currently ol li .btn-remove {
+	float:left;
+}
+
+#main .col-right .block-layered-nav .block-content .currently ol li a {
+	margin-bottom:5px;
+}
+
+#main .col-right .block-layered-nav .block-content .currently .actions {
+	float:left;
+	clear:both;
+	margin-top:14px;
+}
+
+#main .col-right .block-layered-nav .block-content #narrow-by-list ol li {
+	margin:5px 0;
+}
+
+
+
+/* ----------------------------------------------
 	Product Detail Pagina Main
 ---------------------------------------------- */
 
