@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config>
+	<acl>
+		<resources>
+			<all>
+				<title>Allow Everything</title>
+			</all>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<onestepcheckout translate="title" >
+										<title>Magestore</title>
+										<sort_order>50</sort_order>
+									</onestepcheckout>
+								</children>
+							</config>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+	<translate>
+		<modules>
+			<Magestore_Onestepcheckout>
+				 <files>
+						<default>Magestore_Onestepcheckout.csv</default>
+				 </files>
+			</Magestore_Onestepcheckout>
+		</modules>
+	</translate>   
+</config>

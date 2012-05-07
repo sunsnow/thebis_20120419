@@ -1,0 +1,72 @@
+<div class="onestepcheckout-login onestepcheckout-formpopup" id="onestepcheckout-login">
+	<div class="page-title">
+    <h1><?php echo $this->__('LOGIN'); ?></h1>
+	</div>	
+	<div style="float:left;width:100%;">
+		<div class="step-subtitle left"><?php echo $this->__('Please login with your email address and password.');?></div>	
+		<div class="close-box right">
+			<p class="right"><a href="" onclick="javascript:TINY.box.hide();return false">Close</a></p>
+		</div>
+	</div>	
+	<div id="onestepcheckout-login-loading" style="display: none;" class="loading-ajax">&nbsp;</div>
+	<div id="onestepcheckout-login-error-message" style="display:none;"></div>
+	<form action="<?php echo $this->getUrl('customer/account/loginPost');?>" method="post" id="onestepcheckout-login-form">
+		<div class="login-fields">
+			<ul>
+				<li>
+					<div class="input-field">
+						<label><?php echo $this->__('Email Address');?><span class="required">*</span></label>
+						<div class="clear"></div>
+						<input type="text" name="osclogin[email_address]" id="osclogin:email_address" class="input-text required-entry validate-email" value=""/>
+					</div>
+				</li>
+				<li>
+					<div class="input-field">
+						<label><?php echo $this->__('Password');?><span class="required">*</span></label>
+						<div class="clear"></div>
+						<input type="password" name="osclogin[password]" id="osclogin:password" class="input-text required-entry validate-password" value=""/>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="login-button">
+			<p class="left"><a href="" onclick="showPasswordForm();return false;">Forgotten Password?</a></p>
+			<p class="right">
+				<button type="button" class="button" title="<?php echo $this->__('Login') ?>" name="button-login" id="osc-button-login" onclick="submitLoginForm(); return false;"><span><span><?php echo $this->__('Login') ?></span></span></button>
+			</p>	
+		</div>
+	</form>
+</div>
+
+<!-- Forgot password field-->
+<div class="onestepcheckout-forgot-password onestepcheckout-formpopup" id="onestepcheckout-forgot-password" style="display:none;">
+	<div class="page-title">
+		<h1><?php echo $this->__('Forgot Your Password?') ?></h1>
+	</div>
+	<div style="float:left;width:100%;">
+		<div class="close-box right">
+			<div class="right"><a href="" onclick="javascript:TINY.box.hide();return false">Close</a></div>
+		</div>
+		<div class="clear"></div>
+		<div class="step-subtitle left"><?php echo $this->__("Please enter your email below and we will send you a new password.");?></div>
+	<div id="onestepcheckout-password-loading" style="display: none;" class="loading-ajax">&nbsp;</div>
+	<div id="onestepcheckout-password-error-message" style="display:none;"></div>
+	<div id="onestepcheckout-password-success-message" style="display:none;">A new password has been sent to your email address. Click the link below to return to login.</div>
+	<form action="" method="post" id="osc-forgotpassword-form">
+		<div class="login-fields">
+			<ul>
+				<li>
+					<div class="input-text">
+						<label><?php echo $this->__('Email Address');?><span class="required">*</span></label>
+						<div class="clear"></div>
+						<input type="text" name="email" alt="email" id="forgotpassword_email_address" class="input-text required-entry validate-email" value="<?php echo $this->htmlEscape($this->getEmailValue()) ?>" />
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="login-button">
+			<p class="back-link left"><a href="" onclick="showloginform();return false;"><small>&laquo; </small><?php echo $this->__('Back to Login') ?></a></p>
+			<p class="right"><button type="button" class="button" title="<?php echo $this->__('Send Password') ?>" onclick="retrievePassword(); return false;"><span><span><?php echo $this->__('Send Password') ?></span></span></button></p>
+		</div>
+	</form>
+</div>

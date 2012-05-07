@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layout>
+	<adminhtml_sales_order_view>
+		<update handle="order_tab_info" />
+		<reference name="order_tab_info">
+			<action method="setTemplate"><template>onestepcheckout/info.phtml</template></action>
+		</reference>
+	</adminhtml_sales_order_view>
+</layout>
