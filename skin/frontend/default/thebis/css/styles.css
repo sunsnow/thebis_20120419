@@ -259,7 +259,6 @@ legend {
 	
 	#header #header_top_right #topnav ul.links {
 		float:left;
-		padding-left:20px;
 		margin-top:-3px;
 	}
 	
@@ -319,6 +318,10 @@ legend {
 	background-repeat:no-repeat;	
 }
 
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
 
 /* ----------------------------------------------
 	Homepagina Content
@@ -909,6 +912,62 @@ display:none;
 .vlak_blauw {
 	background-color:#edf8fc;
 }
+
+/* ----------------------------------------------
+	Sidebar > Cart (Layered Nav)
+---------------------------------------------- */
+
+#main .col-right .block-layered-nav {
+	float:left;
+	margin-top:16px;
+	border:1px solid #B2DCED;
+}
+
+#main .col-right .block-layered-nav .block-content {
+	float:left;
+	padding:10px 0 10px 17px;
+	font-size:12px;
+}
+
+#main .col-right .block-layered-nav .block-content .block-subtitle {
+	margin-bottom:5px;
+}
+
+#main .col-right .block-layered-nav .block-content a {
+	color:#1D789A;
+}
+
+#main .col-right .block-layered-nav .block-content dt {
+	font-weight:bold;
+	margin:7px 0;
+}
+
+#main .col-right .block-layered-nav .block-content .currently {
+	float:left;
+	margin-bottom:15px;
+}
+
+#main .col-right .block-layered-nav .block-content .currently ol li,
+#main .col-right .block-layered-nav .block-content .currently ol li span,
+#main .col-right .block-layered-nav .block-content .currently ol li .btn-remove {
+	float:left;
+}
+
+#main .col-right .block-layered-nav .block-content .currently ol li a {
+	margin-bottom:5px;
+}
+
+#main .col-right .block-layered-nav .block-content .currently .actions {
+	float:left;
+	clear:both;
+	margin-top:14px;
+}
+
+#main .col-right .block-layered-nav .block-content #narrow-by-list ol li {
+	margin:5px 0;
+}
+
+
 
 /* ----------------------------------------------
 	Product Detail Pagina Main
@@ -1952,7 +2011,8 @@ p.required {
 	margin-bottom:12px;
 }
 
-#col-main-winkelwagen #winkelwagen_container ul.messages li.success-msg span {
+#col-main-winkelwagen #winkelwagen_container ul.messages li.success-msg span,
+#col-main-winkelwagen #winkelwagen_container ul.messages li.error-msg span {
 	color:#071D25;
 	margin:20px 0 0 12px;
 	height:10px;
@@ -2370,16 +2430,39 @@ p.required {
     width: 260px;
 }
 
-  .account-login ul.messages li.error-msg ul li span {
+  .account-login ul.messages li.error-msg ul li span,
+  .account-login ul.messages li.success-msg ul li span {
     float: left;
     font-size: 12px;
     margin-bottom: 0;
     margin-left: 25px;
     margin-right: 0;
-    margin-top: 10px;
+    margin-top: 22px;
     width: 100%;
     color:#FF6D07;
-}
+  }
+
+  .account-login ul.messages li.error-msg ul li span a,
+  .account-login ul.messages li.success-msg ul li span a {
+	color:#1D789A;
+  }
+
+  .account-create ul.messages li.error-msg ul li span,
+  .account-create ul.messages li.success-msg ul li span {
+    float: left;
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-left: 25px;
+    margin-right: 0;
+    margin-top: 22px;
+    width: 100%;
+    color:#FF6D07;
+  }
+
+  .account-create ul.messages li.error-msg ul li span a,
+  .account-create ul.messages li.success-msg ul li span a {
+	color:#1D789A;
+  }
 	
 #col-main-fullwidth .col2-set .col-1 {
     float: left;
@@ -2921,6 +3004,7 @@ p.required {
 
 .my-account .dashboard .page-content #form-validate .buttons-set {
 	width:688px;
+	height:auto;
 	border-bottom:none;
 	border-top:1px solid #B2DCED;
 	margin-top:20px;
@@ -2972,7 +3056,6 @@ p.required {
 
 .my-account .dashboard .page-content #form-validate .fieldset ul.form-list .customer-name .name-firstname {
 	float:left;
-	width:280px;
 }
 
 .my-account .dashboard .page-content #form-validate .fieldset ul.form-list .input-box {
@@ -3862,7 +3945,7 @@ div.my-account div.dashboard div.page-title.title-buttons div.extra-buttons a {
     text-align:center;
     text-decoration:none;
     vertical-align:baseline;
-    width:150px;
+	padding:0 5px 0 5px;
 }
 
 .my-account .dashboard .page-title .button:hover {
@@ -3916,8 +3999,6 @@ div.my-account div.dashboard div.page-title.title-buttons div.extra-buttons a {
   margin-left:16px;
 }
 
-
-
 .customer-address-index .col-right .block-account {
   border:1px solid #b2dced;
 }
@@ -3965,6 +4046,24 @@ div.my-account div.dashboard div.page-title.title-buttons div.extra-buttons a {
   color:#FF6D07;
   text-decoration:none;
 }
+
+/* ----------------------------------------------
+	My account adresboek > Adres toevoegen
+---------------------------------------------- */
+
+.my-account .dashboard .page-content #form-validate .fieldset ul.form-list li.wide .input-box,
+.my-account .dashboard .page-content #form-validate .fieldset ul.form-list li.wide .input-box input {
+	width:520px;
+} 
+
+.my-account .dashboard .page-content #form-validate .fieldset ul.form-list li.fields .field {
+	float:left;
+	margin-right:20px;
+}
+
+
+
+
 
 /* ----------------------------------------------
 	Wachtwoord vergeten?

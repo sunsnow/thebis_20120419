@@ -40,11 +40,12 @@
 		</div>
 		<div id="header_top_right">
 			<div id="topnav">
-				<?php echo $this->getChildHtml('topLinks') ?> 
+				<div class="table">
+					<?php echo $this->getChildHtml('topLinks') ?> 
+				</div>
 			</div>
 			<a href="<?php echo $this->getUrl('contact')?>">
-				<div id="contactinfo">
-				</div>
+				<div id="contactinfo"></div>
 			</a>
 		</div>
 	</div>
