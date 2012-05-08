@@ -10,7 +10,7 @@
 <?php endif;?>
 <?php if ($this->isShowShippingAddress()):?>
 	<div id="showhide_shipping" style="display:none;">
-		<h3 id="shipping_step_header" class="step_2"><?php echo($this->__("SHIPPING ADDRESS")); ?></h3>
+		<h3 id="shipping_step_header" class="step_2"><?php echo($this->__("Afleveradres")); ?></h3>
 		<?php if ($this->customerHasAddresses()): ?>
 		  <p><?php echo $this->__('Select a shipping address from your address book or enter a new address.') ?></p>
 		  <p><?php echo $this->getAddressesHtmlSelect('shipping') ?></p>
@@ -51,7 +51,7 @@
 					<?php if ($this->configData['show_region']):?>
 					<div  class="input-box">
 						<label for="shipping:region"><?php echo $this->__('State/Province') ?> <span class="required">*</span></label><br/>
-						<select id="shipping:region_id" name="shipping[region_id]" title="<?php echo $this->__('State/Province') ?>" class="validate-select" style="display:none;width:135px;" >
+						<select id="shipping:region_id" name="shipping[region_id]" title="<?php echo $this->__('State/Province') ?>" class="validate-select" style="display:none;width:224px;" >
 								<option value=""><?php echo $this->__('Please select region, state or province') ?></option>
 						</select>
 						<script type="text/javascript">

@@ -1,0 +1,5 @@
+#testdiv {width:600px; margin:0 auto; border:1px solid #ccc; padding:20px 25px; background:#fff}
+
+#tinybox {position:absolute; display:none; padding:10px; background:#fff url(../../images/onestepcheckout/preload.gif) no-repeat 50% 50%; border:10px solid #e3e3e3; z-index:2000}
+#tinymask {position:absolute; display:none; top:0; left:0; height:100%; width:100%; background:#000; z-index:1500}
+#tinycontent {background:#fff}

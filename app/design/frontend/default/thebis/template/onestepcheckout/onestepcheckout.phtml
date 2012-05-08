@@ -1,8 +1,9 @@
 <ol class="one-step-checkout clearfix">
-	<li>
+	<div id="page-title">
 		<h1 class="checkout_header"><?php echo $this->getCheckoutTitle();?></h1>
-		<b><?php echo $this->configData['checkout_description'] ? $this->configData['checkout_description'] : 'Please fill in the fields below and click Place order to complete your purchase!';?></b>
-	</li>
+	</div>
+		<p class="uitleg_onestep"><?php echo $this->configData['checkout_description'] ? $this->configData['checkout_description'] : 'Please fill in the fields below and click Place order to complete your purchase!';?></p>
+
 	<?php if ($this->isShowLoginLink() && !$this->isCustomerLoggedIn()):?>
 	<li>
 		<a href="#" id="show-login" onclick ="showloginbox();return false;">
@@ -22,7 +23,7 @@
 					<?php if (!$this->isVirtual() && !Mage::helper('onestepcheckout')->isHideShippingMethod()):?>
 					<li class="shipping-method">						
 						<h3  id="shipping_method_step_header" class="step_2">
-							<?php echo $this->__('SHIPPING METHOD'); ?>
+							<?php echo $this->__('Verzending'); ?>
 						</h3>
 						<div class="onestepcheckout-shipping-method-section">
 							<?php echo $this->getChildHtml('onestepcheckout.shipping_method'); ?>						
@@ -35,14 +36,14 @@
 					<?php endif;?>
 					<li class="payment-method">						
 						<h3 id="payment_method_step_header" <?php if (!$this->isVirtual() && !Mage::helper('onestepcheckout')->isHideShippingMethod()):?> class="step_3"<?php else:?> class="step_2"<?php endif;?>>
-							<?php echo $this->__('PAYMENT METHOD'); ?>
+							<?php echo $this->__('Betaalmethode'); ?>
 						</h3>						
 						<?php echo $this->getChildHtml('onestepcheckout.payment_method'); ?>												
 					</li>
 					<?php if ($this->configData['page_layout'] == '2columns'):?>
 					<li class="order-review-info">						
 						<h3 id="review_step_header" <?php if (!$this->isVirtual() && !Mage::helper('onestepcheckout')->isHideShippingMethod()):?> class="step_4" <?php else:?> class="step_3"<?php endif?>>
-							<?php echo $this->__('ORDER REVIEW'); ?>
+							<?php echo $this->__('Bestelling'); ?>
 						</h3>					
 						<?php echo $this->getChildHtml('onestepcheckout.review') ?>						
 						<div class="ajax-loader3" id="ajax-loader3"  style="display:none;"></div>
@@ -56,7 +57,7 @@
 				<ol>
 					<li class="order-review-info">						
 						<h3 id="review_step_header" <?php if (!$this->isVirtual() && !Mage::helper('onestepcheckout')->isHideShippingMethod()):?> class="step_4" <?php else:?> class="step_3"<?php endif?>>
-							<?php echo $this->__('ORDER REVIEW'); ?>
+							<?php echo $this->__('Bestelling'); ?>
 						</h3>					
 						<?php echo $this->getChildHtml('onestepcheckout.review') ?>						
 						<div class="ajax-loader3" id="ajax-loader3"  style="display:none;"></div>
