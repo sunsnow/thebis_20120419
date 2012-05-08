@@ -1590,7 +1590,6 @@ display:none;
 	display:none;
 }
 
-
 /* ----------------------------------------------
 	Info Pagina
 ---------------------------------------------- */
@@ -2581,8 +2580,7 @@ p.required {
 #col-main-fullwidth #my_account_container .form-list label.required em {
 	float:left;
 	color:#15566F;
-}
-	
+}	
 	
 #col-main-fullwidth #my_account_container .account-create .page-title { 
 	float:left;
