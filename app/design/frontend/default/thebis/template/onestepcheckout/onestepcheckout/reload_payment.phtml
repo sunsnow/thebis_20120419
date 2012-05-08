@@ -1,0 +1,9 @@
+<?php
+$payment_method_html = $this->getChildHtml('onestepcheckout_payment_method');
+$review_total_html = $this->getChildHtml('onestepcheckout_review');
+
+$result = array('payment' => $payment_method_html, 
+								'review' => $review_total_html);
+								
+echo Zend_Json::encode($result);
+?>

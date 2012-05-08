@@ -1,0 +1,93 @@
+<?php $_helper = Mage::helper('onestepcheckout');?>
+
+<div id="checkout-review-load" class="default-box">
+  <?php echo $this->getChildHtml('info') ?>
+</div>
+
+<!-- Begin of Discount section -->
+<?php if ($_helper->showDiscount()):?>
+<div class="onestepcheckout-discount">
+	<?php $_couponCode = $this->getQuote()->getCouponCode(); ?>
+	<b><?php echo $this->__('Discount Codes') ?></b>
+	<div class="discount-form">
+		<label for="coupon_code"><?php echo $this->__('Enter your coupon code if you have one.') ?></label>
+		<input type="hidden" name="remove" id="remove-coupon-onestepcheckout" value="0" />
+		<div class="input-box">
+			<input class="input-text" id="coupon_code_onestepcheckout" autocomplete="off" name="coupon_code" value="<?php echo $this->htmlEscape($_couponCode) ?>" />
+			<button type="button" id="add_coupon_code_button" title="<?php echo $this->__('Apply Coupon') ?>" class="button" value="<?php echo $this->__('Apply Coupon') ?>"><span><span><?php echo $this->__('Apply Coupon') ?></span></span></button>			
+			<button type="button" id="remove_coupon_code_button" title="<?php echo $this->__('Cancel Coupon') ?>" class="button" value="<?php echo $this->__('Cancel Coupon') ?>" <?php if(!strlen($_couponCode)): ?> style="display:none;"<?php endif?>><span><span><?php echo $this->__('Cancel Coupon') ?></span></span></button>
+
+		</div>		
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+	//document.observe('dom:loaded', function() {
+	//fix for IE9
+	Event.observe(window, 'load', function() {
+		var add_coupon_url = '<?php echo $this->getUrl('onestepcheckout/index/add_coupon', array('_secure'=>true)); ?>';
+		Event.observe('add_coupon_code_button', 'click', function() {	
+			var coupon_code = $('coupon_code_onestepcheckout').value;
+			if(coupon_code == '')	{
+				alert('<?php echo $this->__('Please enter coupon code.'); ?>');
+				return;
+			}			
+			add_coupon_code(add_coupon_url);			
+		});
+		
+		Event.observe('remove_coupon_code_button', 'click', function() {
+			remove_coupon_code(add_coupon_url);
+		});
+	});
+//]]>
+</script>
+<?php endif;?>
+<!-- End of discount section-->
+
+<?php //echo $this->getChildHtml('agreements') ?>
+
+<!-- Order comment -->
+<?php if ($_helper->enableOrderComment()):?>
+<div class="onestepcheckout-comment">
+	<label for="onestepcheckout_comment"><?php echo $this->__('Comments');?></label><br/>
+	<textarea id="onestepcheckout_comment" name="onestepcheckout_comment" col="15"></textarea>	
+</div>
+<?php endif;?>
+
+<!-- Gift message for order -->
+<?php if ($_helper->enableGiftMessage()):?>
+<div class="onestepcheckout-giftmessage">
+	<?php if (!$this->getQuote()->isVirtual()): ?>
+    <?php echo Mage::helper('onestepcheckout/message')->getInline('onepage_checkout', $this->getQuote(), $this->getDontDisplayContainer()) ?>
+	<?php endif; ?>
+</div>
+<?php endif;?>
+
+<!-- Newsletter Subscriber -->
+<?php if ($_helper->isShowNewsletter()):?>
+<div class="onestepcheckout-newsletter">
+	<input type="checkbox" name="newsletter_subscriber_checkbox" id="newsletter_subscriber_checkbox" value="1" <?php if ($_helper->isSubscribeByDefault()):?> checked="checked"<?php endif;?>/>
+	<label for="newsletter_subscriber_checkbox"><?php echo $this->__('Sign Up for Our Newsletter');?></label>
+</div>
+<?php endif;?>
+
+<!-- Terms and Conditions -->
+<?php if ($_helper->enableTermsAndConditions()):?>
+<script type="text/javascript">
+ //<![CDATA[
+ var term_popup_width = '<?php echo $_helper->getTermPopupWidth(); ?>';
+ var term_popup_height = '<?php echo $_helper->getTermPopupHeight(); ?>';
+ //]]>
+</script>
+<div class="onestepcheckout-terms-conditions">
+	<input type="checkbox" name="terms_conditions_checkbox" id="terms_conditions_checkbox_id" value="1" class="required-entry"/>
+	<label for="terms_conditions_checkbox_id"><?php echo $this->__('I read and agree to ');?> <a href="#" onclick="showTermsAndCondition(); return false;"><?php echo $this->__('Terms and Conditions');?></a></label>
+</div>
+<?php endif;?>
+
+<div class="content button-set clearfix">
+  <p class="left"><?php echo $this->__('Forgot an Item?') ?> <a href="<?php echo $this->getUrl('checkout/cart') ?>"><?php echo $this->__('Edit Your Cart') ?></a></p>
+  <p>
+		<button id="onestepcheckout-button-place-order" type="button" title="<?php echo $this->__('Place Order') ?>" class="button btn-red-2 right"><span><span><span><?php echo $this->__('Place Order') ?></span></span></span></button>
+  </p>
+</div>

@@ -2095,6 +2095,13 @@ p.required {
 	padding:0 0 4px 0;
 }
 
+#col-main-winkelwagen #winkelwagen_container form p.error {
+	float:left;
+	margin-left:35px;
+    padding:0 5px 4px 0;
+	color:#FF6D07;
+}
+
 #col-main-winkelwagen #winkelwagen_container form .product-imageproduct-image {
 	float:left;
 	margin-left:10px;
@@ -2103,8 +2110,8 @@ p.required {
 
 #col-main-winkelwagen #winkelwagen_container #cart_detail_left{
 	float:left;
-	width:360px;
-	padding-top:176px;
+	width:336px;
+	padding-top:198px;
 	padding-left:10px;
 }
 
@@ -2139,6 +2146,7 @@ p.required {
 #col-main-winkelwagen #winkelwagen_container #cart_detail_right{
 	float:right;
 	width:360px;
+	margin-top:-224px;
 }
 
 

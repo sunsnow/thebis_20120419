@@ -1,0 +1,304 @@
+<ol class="one-step-checkout clearfix">
+	<li>
+		<h1 class="checkout_header"><?php echo $this->getCheckoutTitle();?></h1>
+		<b><?php echo $this->configData['checkout_description'] ? $this->configData['checkout_description'] : 'Please fill in the fields below and click Place order to complete your purchase!';?></b>
+	</li>
+	<?php if ($this->isShowLoginLink() && !$this->isCustomerLoggedIn()):?>
+	<li>
+		<a href="#" id="show-login" onclick ="showloginbox();return false;">
+		<?php echo $this->configData['login_link_title'] ? $this->configData['login_link_title'] : $this->__('Already have an account?Click here to login')?>
+		</a>
+	</li>
+	<?php endif?>
+	<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+	<li class="address-order">
+		<form id="one-step-checkout-form" method="post" action="<?php echo $this->getCheckoutUrl(); ?>">
+			<div class="address-information <?php if ($this->configData['page_layout'] == '3columns'):?>address-info-3-columns<?php endif;?>">
+				<?php echo $this->getChildHtml('onestepcheckout.billing');?>				
+				<?php echo $this->getChildHtml('onestepcheckout.shipping');?>
+			</div>
+			<div class="order-information <?php if ($this->configData['page_layout'] == '3columns'):?>order-info-3-columns<?php endif;?>">
+				<ol>
+					<?php if (!$this->isVirtual() && !Mage::helper('onestepcheckout')->isHideShippingMethod()):?>
+					<li class="shipping-method">						
+						<h3  id="shipping_method_step_header" class="step_2">
+							<?php echo $this->__('SHIPPING METHOD'); ?>
+						</h3>
+						<div class="onestepcheckout-shipping-method-section">
+							<?php echo $this->getChildHtml('onestepcheckout.shipping_method'); ?>						
+						</div>
+						<div class="ajax-loader1" id="ajax-loader1" style="display:none;"></div>
+					</li>
+					<?php elseif (Mage::helper('onestepcheckout')->isHideShippingMethod()):?>
+						<?php $_shippingMethod = $this->hasOnlyOneShippingMethod();?>
+						<span class="no-display"><input name="shipping_method" type="radio" value="<?php echo $_shippingMethod;?>" id="s_method_<?php echo $_shippingMethod; ?>" checked="checked" /></span>
+					<?php endif;?>
+					<li class="payment-method">						
+						<h3 id="payment_method_step_header" <?php if (!$this->isVirtual() && !Mage::helper('onestepcheckout')->isHideShippingMethod()):?> class="step_3"<?php else:?> class="step_2"<?php endif;?>>
+							<?php echo $this->__('PAYMENT METHOD'); ?>
+						</h3>						
+						<?php echo $this->getChildHtml('onestepcheckout.payment_method'); ?>												
+					</li>
+					<?php if ($this->configData['page_layout'] == '2columns'):?>
+					<li class="order-review-info">						
+						<h3 id="review_step_header" <?php if (!$this->isVirtual() && !Mage::helper('onestepcheckout')->isHideShippingMethod()):?> class="step_4" <?php else:?> class="step_3"<?php endif?>>
+							<?php echo $this->__('ORDER REVIEW'); ?>
+						</h3>					
+						<?php echo $this->getChildHtml('onestepcheckout.review') ?>						
+						<div class="ajax-loader3" id="ajax-loader3"  style="display:none;"></div>
+					</li>
+					<?php endif;?>
+				</ol>
+			</div>
+			
+			<?php if ($this->configData['page_layout'] == '3columns'):?>
+			<div class="order-review-section">
+				<ol>
+					<li class="order-review-info">						
+						<h3 id="review_step_header" <?php if (!$this->isVirtual() && !Mage::helper('onestepcheckout')->isHideShippingMethod()):?> class="step_4" <?php else:?> class="step_3"<?php endif?>>
+							<?php echo $this->__('ORDER REVIEW'); ?>
+						</h3>					
+						<?php echo $this->getChildHtml('onestepcheckout.review') ?>						
+						<div class="ajax-loader3" id="ajax-loader3"  style="display:none;"></div>
+					</li>
+				</ol>
+			</div>
+			<?php endif;?>
+			
+		</form>
+	</li>
+</ol>
+<script type="text/javascript">
+//<![CDATA[
+	var preloadImage = '<?php echo $this->getSkinUrl('images/onestepcheckout/preload.gif')?>';
+	var shipping_method_url = '<?php echo $this->getUrl('onestepcheckout/index/save_shipping', array('_secure' => true));?>';
+	var enable_update_payment = <?php echo $this->configData['update_payment'] ? 'true' : 'false'; ?>;
+  var login_url = '<?php echo $this->getUrl('onestepcheckout/index/show_login', array('_secure' => true));?>';	
+	var show_login_link = <?php echo $this->configData['show_login_link'] ? 'true' : 'false'; ?>;
+	var show_term_condition_url = '<?php echo $this->getUrl('onestepcheckout/index/show_term_condition', array('_secure' => true));?>';
+	var form = $('one-step-checkout-form');
+	var reload_payment = <?php echo $this->configData['reload_payment']; ?>
+	
+	function showloginbox() {
+		var url = '<?php echo $this->getUrl('onestepcheckout/index/show_login', array('_secure' => true));?>';
+		showLogin(url);
+	}
+
+	function showforgotpwd() {
+		var url = '<?php echo $this->getUrl('onestepcheckout/index/show_password', array('_secure' => true));?>';
+		showpwdbox(url);
+	}
+	
+	function showPasswordForm() {
+		$('onestepcheckout-login').hide();
+		$('onestepcheckout-forgot-password').show();
+	}
+	
+	function showloginform() {
+		$('onestepcheckout-forgot-password').hide();
+		$('onestepcheckout-login').show();		
+	}
+	
+	function submitLoginForm() {
+		var login_validator = new Validation('onestepcheckout-login-form');
+		if (login_validator.validate()) {
+			showLoginLoading();
+			var url = '<?php echo $this->getUrl('onestepcheckout/index/loginPost', array('_secure' => true))?>';
+			var email = $('osclogin:email_address').value;
+			var password = $('osclogin:password').value;
+			var parameters = {email:email, password:password};			
+			var loginRequest = new Ajax.Request(url, {
+				parameters: parameters,
+				onComplete: loginProcess.bindAsEventListener(this),
+				onFailure: ""
+			});						
+		}
+	}
+	
+	function retrievePassword() {
+		var passwordValidator = new Validation('osc-forgotpassword-form');
+		if (passwordValidator.validate()) {
+			showPassLoading();
+			var url = '<?php echo $this->getUrl('onestepcheckout/index/retrievePassword', array('_secure' => true))?>';
+			var email = $('forgotpassword_email_address').value;
+			var parameters = {email:email};			
+			var loginRequest = new Ajax.Request(url, {
+				parameters: parameters,
+				onComplete: passwordProcess.bindAsEventListener(this),
+				onFailure: ""
+			});
+		}
+	}
+		
+	
+	<?php if ($this->configData['enable_ajax']):?>
+		var save_address_url = '<?php echo $this->getUrl('onestepcheckout/index/save_address', array('_secure' => true))?>';
+		
+		<?php if ($this->isAjaxBillingField('country')):?>
+			//save billing when country is changed
+			Event.observe('billing:country_id', 'change', function() {
+				//check empty fields
+				var empty = checkEmptyFields($('billing-new-address-form'));
+				if(empty == false || reload_payment==2)
+					save_address_information(save_address_url);
+			});
+			<?php if ($this->isShowShippingAddress()):?>
+			Event.observe('shipping:country_id', 'change', function() {
+				//check empty fields
+				var empty = checkEmptyFields($('shipping-new-address-form'));
+				if(empty == false || reload_payment==2)
+					save_address_information(save_address_url);
+			});
+			<?php endif;?>
+		<?php endif;?>
+		
+		<?php if ($this->isAjaxBillingField('state/region')):?>
+			//save billing when state / region is changed
+			<?php if ($this->configData['show_region']):?>
+				Event.observe('billing:region_id', 'change', function() {
+					//check empty fields
+					var empty = checkEmptyFields($('billing-new-address-form'));
+					if(empty == false || reload_payment==2)
+						save_address_information(save_address_url);
+				});
+				Event.observe('billing:region', 'change', function() {
+					//check empty fields
+					var empty = checkEmptyFields($('billing-new-address-form'));
+					if(empty == false || reload_payment==2)
+						save_address_information(save_address_url);
+				});
+				<?php if ($this->isShowShippingAddress()):?>
+				Event.observe('shipping:region_id', 'change', function() {
+					//check empty fields
+					var empty = checkEmptyFields($('shipping-new-address-form'));
+					if(empty == false || reload_payment==2)
+						save_address_information(save_address_url);
+				});
+				Event.observe('shipping:region', 'change', function() {
+					//check empty fields
+					var empty = checkEmptyFields($('shipping-new-address-form'));
+					if(empty == false || reload_payment==2)
+						save_address_information(save_address_url);
+				});
+				<?php endif;?>
+			<?php endif;?>
+		<?php endif;?>
+		
+		<?php if ($this->isAjaxBillingField('postcode')):?>
+			//save billing when postcode is changed
+			<?php if ($this->configData['show_zipcode']):?>
+				Event.observe('billing:postcode', 'change', function() {
+					//check empty fields
+					var empty = checkEmptyFields($('billing-new-address-form'));
+					if(empty == false || reload_payment==2)
+						save_address_information(save_address_url);
+				});
+				<?php if ($this->isShowShippingAddress()):?>
+				Event.observe('shipping:postcode', 'change', function() {
+					//check empty fields
+					var empty = checkEmptyFields($('shipping-new-address-form'));
+					if(empty == false || reload_payment==2)
+						save_address_information(save_address_url);
+				});
+				<?php endif;?>
+			<?php endif?>
+		<?php endif;?>
+		
+		<?php if ($this->isAjaxBillingField('city')):?>
+			//save billing when city is changed
+			<?php if ($this->configData['show_city']):?>
+				Event.observe('billing:city', 'change', function() {
+					//check empty fields
+					var empty = checkEmptyFields($('billing-new-address-form'));
+					if(empty == false || reload_payment==2)
+						save_address_information(save_address_url);
+				});
+				<?php if ($this->isShowShippingAddress()):?>
+				Event.observe('shipping:city', 'change', function() {
+					//check empty fields
+					var empty = checkEmptyFields($('shipping-new-address-form'));
+					if(empty == false || reload_payment==2)
+						save_address_information(save_address_url);
+				});			
+				<?php endif;?>
+			<?php endif?>
+		<?php endif;?>
+		
+		//telephone
+		Event.observe('billing:telephone', 'change', function() {
+			//check empty fields
+			var empty = checkEmptyFields($('billing-new-address-form'));
+			if(empty == false || reload_payment==2)
+				save_address_information(save_address_url);
+		});
+		Event.observe('shipping:telephone', 'change', function() {
+			//check empty fields
+			var empty = checkEmptyFields($('shipping-new-address-form'));
+			if(empty == false || reload_payment==2)
+				save_address_information(save_address_url);
+		});
+	<?php endif?>			
+	
+	//document.observe('dom:loaded', function() {
+	//fix for IE9
+	Event.observe(window, 'load', function() {
+		if($RF(form, 'payment[method]') != null)	{		
+			var payment_method = $RF(form, 'payment[method]');
+			if ($('container_payment_method_' + payment_method)) {
+				$('container_payment_method_' + payment_method).show();
+			}
+			if ($('payment_form_' + payment_method)) {
+				$('payment_form_' + payment_method).show();		
+			}
+		}
+	});
+	
+	function disable_payment(){
+		var options = document.getElementsByName('payment[method]');
+		for(var i=0;i<options.length;i++){
+			if(!$(options[i].id).checked){
+				var container = options[i].id.replace('p_method','container_payment_method');
+				if($(container)){
+					$(container).innerHTML = '';
+				}
+			}
+		}	
+	}
+
+	function checkpayment(){
+	var options = document.getElementsByName('payment[method]');
+		var pay = true;
+		for(var i=0;i<options.length;i++){
+			if($(options[i].id).checked){
+				pay = false;
+				break;
+			}
+		}
+		if(pay==true){
+			return false;
+		}
+		return true;
+	}
+	
+	Event.observe('onestepcheckout-button-place-order', 'click', function(e) {
+		var form = new VarienForm('one-step-checkout-form');
+		var validator = new Validation(this.form);	
+		if (validator.validate()) {			
+			var element = e.element();
+			//disable the button
+			if(checkpayment()) {
+				element.disabled = true;
+				disable_payment();
+				$('one-step-checkout-form').submit();
+			}
+		}
+		else {
+			//alert('Error');
+		}
+	});
+	<?php //if ($this->isCustomerLoggedIn()):?>
+	var save_address_url = '<?php echo $this->getUrl('onestepcheckout/index/save_address', array('_secure' => true))?>';
+	save_address_information(save_address_url);
+	<?php //endif;?>
+//]]>
+</script>
