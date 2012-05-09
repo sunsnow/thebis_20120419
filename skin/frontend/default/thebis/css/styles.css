@@ -56,7 +56,7 @@ ol, ul {
 }
 
 table {/* tables still need 'cellspacing="0"' in the markup */
-	border-collapse: separate;
+	border-collapse: collapse;
 	border-spacing: 0;
 }
 
@@ -4311,6 +4311,7 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 
 #my_account_container ol.one-step-checkout li a {
 	color:#1D789A;
+	display:inline-block;
 }
 
 #my_account_container ol.one-step-checkout #one-step-checkout-form .address-information input {
@@ -4363,7 +4364,26 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 	background:#fff;
 }
 
-
-#my_account_container ol.one-step-checkout #one-step-checkout-form .content {
-	
+.order-information table#checkout-review-table {	
+	line-height:24px;
 }
+
+.order-information table#checkout-review-table td {
+	text-align:right;
+	color:#071d25;
+}
+
+.order-information table#checkout-review-table td.a-right{
+	padding-right:30px;
+}
+
+.order-information table#checkout-review-table td h3{
+	color:#15566f;
+	text-align:left;
+}
+
+.order-information table#checkout-review-table span.price{
+	text-align:right;
+}
+
+.onestepcheckout-payment-methods #container_payment_method_ccsave li .input-box a

@@ -125,7 +125,7 @@
  }
  
  .order-information ol li.shipping-method{
- 	margin-bottom:40px;
+ 	margin-bottom:10px;
  }
  
  .one-step-checkout .login{padding-bottom: 20px;}
@@ -161,8 +161,13 @@
  	z-index:1000;
  }
  
- .shipping-method, .payment-method, .order-review-info{
+.cvv-what-is-this {
+	margin-top:10px;
+}
+ 
+.shipping-method, .payment-method, .order-review-info {
  	position:relative;
+	overflow:hidden;
  }
  
  .ajax-loader1{
@@ -201,7 +206,7 @@
  	list-style:disc;
  }
  
- .one-step-checkout li label{font-size:12px; margin-bottom:3px; line-height:20px;}
+ .one-step-checkout li label{font-size:12px; margin-bottom:3px; line-height:20px; color:#071d25;}
  .one-step-checkout li label span.required{color:#ff6704;}
  .one-step-checkout .login{width:49%;}
  .one-step-checkout h3.step_1
@@ -247,6 +252,7 @@
  	margin-bottom:12px;
  	margin-top:10px;
  	font-size:17px;
+	clear:both;
  }
  
  .one-step-checkout h3.step_5
