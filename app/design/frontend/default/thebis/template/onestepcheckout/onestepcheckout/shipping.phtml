@@ -31,17 +31,46 @@
 				<li class="input-box">			
 					<?php if($this->configData['show_company']): ?>
 					<div class="input-box">
-						<label for="shipping:company"><?php echo $this->__('Company') ?></label><br />
+						<label for="shipping:company"><?php echo $this->__('Company:') ?></label><br />
 						<input type="text" id="shipping:company" name="shipping[company]" value="<?php echo $this->htmlEscape($this->getShippingAddress()->getCompany()) ?>" title="<?php echo $this->__('Company') ?>" class="input-text" />
 					</div>
 					<?php endif; ?>
 				</li>
+				<li>
+					<?php if($this->configData['show_telephone']): ?>
+					<div class="input-box">
+						<label for="shipping:telephone"><?php echo $this->__('Telephone') ?> <span class="required">*</span></label><br/>
+						<input type="text" name="shipping[telephone]" value="<?php echo $this->htmlEscape($this->getShippingAddress()->getShippingTelephone()) ?>" title="<?php echo $this->__('Telephone') ?>" class="required-entry input-text" id="shipping:telephone" />
+					</div>
+					<?php endif; ?>
+					
+					<?php if($this->configData['show_fax']): ?>
+					<div class="input-box">
+						<label for="shipping:fax"><?php echo $this->__('Fax') ?></label><br/>
+						<input type="text" name="shipping[fax]" value="<?php echo $this->htmlEscape($this->getShippingAddress()->getShippingFax()) ?>" title="<?php echo $this->__('Fax') ?>" class="input-text" id="shipping:fax" />
+					</div>
+					<?php endif; ?>
+				</li>	
 				<li class="wide">
 					<label for="shipping:street1"><?php echo $this->__('Address') ?> <span class="required">*</span></label><br />
 					<input type="text" title="<?php echo $this->__('Street Address') ?>" name="shipping[street][]" id="shipping:street1" value="<?php echo $this->htmlEscape($this->getShippingAddress()->getShippingStreet(1)) ?>" class="required-entry input-text"/>
 					<?php for ($_i=2, $_n=$this->helper('customer/address')->getStreetLines(); $_i<=$_n; $_i++): ?>
-					<input type="text" title="<?php echo $this->__('Street Address '.$_i) ?>" name="shipping[street][]" id="shipping:street<?php echo $_i?>" value="<?php echo $this->htmlEscape($this->getShippingAddress()->getShippingStreet($_i)) ?>" class="input-text" />
+					<!-- <input type="text" title="<?php echo $this->__('Street Address '.$_i) ?>" name="shipping[street][]" id="shipping:street<?php echo $_i?>" value="<?php echo $this->htmlEscape($this->getShippingAddress()->getShippingStreet($_i)) ?>" class="input-text" /> -->
 					<?php endfor ?>
+				</li>
+				<li>
+					<?php if($this->configData['show_zipcode']): ?>
+						<div class="input-box">
+							<label for="shipping:postcode"><?php echo $this->__('Zip/Postal Code') ?> <span class="required">*</span></label><br />
+							<input type="text" title="<?php echo $this->__('Zip/Postal Code') ?>" name="shipping[postcode]" id="shipping:postcode" value="<?php echo $this->htmlEscape($this->getShippingAddress()->getShippingZipcode()) ?>" class="validate-zip-international required-entry input-text"/>
+						</div>
+					<?php endif;?>
+					<?php if($this->configData['show_city']): ?>
+					<div class="input-box">
+						<label for="shipping:city"><?php echo $this->__('City') ?> <span class="required">*</span></label><br />
+						<input type="text" title="<?php echo $this->__('City') ?>" name="shipping[city]" value="<?php echo $this->htmlEscape($this->getShippingAddress()->getShippingCity()) ?>" class="required-entry input-text" id="shipping:city" />
+					</div>
+					<?php endif;?>
 				</li>
 				<li>
 					<div  class="input-box">
@@ -61,36 +90,7 @@
 					</div>
 					<?php endif;?>
 				</li>
-				<li>
-					<?php if($this->configData['show_city']): ?>
-					<div class="input-box">
-						<label for="shipping:city"><?php echo $this->__('City') ?> <span class="required">*</span></label><br />
-						<input type="text" title="<?php echo $this->__('City') ?>" name="shipping[city]" value="<?php echo $this->htmlEscape($this->getShippingAddress()->getShippingCity()) ?>" class="required-entry input-text" id="shipping:city" />
-					</div>
-					<?php endif;?>
-					
-					<?php if($this->configData['show_zipcode']): ?>
-						<div class="input-box">
-							<label for="shipping:postcode"><?php echo $this->__('Zip/Postal Code') ?> <span class="required">*</span></label><br />
-							<input type="text" title="<?php echo $this->__('Zip/Postal Code') ?>" name="shipping[postcode]" id="shipping:postcode" value="<?php echo $this->htmlEscape($this->getShippingAddress()->getShippingZipcode()) ?>" class="validate-zip-international required-entry input-text"/>
-						</div>
-					<?php endif;?>
-				</li>
-				<li>
-					<?php if($this->configData['show_telephone']): ?>
-					<div class="input-box">
-						<label for="shipping:telephone"><?php echo $this->__('Telephone') ?> <span class="required">*</span></label><br/>
-						<input type="text" name="shipping[telephone]" value="<?php echo $this->htmlEscape($this->getShippingAddress()->getShippingTelephone()) ?>" title="<?php echo $this->__('Telephone') ?>" class="required-entry input-text" id="shipping:telephone" />
-					</div>
-					<?php endif; ?>
-					
-					<?php if($this->configData['show_fax']): ?>
-					<div class="input-box">
-						<label for="shipping:fax"><?php echo $this->__('Fax') ?></label><br/>
-						<input type="text" name="shipping[fax]" value="<?php echo $this->htmlEscape($this->getShippingAddress()->getShippingFax()) ?>" title="<?php echo $this->__('Fax') ?>" class="input-text" id="shipping:fax" />
-					</div>
-					<?php endif; ?>
-				</li>	  
+				  
         <?php if ($this->isCustomerLoggedIn() && $this->customerHasAddresses()):?>
             <li><input type="checkbox" name="shipping[save_in_address_book]" value="1" title="<?php echo $this->__('Save in address book') ?>" id="shipping:save_in_address_book" <?php if ($this->getShippingAddress()->getSaveInAddressBook()):?> checked="checked"<?php endif;?> /> <label for="shipping:save_in_address_book"><?php echo $this->__('Save in address book') ?></label></li>
         <?php else:?>

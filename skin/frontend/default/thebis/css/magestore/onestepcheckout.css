@@ -302,6 +302,7 @@
  
  .order-review-info .onestepcheckout-terms-conditions label{
  	font-weight:normal;
+	color: #1D789A;
  }
  
  .order-review-info .onestepcheckout-discount {
@@ -354,3 +355,13 @@
  	width:33%;
  	float:left;
  }
+ 
+tr.first.last {
+ border-top:none;
+ }
+tr.last {
+ border-top:1px solid #b8dfee;
+ }
+table#checkout-review-table.data-table {
+margin-right:10px;
+}
