@@ -26,7 +26,84 @@
  	font-size:15px;
  }
  /* Style Onestepcheckout Form Popup */
- .onestepcheckout-formpopup .page-title{text-align:left;}
+ .onestepcheckout-formpopup .page-title{
+	float:left;
+	width:386px; 
+	height:26px; 
+	color:#fff;
+	margin-bottom:18px;
+	padding:10px 0 0 14px;
+	background-image: url('../../images/onestepcheckout/bg_titlebar.png');
+	background-repeat:repeat-x;	
+}
+
+.close-box,
+.close-box a:link,.close-box a:visited,.close-box a:active{
+	float:right;
+	color:#fff;
+	padding-right:5px;
+}
+
+.step-subtitle{
+	margin-bottom:24px;
+}
+
+#wrapper_login{
+	margin-left:11px;
+}
+
+form#onestepcheckout-login-form,
+form#osc-forgotpassword-form{
+	line-height:20px;
+}
+
+form#onestepcheckout-login-form a,
+form#osc-forgotpassword-form a{
+	color:#1D789A;
+	margin-bottom:18px;
+}
+
+form#onestepcheckout-login-form span,
+form#osc-forgotpassword-form span{
+	color:#FF6704;
+}
+
+form#onestepcheckout-login-form input,
+#osc-forgotpassword-form input{
+	border:1px solid #B2DCED;
+    height:22px;
+    margin-bottom:6px;
+    width:222px;
+}
+
+#osc-button-login,
+.login-button .button{
+	float:left;
+	margin-top:20px;
+	font-size:15px;
+	color:#fff;
+	width:110px;
+	height:27px;
+	background-image: url('../../images/onestepcheckout/bg_button_kassa.png');
+	background-repeat:repeat-x;	
+	cursor:pointer;
+	clear:both;
+}
+
+#onestepcheckout-login-form .login-button #osc-button-login span,
+#osc-forgotpassword-form .login-button .button span{
+	color:#fff;
+}
+
+#onestepcheckout-login-form .login-button #osc-button-login:hover,
+#osc-forgotpassword-form .login-button .button:hover{
+	background:#fff;
+	color:#ff6d07;
+	border:1px solid #ff6d07;
+}
+
+
+
  .onestepcheckout-formpopup .page-title h1{color:#F18200;font-size:16px;font-weight:bold;}
  .onestepcheckout-formpopup .login-fields{}
  .onestepcheckout-formpopup .login-fields ul li{margin-bottom:3px;float:left;width:100%;text-align:left;}
