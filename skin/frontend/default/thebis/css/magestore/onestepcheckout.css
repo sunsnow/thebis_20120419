@@ -45,16 +45,19 @@
 }
 
 .step-subtitle{
-	margin-bottom:24px;
+	margin-bottom:19px;
 }
 
 #wrapper_login{
+	float:left;
 	margin-left:11px;
+	overflow:hidden;
 }
 
 form#onestepcheckout-login-form,
 form#osc-forgotpassword-form{
-	line-height:20px;
+	float:left;
+	overflow:hidden;
 }
 
 form#onestepcheckout-login-form a,
@@ -102,6 +105,47 @@ form#onestepcheckout-login-form input,
 	border:1px solid #ff6d07;
 }
 
+#voorwaarden_popup #page-title {
+	float:left;
+	width:486px; 
+	height:26px; 
+	color:#fff;
+	margin-bottom:6px;
+	padding:10px 0 0 14px;
+	background-image: url('../../images/onestepcheckout/bg_titlebar.png');
+	background-repeat:repeat-x;	
+}
+
+#voorwaarden_popup h1 {
+	font-size:15px;
+}
+
+#voorwaarden_popup h2 {
+	margin:10px 0 5px 15px;
+}
+
+#voorwaarden_popup ul {
+	margin-left:14px;
+	margin-bottom:15px;
+}
+
+#voorwaarden_popup a {
+	color:#1D789A;
+}
+
+#voorwaarden_popup p {
+	margin-left:15px;
+	padding-right:10px;
+}
+
+#tinycontent p.a-right a{
+	display:block;
+	padding-left:14px;
+	color:#1D789A;
+	margin:10px 0 10px 0;
+}
+
+
 
 
  .onestepcheckout-formpopup .page-title h1{color:#F18200;font-size:16px;font-weight:bold;}
@@ -110,7 +154,7 @@ form#onestepcheckout-login-form input,
  .onestepcheckout-formpopup .login-fields span.require{color:#EB340A;float:right;}
  .onestepcheckout-formpopup .login-fields .input-field input.input-text{width:200px;}
  .onestepcheckout-formpopup .login-button{float:left;width:100%;}
- .onestepcheckout-login{}
+ .onestepcheckout-login{float:left; overflow:hidden;}
  .onestepcheckout-forgot-password{}
  /************************/
  .one-step-checkout li.section { position:relative; }
