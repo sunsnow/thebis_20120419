@@ -212,6 +212,7 @@ form#onestepcheckout-login-form input,
  }
  
  .one-step-checkout .address-information {
+	position:relative;
  	width:478px;
  	float:left;
  	border-top:0;
@@ -250,12 +251,12 @@ form#onestepcheckout-login-form input,
  }
  
  .one-step-checkout .login{padding-bottom: 20px;}
+ 
  .one-step-checkout .address-order
  {
- 	width:100%; 
- 	margin-top:10px;
- 	
+ 	width:100%; 	
  }
+ 
  #loading-mask-onestepcheckout {
  	position:absolute;
  	color:#d85909;
@@ -288,7 +289,6 @@ form#onestepcheckout-login-form input,
  
 .shipping-method, .payment-method, .order-review-info {
  	position:relative;
-	overflow:hidden;
  }
  
  .ajax-loader1{
