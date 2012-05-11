@@ -4322,6 +4322,9 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 	font-weight:normal;
 	color: #071D25;
 }
+#my_account_container ol.one-step-checkout li.inloggencheckout a:hover {
+	color: #1D789A;
+}
 
 #my_account_container ol.one-step-checkout #one-step-checkout-form .address-information input {
 	width:222px;
