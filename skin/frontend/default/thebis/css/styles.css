@@ -4298,7 +4298,7 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 	height:26px; 
 	color:#fff;
 	margin-left:-9px;
-	margin-bottom:26px;
+	margin-bottom:21px;
 	padding:10px 0 0 14px;
 	background-image: url('../img/bg_titlebar.png');
 	background-repeat:repeat-x;	 
@@ -4315,10 +4315,11 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 }
 
 #my_account_container ol.one-step-checkout li.inloggencheckout a {
-	left: 475px;
+    top: 23px;
+	left:237px;
+	font-size:14px;
     position: absolute;
-    top: 316px;
-	font-weight: bold;
+	font-weight:normal;
 	color: #071D25;
 }
 #my_account_container ol.one-step-checkout li.inloggencheckout a:hover {
@@ -4339,9 +4340,25 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 }
 
 #my_account_container ol.one-step-checkout #one-step-checkout-form .address-information select {
-	width:224px;
+	width:224px !important;
 	height:27px;
 	border:1px solid #B2DCED;
+	margin-bottom:10px;
+}
+
+#my_account_container ol.one-step-checkout #one-step-checkout-form .address-information #billing-address-select,
+#my_account_container ol.one-step-checkout #one-step-checkout-form .address-information #shipping-address-select {
+	margin:10px 0 14px 0;
+}
+
+#my_account_container ol.one-step-checkout #billing-new-address-form ul li.control input,
+#my_account_container ol.one-step-checkout #one-step-checkout-form .address-information #shipping-new-address-form #adresboek_onestep input {
+	width:13px;
+	height:13px;
+}
+
+#my_account_container ol.one-step-checkout #one-step-checkout-form .address-information .input-different-shipping {
+	margin-top:-12px;
 }
 
 #my_account_container ol.one-step-checkout #one-step-checkout-form .address-information #billing-new-address-form .wide input {
