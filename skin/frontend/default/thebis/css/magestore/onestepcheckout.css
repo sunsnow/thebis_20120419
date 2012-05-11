@@ -107,7 +107,7 @@ form#onestepcheckout-login-form input,
 
 #voorwaarden_popup #page-title {
 	float:left;
-	width:486px; 
+	width:100%; 
 	height:26px; 
 	color:#fff;
 	margin-bottom:6px;
@@ -131,6 +131,7 @@ form#onestepcheckout-login-form input,
 
 #voorwaarden_popup a {
 	color:#1D789A;
+	line-height:16px;
 }
 
 #voorwaarden_popup p {
@@ -485,4 +486,7 @@ tr.last {
  }
 table#checkout-review-table.data-table {
 margin-right:10px;
+}
+dl.sp-methods dd ul li {
+margin-bottom:0;
 }
