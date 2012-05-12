@@ -300,7 +300,6 @@ form#onestepcheckout-login-form input,
  	height:32px;
  	background:url(../../images/onestepcheckout/ajax-loader.gif) top left no-repeat;
  	z-index:999;
-	margin-bottom:20px;
  }
  
  .ajax-loader2{
@@ -310,7 +309,6 @@ form#onestepcheckout-login-form input,
  	width:32px;
  	height:32px;
  	background:url(../../images/onestepcheckout/ajax-loader.gif) top left no-repeat;
-	margin-bottom:20px;
  }
  
  .ajax-loader3{
@@ -320,7 +318,6 @@ form#onestepcheckout-login-form input,
  	width:32px;
  	height:32px;
  	background:url(../../images/onestepcheckout/ajax-loader.gif) top left no-repeat;
-	margin-bottom:20px;
  }
  .onestepcheckout-index-success .main{padding:0 10px; width:auto;}
  .checkout-success .page-title h1{color:#6E6E70;}
