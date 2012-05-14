@@ -58,6 +58,7 @@ form#onestepcheckout-login-form,
 form#osc-forgotpassword-form{
 	float:left;
 	overflow:hidden;
+	line-height:22px;
 }
 
 form#onestepcheckout-login-form a,
@@ -288,14 +289,17 @@ form#onestepcheckout-login-form input,
 	margin-top:10px;
 }
  
-.shipping-method, .payment-method, .order-review-info {
- 	position:relative;
+.shipping-method, li.payment-method, .order-review-info {
+	position:relative;
+	min-height:100px;
+	z-index:999;
+	overflow:hidden;
  }
  
  .ajax-loader1{
  	position:absolute;
  	right:300px;
- 	top:40px;
+ 	top:60px;
  	width:32px;
  	height:32px;
  	background:url(../../images/onestepcheckout/ajax-loader.gif) top left no-repeat;
@@ -305,16 +309,16 @@ form#onestepcheckout-login-form input,
  .ajax-loader2{
  	position:absolute;
  	right:300px;
- 	top:40px;
+ 	top:60px;
  	width:32px;
- 	height:32px;
+ 	height:90px;
  	background:url(../../images/onestepcheckout/ajax-loader.gif) top left no-repeat;
  }
  
  .ajax-loader3{
  	position:absolute;
  	right:300px;
- 	top:40px;
+ 	top:60px;
  	width:32px;
  	height:32px;
  	background:url(../../images/onestepcheckout/ajax-loader.gif) top left no-repeat;
@@ -420,11 +424,18 @@ form#onestepcheckout-login-form input,
  
  .order-review-info .onestepcheckout-terms-conditions {
  	padding-top:10px;
+	margin-top:22px;
  }
  
  .order-review-info .onestepcheckout-terms-conditions label{
  	font-weight:normal;
-	color: #1D789A;
+	color:#1D789A;
+ }
+ 
+  .order-review-info .onestepcheckout-terms-conditions .validation-advice{
+ 	font-weight:normal;
+	color:#FF6D07;
+	padding-left:24px;
  }
  
  .order-review-info .onestepcheckout-discount {
@@ -462,6 +473,11 @@ form#onestepcheckout-login-form input,
  
  #gift-message-whole-message {
  	width: 400px;
+ }
+ 
+ #showhide_shipping{
+ float:left;
+ width:100%;
  }
  
  /* for 3 columns layout*/

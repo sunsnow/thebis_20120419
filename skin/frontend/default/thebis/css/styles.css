@@ -1590,6 +1590,13 @@ display:none;
 	display:none;
 }
 
+.category-products .products-grid p.out-of-stock span{
+	float:left;
+	margin-top:13px;
+	color:#FF6D07;
+	font-size:12px;
+}
+
 /* ----------------------------------------------
 	Info Pagina
 ---------------------------------------------- */
@@ -1750,6 +1757,15 @@ form#contactForm div.fieldset #comment.required-entry {
 .form-list select {
     width: 260px;
 }
+
+#payment_form_ops_bankTransfer br {
+display:none;
+}
+
+#payment_form_ops_bankTransfer label{
+margin-right:10px;
+}
+
 .form-list li.wide .input-box {
     width: 535px;
 }
@@ -4357,8 +4373,13 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 	height:13px;
 }
 
+#my_account_container ol.one-step-checkout #billing-new-address-form #email-error-message p {
+	width:458px;
+	color:#FF6D07;
+}
+
 #my_account_container ol.one-step-checkout #one-step-checkout-form .address-information .input-different-shipping {
-	margin-top:-12px;
+	float:left;
 }
 
 #my_account_container ol.one-step-checkout #one-step-checkout-form .address-information #billing-new-address-form .wide input {
@@ -4412,6 +4433,13 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 
 .order-information table#checkout-review-table span.price{
 	text-align:right;
+}
+
+#my_account_container ol.one-step-checkout #one-step-checkout-form .order-information li.payment-method .onestepcheckout-payment-methods dl dd ul {
+	margin:5px 0 5px 25px;
+	font-style:italic;
+	color:#1D789A;
+	font-size:11px;
 }
 
 /* ----------------------------------------------
@@ -4482,6 +4510,6 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 	background:#fff;
 }
 
-
+j
 
 
