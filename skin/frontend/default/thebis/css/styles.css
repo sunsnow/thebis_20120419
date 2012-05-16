@@ -1060,6 +1060,10 @@ display:none;
 		margin:10px 0 0 15px;
 	}
 
+	#messages_product_view { 
+		display:none;
+	}
+
 	#product_info_container .product-view {
 		float:left;
 		margin-bottom:25px;
@@ -4341,6 +4345,7 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 #my_account_container ol.one-step-checkout {
 	margin-left:9px;
 	color:#071d25;
+	width:949px;
 }
 
 #my_account_container ol.one-step-checkout li a {
@@ -4541,6 +4546,7 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 .pager .limiter label { vertical-align:middle; }
 .pager .limiter select { padding:0; margin:0 0 1px; vertical-align:middle; }
 .pager .pages { margin:0 140px; line-height:17px;}
+.pager .pages a { color:#1D789A;}
 .pager .pages ol { display:inline; }
 .pager .pages li { display:inline; margin:0 2px; }
 .pager .pages .current {}
@@ -4552,7 +4558,6 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 .sorter .sort-by label { vertical-align:middle; }
 .sorter .sort-by select { padding:0; margin:0 0 1px; vertical-align:middle; }
 .sorter .link-feed {}
-
 
 
 
