@@ -919,6 +919,7 @@ display:none;
 
 #main .col-right .block-layered-nav {
 	float:left;
+	width:217px;
 	margin-top:16px;
 	border:1px solid #B2DCED;
 }
@@ -939,12 +940,20 @@ display:none;
 
 #main .col-right .block-layered-nav .block-content dt {
 	font-weight:bold;
-	margin:7px 0;
+	padding-top:8px;
+}
+
+#main .col-right .block-layered-nav .block-content dd{
+	padding-bottom:6px;
 }
 
 #main .col-right .block-layered-nav .block-content .currently {
 	float:left;
 	margin-bottom:15px;
+}
+
+#main .col-right .block-layered-nav .block-content .currently ol li {
+	padding-bottom:8px;
 }
 
 #main .col-right .block-layered-nav .block-content .currently ol li,
@@ -4510,6 +4519,31 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 	background:#fff;
 }
 
-j
+/* Toolbar */
+.toolbar {}
+.toolbar .pager { padding:3px 8px; width:514px; float:left; margin-left:10px;}
+.toolbar .sorter {float:right; margin-right:10px; width:152px;}
+.toolbar-bottom {}
+
+/* Pager */
+.pager { font-size:11px; background:#fff url(../images/bkg_toolbar.gif) 0 100% repeat-x; padding:4px 8px; border-top:1px solid #ddd; text-align:center; }
+.pager .amount { float:left; margin:0; }
+.pager .limiter { float:right; }
+.pager .limiter label { vertical-align:middle; }
+.pager .limiter select { padding:0; margin:0 0 1px; vertical-align:middle; }
+.pager .pages { margin:0 140px; }
+.pager .pages ol { display:inline; }
+.pager .pages li { display:inline; margin:0 2px; }
+.pager .pages .current {}
+
+/* Sorter */
+.sorter { font-size:11px; background:#fff url(../images/bkg_toolbar.gif) 0 100% repeat-x; padding:3px 8px; border-top:1px solid #ddd; }
+.sorter .view-mode { float:left; margin:0; }
+.sorter .sort-by { float:right; padding-right:36px; }
+.sorter .sort-by label { vertical-align:middle; }
+.sorter .sort-by select { padding:0; margin:0 0 1px; vertical-align:middle; }
+.sorter .link-feed {}
+
+
 
 
