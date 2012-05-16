@@ -1035,6 +1035,15 @@ display:none;
 		color:#071D25;
 	}
 	
+	.catalog-category-view #product_info_container {
+		float:left;
+		width:718px;
+		min-height:0;
+		border:1px solid #b2dced;
+		padding-bottom: 35px;
+		color:#071D25;
+	}
+	
 	#product_info_container #mainblock-title {
 		float:left;
 		width:704px; 
@@ -4521,25 +4530,25 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 
 /* Toolbar */
 .toolbar {}
-.toolbar .pager { padding:3px 8px; width:514px; float:left; margin-left:10px;}
+.toolbar .pager { padding:10px 8px; width:514px; float:left; margin-left:10px;}
 .toolbar .sorter {float:right; margin-right:10px; width:152px;}
 .toolbar-bottom {}
 
 /* Pager */
-.pager { font-size:11px; background:#fff url(../images/bkg_toolbar.gif) 0 100% repeat-x; padding:4px 8px; border-top:1px solid #ddd; text-align:center; }
+.pager { font-size:11px; padding:9px 8px; border-top:1px solid #B2DCED; text-align:center; }
 .pager .amount { float:left; margin:0; }
 .pager .limiter { float:right; }
 .pager .limiter label { vertical-align:middle; }
 .pager .limiter select { padding:0; margin:0 0 1px; vertical-align:middle; }
-.pager .pages { margin:0 140px; }
+.pager .pages { margin:0 140px; line-height:17px;}
 .pager .pages ol { display:inline; }
 .pager .pages li { display:inline; margin:0 2px; }
 .pager .pages .current {}
 
 /* Sorter */
-.sorter { font-size:11px; background:#fff url(../images/bkg_toolbar.gif) 0 100% repeat-x; padding:3px 8px; border-top:1px solid #ddd; }
+.sorter { font-size:11px; padding:10px 8px; border-top:1px solid #B2DCED; }
 .sorter .view-mode { float:left; margin:0; }
-.sorter .sort-by { float:right; padding-right:36px; }
+.sorter .sort-by { float:right;}
 .sorter .sort-by label { vertical-align:middle; }
 .sorter .sort-by select { padding:0; margin:0 0 1px; vertical-align:middle; }
 .sorter .link-feed {}
