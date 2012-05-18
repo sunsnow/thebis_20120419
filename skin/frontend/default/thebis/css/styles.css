@@ -1589,6 +1589,10 @@ display:none;
 	margin:9px 10px 21px 16px;
 }
 
+#product_info_container #category_list_container .category-products {
+ float:left;
+}
+
 #product_info_container #category_list_container .category-products .first {
  float:left;
  border:none;
@@ -1598,6 +1602,10 @@ display:none;
 	float:left;
 	margin-bottom:38px;
 	border:none;
+}
+
+.catalog-category-view #product_info_container #category_list_container .category-products ul.last {
+	margin-bottom:0px;
 }
 
 .category-products .products-grid .item .price-box-bundle .price-from {
@@ -4353,7 +4361,7 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 	display:inline-block;
 }
 
-#my_account_container ol.one-step-checkout li.inloggencheckout a {
+#my_account_container ol.one-step-checkout .inloggencheckout a {
     top: 23px;
 	left:237px;
 	font-size:14px;
@@ -4361,8 +4369,14 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 	font-weight:normal;
 	color: #071D25;
 }
-#my_account_container ol.one-step-checkout li.inloggencheckout a:hover {
+#my_account_container ol.one-step-checkout .inloggencheckout a:hover {
 	color: #1D789A;
+}
+
+
+#my_account_container ol.one-step-checkout #one-step-checkout-form {
+	float:left;
+	width:949px;
 }
 
 #my_account_container ol.one-step-checkout #one-step-checkout-form .address-information input {
@@ -4390,6 +4404,11 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 	margin:10px 0 14px 0;
 }
 
+
+#my_account_container ol.one-step-checkout #billing-new-address-form ul{
+	overflow:hidden;
+}
+
 #my_account_container ol.one-step-checkout #billing-new-address-form ul li.control input,
 #my_account_container ol.one-step-checkout #one-step-checkout-form .address-information #shipping-new-address-form #adresboek_onestep input {
 	width:13px;
@@ -4403,6 +4422,9 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 
 #my_account_container ol.one-step-checkout #one-step-checkout-form .address-information .input-different-shipping {
 	float:left;
+	width:200px;
+	height:20px;
+	overflow:hidden;
 }
 
 #my_account_container ol.one-step-checkout #one-step-checkout-form .address-information #billing-new-address-form .wide input {
@@ -4533,11 +4555,53 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 	background:#fff;
 }
 
+li#password_section_id {
+	display:inline;
+	width:478px;
+	float:left;
+	clear:both;
+}
+
+
+
 /* Toolbar */
-.toolbar {}
+.toolbar {float:left; overflow:hidden;}
 .toolbar .pager { padding:10px 8px; width:514px; float:left; margin-left:10px;}
 .toolbar .sorter {float:right; margin-right:10px; width:152px;}
 .toolbar-bottom {}
+
+/* Toolbar Top */
+
+#toolbar_top {
+	float:left;
+	width:708px;
+	height:24px;
+	margin-bottom:25px;
+}
+
+#toolbar_top .toolbar { 
+	margin-top:-16px;
+}
+
+#toolbar_top .toolbar .pager { 
+	margin:0;
+	border:0;
+	border-bottom:1px solid #B2DCED;
+}
+
+#toolbar_top .toolbar .sorter { 
+	border:0;
+	border-bottom:1px solid #B2DCED;
+}
+
+/* Toolbar Bottom*/
+
+#toolbar_bottom {
+	float:left;
+	width:718px;
+	height:24px;
+	margin-top:25px;
+}
 
 /* Pager */
 .pager { font-size:11px; padding:9px 8px; border-top:1px solid #B2DCED; text-align:center; }

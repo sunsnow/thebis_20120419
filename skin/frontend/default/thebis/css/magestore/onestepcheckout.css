@@ -214,6 +214,7 @@ form#onestepcheckout-login-form input,
  }
  
  .one-step-checkout .address-information {
+	float:left;
 	position:relative;
  	width:478px;
  	float:left;
@@ -223,6 +224,8 @@ form#onestepcheckout-login-form input,
  }
  
  .address-information ul li{margin-bottom:5px; overflow:hidden;}
+ 
+ .address-information ul ul li{margin-bottom:0; overflow:hidden;}
  
  .address-information ul li .input-box
  {
@@ -236,12 +239,21 @@ form#onestepcheckout-login-form input,
  
  .address-information ul li.wide input{width:78%; clear:both; margin-bottom:3px;}
  
+.inloggencheckout {
+
+}
+ 
  
  .one-step-checkout .order-information {
  	width:450px;
  	float:right;
  	border-top:0;
  	margin-bottom:15px;
+ }
+ 
+  .order-information ol {
+ 	width:450px;
+	float:right;
  }
  
  .order-information ol li{

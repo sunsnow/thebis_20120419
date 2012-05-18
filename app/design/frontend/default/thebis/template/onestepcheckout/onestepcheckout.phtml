@@ -10,11 +10,11 @@
 		<form id="one-step-checkout-form" method="post" action="<?php echo $this->getCheckoutUrl(); ?>">
 			<div class="address-information <?php if ($this->configData['page_layout'] == '3columns'):?>address-info-3-columns<?php endif;?>">
 				<?php if ($this->isShowLoginLink() && !$this->isCustomerLoggedIn()):?>
-				<li class="inloggencheckout">
+				<div class="inloggencheckout">
 					<a href="#" id="show-login" onclick ="showloginbox();return false;">
 					<?php echo $this->configData['login_link_title'] ? $this->configData['login_link_title'] : $this->__('Already have an account? Click here to login')?>
 					</a>
-				</li>
+				</div>
 				<?php endif?>
 				<?php echo $this->getChildHtml('onestepcheckout.billing');?>				
 				<?php echo $this->getChildHtml('onestepcheckout.shipping');?>

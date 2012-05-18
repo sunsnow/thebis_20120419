@@ -42,7 +42,9 @@
 <?php else: ?>
 
 <div id="category_list_container">
-<?php echo $this->getToolbarHtml() ?>
+<div id="toolbar_top">
+	<?php echo $this->getToolbarHtml() ?>
+</div>
 <div class="category-products">
     <?php // List mode ?>
     <?php if($this->getMode()!='grid'): ?>
@@ -138,6 +140,8 @@
     <?php endif; ?>
 </div>
 </div>
-<?php echo $this->getToolbarHtml() ?> 
+<div id="toolbar_bottom">
+	<?php echo $this->getToolbarHtml() ?> 
+</div>
 <?php endif; ?>
 
