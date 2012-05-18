@@ -214,6 +214,7 @@ form#onestepcheckout-login-form input,
  }
  
  .one-step-checkout .address-information {
+	float:left;
 	position:relative;
  	width:478px;
  	float:left;
@@ -235,6 +236,10 @@ form#onestepcheckout-login-form input,
  }
  
  .address-information ul li.wide input{width:78%; clear:both; margin-bottom:3px;}
+ 
+.inloggencheckout {
+
+}
  
  
  .one-step-checkout .order-information {
