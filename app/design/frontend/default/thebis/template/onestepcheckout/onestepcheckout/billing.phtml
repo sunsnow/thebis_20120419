@@ -107,13 +107,14 @@
 		</script>
 		<?php endif;?>
 		<?php if (!$this->isCustomerLoggedIn() && (Mage::helper('onestepcheckout')->enableRegistration() || !Mage::helper('onestepcheckout')->allowGuestCheckout())):?>
+		<ul>
 		<li id="password_section_id" <?php if (!Mage::helper('onestepcheckout')->allowGuestCheckout()):?>style="display:block"<?php else:?>style="display:none"<?php endif?>>
 			<div class="input-box">
-				<label for="billing:customer_password"><?php echo $this->__('Password') ?> <span class="required">*</span></label><br/>
+				<label for="billing:customer_password"><?php echo $this->__('Password') ?> <span class="required">*</span></label>
 				<input type="password" name="billing[customer_password]" id="billing:customer_password" title="<?php echo $this->__('Password') ?>" class="input-text required-entry validate-password" />
 			</div>
 			<div class="input-box">
-				<label for="billing:confirm_password"><?php echo $this->__('Confirm Password') ?> <span class="required">*</span></label><br/>
+				<label for="billing:confirm_password"><?php echo $this->__('Confirm Password') ?> <span class="required">*</span></label>
 				<input type="password" name="billing[confirm_password]" title="<?php echo $this->__('Confirm Password') ?>" id="billing:confirm_password" class="input-text required-entry validate-cpassword" />
 			</div>
 		</li>			
@@ -137,6 +138,7 @@
 		<li>
 			<input type="hidden" name="billing[use_for_shipping]" id="billing:use_for_shipping" value="1" />
 		</li>
+		</ul>
 	</ul>
 </fieldset>
 <script type="text/javascript">var countryRegions = <?php echo $this->helper('directory')->getRegionJson() ?></script>
