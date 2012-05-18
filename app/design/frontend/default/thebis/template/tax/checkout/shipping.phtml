@@ -29,14 +29,14 @@
  */
 ?>
 <?php if ($this->displayBoth()):?>
-<tr>
+<!-- <tr>
     <td style="<?php echo $this->getStyle() ?>" class="a-right" colspan="<?php echo $this->getColspan(); ?>">
         <?php echo $this->getExcludeTaxLabel() ?>
     </td>
     <td style="<?php echo $this->getStyle() ?>" class="a-right">
         <?php echo $this->helper('checkout')->formatPrice($this->getShippingExcludeTax()) ?>
     </td>
-</tr>
+</tr> // De verzendkosten excl. BTW op de OneStepCheckout is hiermee uitgeschakeld --> 
 <tr>
     <td style="<?php echo $this->getStyle() ?>" class="a-right" colspan="<?php echo $this->getColspan(); ?>">
         <?php echo $this->getIncludeTaxLabel() ?>
