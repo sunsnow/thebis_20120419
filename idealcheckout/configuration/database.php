@@ -13,6 +13,6 @@
 	$aSettings['name'] = 'deb28997n3_mage9';
 
 	// MySQL Table Prefix
-	$aSettings['prefix'] = 'mage_';
+	$aSettings['prefix'] = '';
 
 ?>
