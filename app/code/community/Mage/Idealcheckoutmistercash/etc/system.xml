@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<config>
+	<sections>
+		<payment>
+			<groups>
+				<idealcheckoutmistercash translate="label" module="idealcheckoutmistercash">
+					<label>iDEAL Checkout - Mister Cash</label>
+					<sort_order>700</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label comment">
+							<label>Module Inschakelen</label>
+							<comment><![CDATA[<iframe src="/idealcheckout/mistercash_info.php" height="400" width="280" scrolling="no" frameborder="0"></iframe>]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</active>
+						<title translate="label">
+							<label>Titel van de betaalmethode</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</title>
+						<desc translate="label">
+							<label>Omschrijving van de betaalmethode in de factuur</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</desc>
+						<sort_order translate="label">
+							<label>Betaalmethode sorteer volgorde</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</sort_order>
+					</fields>
+				</idealcheckoutmistercash>
+			</groups>
+		</payment>
+	</sections>
+</config>

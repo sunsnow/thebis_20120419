@@ -1,0 +1,12 @@
+<config>
+	<modules>
+		<Mage_Idealcheckoutpaypal>
+			<active>true</active>
+			<codePool>community</codePool>
+			<depends>
+				<Mage_Payment/>
+			</depends>
+			<version>1.4.0</version>
+		</Mage_Idealcheckoutpaypal>
+	</modules>
+</config>

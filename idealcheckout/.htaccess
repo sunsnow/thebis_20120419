@@ -1,0 +1,13 @@
+
+# Start rewrite engine
+RewriteEngine On
+
+
+# Catch blocked folders
+RewriteRule ^(certificates|configuration|gateways|includes|temp|translations)(/(.*)?)?$ index.html
+
+
+# Catch non existing files and folders
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^(.*)$ index.html [NC,L]
