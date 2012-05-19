@@ -1,16 +1,16 @@
 <?php
 
 	// MySQL Server/Host
-	$aSettings['host'] = 'localhost';
+	$aSettings['host'] = 'dbint047268';
 
 	// MySQL Username
-	$aSettings['user'] = 'deb28997n3_mage9';
+	$aSettings['user'] = 'u047268_root';
 
 	// MySQL Password
-	$aSettings['pass'] = 'Zaa)9dp^*is^2';
+	$aSettings['pass'] = 'b1kv63DCK-Hx0H8G';
 
 	// MySQL Database name
-	$aSettings['name'] = 'deb28997n3_mage9';
+	$aSettings['name'] = 'db047268_thebis_magento_db1';
 
 	// MySQL Table Prefix
 	$aSettings['prefix'] = '';

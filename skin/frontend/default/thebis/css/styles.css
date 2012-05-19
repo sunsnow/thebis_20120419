@@ -1143,6 +1143,7 @@ display:none;
 	   
 	  #product_info_container .product-view .product-collateral .box-additional #product-attribute-specs-table.data-table {
 		margin-bottom: 10px;
+		width:405px;
 	  }
 	  
 	  #product_info_container .product-view .product-collateral .box-additional #product-attribute-specs-table.data-table a:link,
@@ -1233,7 +1234,7 @@ display:none;
 	
 	#product_info_container #product_tabs_specs_contents #tab_detail p{
 		display:block;
-		width:707px;
+		width:100%;
 		padding:10px 0 10px 0;
 	}
 	
@@ -4656,6 +4657,44 @@ li#password_section_id {
 .sorter .sort-by select { padding:0; margin:0 0 1px; vertical-align:middle; }
 .sorter .link-feed {}
 
+/* ----------------------------------------------
+	CMS pagina
+---------------------------------------------- */
+div#pagina_info_container div.std ul.info_pagina_listitems li {
+	line-height: 18px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: disc;
+    margin-left: 15px;
+	margin-bottom:10px;
+    padding-left: 5px;
+}
+
+div#pagina_info_container div.std ol li {
+	clear: both;
+    float: left;
+	line-height: 18px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: decimal;
+    margin-left: 15px;
+	margin-bottom:10px;
+    padding-left: 5px;
+}
+
+div#pagina_info_container div.std ol li ul.info_pagina_ulitems {
+	width:100%;
+	margin-bottom: 33px;
+    margin-left: 0;
+}
+
+div#pagina_info_container div.std ol li ul li{
+	clear: both;
+    float: left;
+	list-style-image: none;
+    list-style-position: outside;
+    list-style-type: disc;
+}
 
 
 
