@@ -1,0 +1,12 @@
+<config>
+	<modules>
+		<Mage_Idealcheckoutdirectebanking>
+			<active>true</active>
+			<codePool>community</codePool>
+			<depends>
+				<Mage_Payment/>
+			</depends>
+			<version>1.4.0</version>
+		</Mage_Idealcheckoutdirectebanking>
+	</modules>
+</config>
