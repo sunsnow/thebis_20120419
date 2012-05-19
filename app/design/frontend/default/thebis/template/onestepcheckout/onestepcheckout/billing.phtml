@@ -91,7 +91,7 @@
 			<?php endif?>
 		</li>
 		<?php if (!$this->isCustomerLoggedIn() && Mage::helper('onestepcheckout')->enableRegistration() && Mage::helper('onestepcheckout')->allowGuestCheckout()):?>
-		<li>
+		<li class="account_creatie">
 			<div class="input-box">
 				<input id="create_account_checkbox_id" type="checkbox" name="create_account_checkbox" value="1" />
 				<label for="create_account_checkbox_id"><?php echo $this->__('Account aanmaken') ?></label>

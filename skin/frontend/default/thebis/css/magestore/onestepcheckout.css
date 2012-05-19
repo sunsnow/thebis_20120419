@@ -63,8 +63,10 @@ form#osc-forgotpassword-form{
 
 form#onestepcheckout-login-form a,
 form#osc-forgotpassword-form a{
+	float:left;
+	height:15px;
 	color:#1D789A;
-	margin-bottom:18px;
+	
 }
 
 form#onestepcheckout-login-form span,
@@ -80,10 +82,20 @@ form#onestepcheckout-login-form input,
     width:222px;
 }
 
+.login-button p {
+	float:left;
+}
+
+.login-button p.right {
+	margin-top:20px;
+	height:27px;
+	clear:both;
+}
+
 #osc-button-login,
 .login-button .button{
 	float:left;
-	margin-top:20px;
+	height:63px;
 	font-size:15px;
 	color:#fff;
 	width:110px;
@@ -151,11 +163,11 @@ form#onestepcheckout-login-form input,
 
 
  .onestepcheckout-formpopup .page-title h1{color:#F18200;font-size:16px;font-weight:bold;}
- .onestepcheckout-formpopup .login-fields{}
+ .onestepcheckout-formpopup .login-fields{float:left;}
  .onestepcheckout-formpopup .login-fields ul li{margin-bottom:3px;float:left;width:100%;text-align:left;}
  .onestepcheckout-formpopup .login-fields span.require{color:#EB340A;float:right;}
  .onestepcheckout-formpopup .login-fields .input-field input.input-text{width:200px;}
- .onestepcheckout-formpopup .login-button{float:left;width:100%;}
+ .onestepcheckout-formpopup .login-button{float:left;width:200px;}
  .onestepcheckout-login{float:left; overflow:hidden;}
  .onestepcheckout-forgot-password{}
  /************************/
@@ -223,7 +235,9 @@ form#onestepcheckout-login-form input,
  	border-right:1px solid #bbe0ef;
  }
  
- .address-information ul li{margin-bottom:5px; overflow:hidden;}
+ .address-information ul li{margin-bottom:5px; overflow:hidden; }
+ 
+ .address-information ul li.account_creatie{min-height:26px; height:auto !important; height:26px; overflow:visible;}
  
  .address-information ul ul li{margin-bottom:0; overflow:hidden;}
  

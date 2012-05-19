@@ -4404,9 +4404,9 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 	margin:10px 0 14px 0;
 }
 
-
-#my_account_container ol.one-step-checkout #billing-new-address-form ul{
-	overflow:hidden;
+#my_account_container ol.one-step-checkout #billing-new-address-form ul ul{
+	float:left;
+	clear:both;
 }
 
 #my_account_container ol.one-step-checkout #billing-new-address-form ul li.control input,
@@ -4594,13 +4594,8 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 }
 
 li#password_section_id {
-	display:inline;
 	width:478px;
-	float:left;
-	clear:both;
 }
-
-
 
 /* Toolbar */
 .toolbar {float:left; overflow:hidden;}
