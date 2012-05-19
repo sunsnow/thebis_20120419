@@ -4,6 +4,7 @@
 "Close","Sluiten"
 "Company:","Bedrijfsnaam: (optioneel)"
 "Confirm Password","Bevestig wachtwoord"
+"Excl. Tax","Verzending"
 "First Name","Voornaam:"
 "Already have an account? Click here to login","inloggen"
 "Last Name","Achternaam:"
@@ -12,3 +13,6 @@
 "totals","TOTAAL:"
 "Stad:","Plaats:"
 "Shipping","Verzending"
+"Shipping","Verzending"
+"Shipping Excl. Tax","Verzending"
+
