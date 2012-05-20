@@ -50,6 +50,7 @@
 "Payment Method","Betaalwijze"
 "Payment from Specific countries","Betaling van specifieke landen."
 "Payment from applicable countries","Betaling van landen die van toepassing zijn."
+"Payment Charge","PayPal 3,6% betalingsfee"
 "Paypal Checkout","PayPal Afrekenen"
 "Paypal IPN Invalid %s.","PayPal IPN ongeldig %s"
 "Paypal Logo Image URL","URL PayPal-logo"

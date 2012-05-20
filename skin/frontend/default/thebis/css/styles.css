@@ -1704,8 +1704,7 @@ display:none;
   position: relative;
   top: -22px;
   float:right;
-	margin:10px 0 0 0;
-  
+  margin:16px 0 0 0;
 }
 
 #contact_info_container {
@@ -1778,7 +1777,7 @@ display:none;
 }
 form#contactForm div.fieldset #comment.required-entry {
     border: 1px solid #B2DCED;
-    width: 602px;
+    width: 595px;
     height: 175px; 
    }
 .form-list textarea {
@@ -4601,7 +4600,7 @@ li#password_section_id {
 /* Toolbar */
 .toolbar {float:left; overflow:hidden;}
 .toolbar .pager { padding:10px 8px; width:514px; float:left; margin-left:10px;}
-.toolbar .sorter {float:right; margin-right:10px; width:152px;}
+.toolbar .sorter {float:right; /*margin-right:10px;*/ width:154px;}
 .toolbar-bottom {}
 
 /* Toolbar Top */
@@ -4650,7 +4649,7 @@ li#password_section_id {
 .pager .pages .current {}
 
 /* Sorter */
-.sorter { font-size:11px; padding:10px 8px; border-top:1px solid #B2DCED; }
+.sorter { font-size:11px; padding:9px 8px 11px 8px; border-top:1px solid #B2DCED; }
 .sorter .view-mode { float:left; margin:0; }
 .sorter .sort-by { float:right;}
 .sorter .sort-by label { vertical-align:middle; }
@@ -4670,30 +4669,39 @@ div#pagina_info_container div.std ul.info_pagina_listitems li {
     padding-left: 5px;
 }
 
+div#pagina_info_container div.std ol {
+	float:left;
+	margin-bottom:13px;
+	margin-top: 9px;
+}
+
 div#pagina_info_container div.std ol li {
 	clear: both;
     float: left;
+	width: 650px;
 	line-height: 18px;
     list-style-image: none;
     list-style-position: outside;
     list-style-type: decimal;
-    margin-left: 15px;
+    margin-left: 35px;
 	margin-bottom:10px;
     padding-left: 5px;
 }
 
 div#pagina_info_container div.std ol li ul.info_pagina_ulitems {
 	width:100%;
-	margin-bottom: 33px;
+	margin-bottom: 0;
     margin-left: 0;
+	line-height: 18px;
 }
 
-div#pagina_info_container div.std ol li ul li{
+div#pagina_info_container div.std ol li ul li {
 	clear: both;
     float: left;
 	list-style-image: none;
     list-style-position: outside;
     list-style-type: disc;
+	margin-bottom: 0;
 }
 
 
