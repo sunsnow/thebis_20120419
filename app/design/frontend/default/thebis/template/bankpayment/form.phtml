@@ -28,9 +28,9 @@
         <?php elseif ($_accounts = $this->getAccounts()): ?>
             <?php if (count($_accounts) == 1): ?>
                 <?php if ($this->getMethod()->getPayWithinXDays() > 0): ?>
-                    <?php echo $this->__('Please transfer the money within %s days to the following bank account', $this->getMethod()->getPayWithinXDays()); ?>:
+                    <?php echo $this->__('U kunt het bedrag overmaken op:', $this->getMethod()->getPayWithinXDays()); ?>:
                 <?php else: ?>
-                    <?php echo $this->__('Please transfer the money to the following bank account'); ?>:
+                    <?php echo $this->__('U kunt het bedrag overmaken op:'); ?>:
                 <?php endif; ?>
             <?php else: ?>
                 <?php if ($this->getMethod()->getPayWithinXDays() > 0): ?>
@@ -63,13 +63,14 @@
                         </tbody>
                     </table>
                     <?php if (($_iban = $_account->getIban()) && ($_bic = $_account->getBic())): ?>
-                        <p><?php echo $this->__('For international transfers please use also following data') ?>:</p>
+                        <p><?php echo $this->__('Gebruik de volgende gegevens bij internationale betalingen:') ?></p>
                         <table>
                             <tbody>
                                 <tr><td><label><?php echo $this->__('IBAN') ?></label>: </td><td><?php echo $_iban ?></td></tr>
                                 <tr><td><label><?php echo $this->__('BIC') ?></label>: </td><td><?php echo $_bic ?></td></tr>
                             </tbody>
                         </table>
+					<p><?php echo $this->__('Wij verwerken uw bestelling zodra het bedrag op onze rekening is ontvangen.'); ?></p>
                     <?php endif; ?>
                 <?php endforeach; ?>
                 <?php if ($_customText = $this->getMethod()->getCustomText()): ?>

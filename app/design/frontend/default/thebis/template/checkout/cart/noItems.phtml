@@ -30,17 +30,16 @@
 	<div class="page-title">
 		<h1><?php echo $this->__('Uw winkelwagen is leeg') ?></h1>
 	</div>
-	<div class="cart-empty">
+	<div class="cart-empty" style="height:200px;">
 		<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
-		<p><?php echo $this->__('Uw winkelwagen is leeg') ?></p>
-		<p><?php echo $this->__('Klik <a href="%s">hier</a> om verder te gaan met winkelen.', $this->getContinueShoppingUrl()) ?></p>
+		<p style="float:left;"><?php echo $this->__('Klik <a href="%s">hier</a> om verder te gaan met winkelen.', $this->getContinueShoppingUrl()) ?></p>
 	</div>
 	
 </div>
 
 <style type="text/css">
 #col-main-winkelwagen #kochten_ook{
-	border:none;
+	display:none;
 }
  </style>
  

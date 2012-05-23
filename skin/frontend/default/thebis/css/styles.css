@@ -216,12 +216,13 @@ legend {
 
 	#header #header_top_left .logo {
 		float:left;
-		width:388px; 
-		height:96px; 
-		margin:30px 0 0 -89px;
+		width:595px; 
+		height:216px; 
+		margin:0 0 0 -122px;
 		background-image: url('../img/logo_thebis.png'); 
 		background-repeat:no-repeat;
 		cursor:pointer;
+		overflow:hidden;
 	}
 
 #header #header_top_right {
@@ -1119,43 +1120,45 @@ display:none;
 		overflow:hidden;
 	}
 	
-		#product_info_container .box-collateral .std p {
+	#product_info_container .box-collateral .std p {
 		margin-bottom: 10px;
 		line-height; 14px;
-	  }
+	}
 	  
-	  #product_info_container .box-collateral .std a:link, 
+	#product_info_container .box-collateral .std a:link, 
     #product_info_container .box-collateral .std a:visited {
 		color:#071d25;
 		text-decoration:none;
-		}
+	}
 	  
-	  #product_info_container .box-collateral .std a:hover {
+	#product_info_container .box-collateral .std a:hover {
 		color:#1d789a;
 		text-decoration:none;
-	  }
+	}
 	  
-	  #product_info_container .product-view .box-collateral.box-additional {
+	#product_info_container .product-view .box-collateral.box-additional {
 		float:left;
+		width:400px;
 		overflow:hidden;
-		line-height: 24px;
+		line-height:24px;
+		clear:both;
 	}
 	   
-	  #product_info_container .product-view .product-collateral .box-additional #product-attribute-specs-table.data-table {
+	#product_info_container .product-view .product-collateral .box-additional #product-attribute-specs-table.data-table {
 		margin-bottom: 10px;
 		width:405px;
-	  }
+	}
 	  
-	  #product_info_container .product-view .product-collateral .box-additional #product-attribute-specs-table.data-table a:link,
-    #product_info_container .product-view .product-collateral .box-additional #product-attribute-specs-table.data-table a:visited {
+	#product_info_container .product-view .product-collateral .box-additional #product-attribute-specs-table.data-table a:link,
+	#product_info_container .product-view .product-collateral .box-additional #product-attribute-specs-table.data-table a:visited {
 		color:#071d25;
 		text-decoration:underline;
-	  }
+	}
 	  
-	  #product_info_container .product-view .product-collateral .box-additional #product-attribute-specs-table.data-table a:hover {
+	#product_info_container .product-view .product-collateral .box-additional #product-attribute-specs-table.data-table a:hover {
 		color:#1d789a;
 		text-decoration:none;
-	  }
+	}
 	
 	#product_info_container .product-view  .product-collateral #product_bottom {
 		width:420px;
@@ -1418,6 +1421,7 @@ display:none;
 	}
 	
 	#product_info_container #product-options-wrapper dt label {
+		float:left;
 		display:block;
 		width:668px;
 		font-size:12px;
@@ -1428,23 +1432,28 @@ display:none;
 	}
 	
 	#product_info_container #product-options-wrapper dd {
+		float:left;
 		margin-left:19px;
 		margin-bottom:15px;
 	}
 	
 	#product_info_container #product-options-wrapper dd .input-box {
+		float:left;
 		font-size:12px;
 		margin-left:3px;
+		margin-bottom:10px;
+		width:500px;
+	}
+	
+	#product_info_container #product-options-wrapper dd .qty-holder {
+		float:right;
+		margin-top:-7px;
 	}
 	
 	#product_info_container #product-options-wrapper dd .input-box .price-notice,
 	#product_info_container #product-options-wrapper dd .input-box .price-notice span.price {
 		color:#1d789a;
 		font-weight:bold;
-	}
-	
-	#product_info_container #product-options-wrapper dd .input-box {
-		margin-bottom:10px;
 	}
 	
 	#product_info_container #product-options-wrapper dd .qty-holder label {
@@ -1477,6 +1486,7 @@ display:none;
 	}
 	
 	#product_info_container #product-options-wrapper dl{
+		float:left;
 		border-bottom:1px solid #badfef;
 	}
 	
@@ -4471,6 +4481,11 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 	padding-right:30px;
 }
 
+.order-information table#checkout-review-table th.a-right{
+	text-align:right;
+	padding-right:30px;
+}
+
 .order-information table#checkout-review-table td h3{
 	color:#15566f;
 	text-align:left;
@@ -4497,7 +4512,7 @@ body.sales-order-print table#my-orders-table tbody .nobr {
 #my_account_container ol.one-step-checkout #one-step-checkout-form .order-information li.payment-method .onestepcheckout-payment-methods dl dd div#payment_block_bankpayment ul {
 	float:left;
 	width:367px;
-	height:200px;
+	height:240px;
 	border:1px solid #BBE0EF;
 	margin-top:20px;
 	margin-right:20px;
