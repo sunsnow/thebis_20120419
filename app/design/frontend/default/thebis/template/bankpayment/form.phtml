@@ -28,9 +28,9 @@
         <?php elseif ($_accounts = $this->getAccounts()): ?>
             <?php if (count($_accounts) == 1): ?>
                 <?php if ($this->getMethod()->getPayWithinXDays() > 0): ?>
-                    <?php echo $this->__('U kunt het bedrag overmaken op:', $this->getMethod()->getPayWithinXDays()); ?>:
+                    <?php echo $this->__('U kunt het bedrag overmaken op:', $this->getMethod()->getPayWithinXDays()); ?>
                 <?php else: ?>
-                    <?php echo $this->__('U kunt het bedrag overmaken op:'); ?>:
+                    <?php echo $this->__('U kunt het bedrag overmaken op:'); ?>
                 <?php endif; ?>
             <?php else: ?>
                 <?php if ($this->getMethod()->getPayWithinXDays() > 0): ?>
