@@ -43,84 +43,13 @@
 	<h3><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
   </div>
   			<?php echo $this->getChildHtml('product_type_data') ?>
-    <div class="product-essential">
+
+	<style type="text/css">
+		.box-additional {display:none;}
+		#product_bottom {display:none;}
+	</style>
 	
-		<?php $specialprice = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialPrice(); 
-			if ($specialprice){?>
-				<img src="<?php echo $this->getSkinUrl('img/label_actie.png');?>" width="124" height="41" class="actieimg_big" /> 
-		<?php } ?>
-	
-		<?php if ($_product->isNew() === true): ?> 
-			<img src="<?php echo $this->getSkinUrl('img/label_nieuw.png');?>" width="124" height="41" class="actieimg_big" /> 
-		<?php endif; ?>
-		
-    <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
-        <div class="no-display">
-            <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
-            <input type="hidden" name="related_product" id="related-products-field" value="" />
-        </div>
-
-            <?php echo $this->getChildHtml('alert_urls') ?>
-            <?php echo $this->getChildHtml('extrahint') ?>
-            <?php echo $this->getChildHtml('other');?>
-
-            <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-                <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
-            <?php endif;?>
-
-        <div class="product-img-box">
-            <?php echo $this->getChildHtml('media') ?>
-        </div>
-
-        <div class="clearer"></div>
-    
-    <script type="text/javascript">
-    //<![CDATA[
-        var productAddToCartForm = new VarienForm('product_addtocart_form');
-        productAddToCartForm.submit = function(button, url) {
-            if (this.validator.validate()) {
-                var form = this.form;
-                var oldUrl = form.action;
-
-                if (url) {
-                   form.action = url;
-                }
-                var e = null;
-                try {
-                    this.form.submit();
-                } catch (e) {
-                }
-                this.form.action = oldUrl;
-                if (e) {
-                    throw e;
-                }
-
-                if (button && button != 'undefined') {
-                    button.disabled = true;
-                }
-            }
-        }.bind(productAddToCartForm);
-
-        productAddToCartForm.submitLight = function(button, url){
-            if(this.validator) {
-                var nv = Validation.methods;
-                delete Validation.methods['required-entry'];
-                delete Validation.methods['validate-one-required'];
-                delete Validation.methods['validate-one-required-by-name'];
-                if (this.validator.validate()) {
-                    if (url) {
-                        this.form.action = url;
-                    }
-                    this.form.submit();
-                }
-                Object.extend(Validation.methods, nv);
-            }
-        }.bind(productAddToCartForm);
-    //]]>
-    </script>
-    </div>
-
-    <div class="product-collateral">
+    <div class="product-collateral-bundle">
 		<?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
 			<div class="box-collateral <?php echo "box-{$alias}"?>">
 				<?php if ($title = $this->getChildData($alias, 'title')):?>
@@ -129,6 +58,8 @@
 				<?php echo $html; ?>
 			</div>
 		<?php endforeach;?>
+		
+		<img id="image_configurator"></img>
 
 		<div id="product_bottom">
 	
@@ -149,6 +80,11 @@
 		</div>
 	</div>
 </div>
+
+<div class="configurator_sub">
+	<h2>Systeem</h2>
+</div>
+
 	<?php if ($_product->isSaleable() && $this->hasOptions()):?>
 		<?php echo $this->getChildChildHtml('container2', '', true, true) ?>
 	<?php endif;?>

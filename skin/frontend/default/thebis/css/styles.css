@@ -1384,6 +1384,45 @@ display:none;
 	Product Detail Pagina Bundle
 ---------------------------------------------- */
 
+#product_info_container .product-view  .product-collateral-bundle {
+	float:left;
+	width:684px;
+	font-size:12px;
+	margin-top:16px;
+	margin-left:18px;
+	line-height:14px;
+}
+
+#product_info_container .product-view  .product-collateral-bundle .box-description {
+	float:left;
+	width:500px;
+	line-height:18px;
+}
+
+#product_info_container .configurator_sub {
+	float:left;
+	width:100%;
+	height:40px;
+	background-color:#edf8fc;
+	margin-bottom:14px;
+}
+
+#product_info_container .configurator_sub h2 {
+	font-size:16px;
+	margin-top:12px;
+	margin-left:14px;
+	color:#071d25;
+}
+
+#product_info_container .product-view  .product-collateral-bundle #image_configurator {
+	float:left;
+	margin-left:35px;
+	background-image: url('../img/icon_config.png');
+	width:107px;
+	height:93px;
+}
+
+
 .product-view .product-collateral #product_bottom .price-box-bundle {
 	float:left;
 	width:400px;
@@ -1420,19 +1459,24 @@ display:none;
 		margin-left:13px;
 	}
 	
+	#product_info_container #product-options-wrapper dt {
+		float:left;
+		clear:both;
+	}
+	
 	#product_info_container #product-options-wrapper dt label {
 		float:left;
 		display:block;
-		width:668px;
+		width:180px;
 		font-size:12px;
 		font-weight:bold;
-		color:#071d25;
-		border-top:1px solid #badfef;
-		padding:13px 0 14px 22px;
+		color:#1d789a;
+		padding:3px 0 14px 2px;
 	}
 	
 	#product_info_container #product-options-wrapper dd {
 		float:left;
+		height:27px;
 		margin-left:19px;
 		margin-bottom:4px;
 	}
@@ -1446,8 +1490,7 @@ display:none;
 	}
 	
 	#product_info_container #product-options-wrapper dd .qty-holder {
-		float:right;
-		margin-top:-33px;
+		display:none;
 	}
 	
 	#product_info_container #product-options-wrapper dd .input-box .price-notice,
@@ -1475,6 +1518,11 @@ display:none;
 		padding-right:5px;
 	}
 	
+	#product_info_container #product-options-wrapper dd select {
+		width:476px;
+		border:1px solid #b8dfee;
+	}
+	
 	#product_info_container #product-options-wrapper dd .options-list li {
 		font-size:12px;
 		height:28px;
@@ -1488,7 +1536,6 @@ display:none;
 	
 	#product_info_container #product-options-wrapper dl{
 		float:left;
-		border-bottom:1px solid #badfef;
 	}
 	
 	#product_info_container #product-options-wrapper dd.last {
