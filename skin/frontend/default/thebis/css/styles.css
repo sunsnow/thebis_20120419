@@ -1407,7 +1407,17 @@ display:none;
 	margin-bottom:14px;
 }
 
-#product_info_container .configurator_sub h2 {
+#product_info_container .configurator_sub2 {
+	top:608px;
+	position:absolute;
+	width:100%;
+	height:40px;
+	background-color:#edf8fc;
+}
+
+
+#product_info_container .configurator_sub h2,
+#product_info_container .configurator_sub2 h2 {
 	font-size:16px;
 	margin-top:12px;
 	margin-left:14px;
@@ -1462,6 +1472,11 @@ display:none;
 	#product_info_container #product-options-wrapper dt {
 		float:left;
 		clear:both;
+	}
+	
+	#product_info_container #product-options-wrapper .titel15,
+	#product_info_container #product-options-wrapper .input15 	{
+		margin-top:76px;
 	}
 	
 	#product_info_container #product-options-wrapper dt label {
@@ -1543,20 +1558,25 @@ display:none;
 		margin-bottom:0;
 	}
 	
-	#product_info_container .product-options-bottom {
+	.product-systeemconfigurator #product_info_container {
+		position:relative;
+	}
+	
+	.product-systeemconfigurator #product_info_container .product-options-bottom {
 		float:left;
 		width:705px;
 		height:68px;
 		clear:both;
 		margin-left:13px;
+		margin-top:24px;
 	}
 	
-	#product_info_container .product-options-bottom .price-box {
+	.product-systeemconfigurator #product_info_container .product-options-bottom .price-box {
 		float:left;
 		width:188px;
 		height:64px;
 		padding:6px 0 6px 0;
-		margin-left:252px;
+		margin-left:208px;
 	}
 	
 	#product_info_container .product-options-bottom .price-box #price_arrow {
@@ -1567,7 +1587,7 @@ display:none;
 		background-repeat:no-repeat;
 	}
 	
-	#product_info_container .product-options-bottom button {
+	.product-systeemconfigurator #product_info_container .product-options-bottom button {
 		float:right;
 		width:138px;
 		height:27px;
@@ -1577,7 +1597,7 @@ display:none;
 		cursor:pointer;
 		font-size:16px;
 		margin-top:14px;
-		margin-right:15px;
+		margin-right:62px;
 		font-family: Tahoma, Arial, Helvetica, sans-serif;
 		background-image: url('../img/bg_button_kassa.png');
 		background-repeat:repeat-x;

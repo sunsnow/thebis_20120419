@@ -32,10 +32,10 @@
 <?php $_default     = $_option->getDefaultSelection(); ?>
 <?php list($_defaultQty, $_canChangeQty) = $this->_getDefaultValues(); ?>
 
-<dt>
+<dt class="titel<?php echo $_option->getId() ?>">
     <label<?php if ($_option->getRequired()) echo ' class="required"' ?>><?php echo $this->htmlEscape($_option->getTitle()) ?><?php if ($_option->getRequired()) echo '<em>*</em>' ?></label>
 </dt>
-<dd<?php if ($_option->decoratedIsLast){?> class="last"<?php }?>>
+<dd class="input<?php echo $_option->getId() ?>">
     <div class="input-box">
     <?php if ($this->_showSingle()): ?>
         <?php echo $this->getSelectionTitlePrice($_selections[0]) ?>
