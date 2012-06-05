@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Desitex_Singleproductcat>
+            <version>1.0.0</version>
+        </Desitex_Singleproductcat>
+    </modules>
+    <frontend>
+        <events>
+        	<catalog_controller_category_init_after>
+                <observers>
+                    <initSingleProductRedirect>
+                        <type>singleton</type>
+                        <class>singleproductcat/observer</class>
+                        <method>initSingleProductRedirect</method>
+                    </initSingleProductRedirect>
+                </observers>
+            </catalog_controller_category_init_after>
+		</events>
+    </frontend>
+    <global>
+    	<models>
+ 	        <singleproductcat>
+                <class>Desitex_Singleproductcat_Model</class>
+            </singleproductcat>
+    	</models>
+    </global>
+</config>

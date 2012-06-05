@@ -293,7 +293,6 @@ Additional block dependant on product type
     </PRODUCT_TYPE_grouped>
 	    <PRODUCT_TYPE_bundle translate="label" module="catalog">
         <label>Catalog Product View (Bundle)</label>
-		<remove name="right"></remove>
         <reference name="product.info">
 			<action method="setTemplate">
 				<template>catalog/product/view_bundle.phtml</template>
