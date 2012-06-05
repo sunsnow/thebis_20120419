@@ -1397,6 +1397,8 @@ display:none;
 	float:left;
 	width:500px;
 	line-height:18px;
+	height:92px;
+	overflow:hidden;
 }
 
 #product_info_container .configurator_sub {
@@ -1502,6 +1504,7 @@ display:none;
 		margin-left:3px;
 		margin-bottom:10px;
 		width:500px;
+		line-height:18px;
 	}
 	
 	#product_info_container #product-options-wrapper dd .qty-holder {
