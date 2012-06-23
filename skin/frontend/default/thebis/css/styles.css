@@ -4694,8 +4694,8 @@ li#password_section_id {
 
 /* Toolbar */
 .toolbar {float:left; overflow:hidden;}
-.toolbar .pager { padding:10px 8px; width:514px; float:left; margin-left:10px;}
-.toolbar .sorter {float:right; /*margin-right:10px;*/ width:154px;}
+.toolbar .pager { padding:10px 8px; width:445px; float:left; margin-left:10px;}
+.toolbar .sorter {float:right; /*margin-right:10px;*/ width:231px;}
 .toolbar-bottom {}
 
 /* Toolbar Top */
@@ -4734,22 +4734,63 @@ li#password_section_id {
 /* Pager */
 .pager { font-size:11px; padding:9px 8px; border-top:1px solid #B2DCED; text-align:center; }
 .pager .amount { float:left; margin:0; }
-.pager .limiter { float:right; }
+.pager .limiter { float:left; margin-left:15px; }
 .pager .limiter label { vertical-align:middle; }
 .pager .limiter select { padding:0; margin:0 0 1px; vertical-align:middle; }
-.pager .pages { margin:0 140px; line-height:17px;}
+.pager .pages { margin:0 20px; line-height:17px;}
 .pager .pages a { color:#1D789A;}
 .pager .pages ol { display:inline; }
 .pager .pages li { display:inline; margin:0 2px; }
 .pager .pages .current {}
 
 /* Sorter */
-.sorter { font-size:11px; padding:9px 8px 11px 8px; border-top:1px solid #B2DCED; }
-.sorter .view-mode { float:left; margin:0; }
-.sorter .sort-by { float:right;}
+.sorter { font-size:11px; padding:9px 8px 11px 8px; border-top:1px solid #B2DCED;}
+.sorter .view-mode { float:left;}
+.sorter .sort-by { float:left; margin-left:32px;}
 .sorter .sort-by label { vertical-align:middle; }
 .sorter .sort-by select { padding:0; margin:0 0 1px; vertical-align:middle; }
 .sorter .link-feed {}
+
+/* ----------------------------------------------
+	Lijstweergave
+---------------------------------------------- */
+
+#col-main .category-products .products-list .item {
+	width:697px;
+}
+
+#col-main .category-products .products-list .item {
+	border:none;
+}
+
+#col-main .category-products .products-list .item a.product-image {
+	float:left;
+}
+
+#col-main .category-products .products-list .item .product-shop {
+	float:left;
+	width:562px;
+	font-size:11px;
+}
+
+#col-main .category-products .products-list .item .product-shop .price-box {
+	width:76px;
+	height:30px;
+	line-height:34px;
+}
+
+#col-main .category-products .products-list .item .product-shop .desc {
+	float:left;
+	clear:both;
+	margin-top:20px;
+}
+
+#col-main .category-products .products-list .item .product-shop .add-to-links{
+	float:left;
+	clear:both;
+}
+
+
 
 /* ----------------------------------------------
 	CMS pagina
