@@ -53,9 +53,9 @@
             </tr>
         <?php endforeach; ?>
 		
-		<?php if($_product->isSaleable() & $qtyLeft > 1): ?>
+		<?php if($_product->isSaleable() & $qtyLeft >= 1): ?>
     
-		<th class="label">Op voorraad (<?php echo ($qtyLeft); ?> stk.):</th>
+		<th class="label">Op voorraad:(<?php echo ($qtyLeft); ?> stks.)</th>
 		<td><?php echo $_product->getVoorraad_positief() ?></td>
 		
 		<?php elseif($_product->isSaleable() & $qtyLeft < 1 & isManageStock == 0): ?>  
