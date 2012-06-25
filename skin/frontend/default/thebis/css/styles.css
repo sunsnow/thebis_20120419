@@ -4895,7 +4895,7 @@ body.cms-klantenservice #pagina_info_container .std {
 
 body.cms-klantenservice #pagina_info_container .std .service_block {
 	float:left;
-	width:190px;
+	width:230px;
 	position:relative;
 }
 
@@ -4916,7 +4916,7 @@ body.cms-klantenservice #pagina_info_container .std ul {
 }
 
 body.cms-klantenservice #pagina_info_container .std ul li{
-	list-style:circle;
+	list-style:disc;
 }
 
 body.cms-klantenservice #pagina_info_container .std .service_block .bg_service {
