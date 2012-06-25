@@ -34,6 +34,12 @@
     $_helper = $this->helper('catalog/output');
     $_product = $this->getProduct()
 ?>
+
+<?php $_product = $this->getProduct() ?>
+     
+     <?php $qtyLeft = (int) Mage::getModel('cataloginventory/stock_item')->loadByProduct($_product)->getQty(); ?>
+     <?php $stocklevel = (int)Mage::getModel('cataloginventory/stock_item')->loadByProduct($_product)->getQty() ?>
+
 <?php if($_additional = $this->getAdditionalData()): ?>
     <h2><?php echo $this->__('Product Information') ?>:</h2>
     <table class="data-table" id="product-attribute-specs-table">
@@ -46,7 +52,21 @@
                 <td class="data"><?php echo $_helper->productAttribute($_product, $_data['value'], $_data['code']) ?></td>
             </tr>
         <?php endforeach; ?>
+		
+		<?php if($_product->isSaleable() & $qtyLeft > 1): ?>
+    
+		<th class="label">Op voorraad:</th>
+		<td><?php echo $_product->getVoorraad_positief() ?></td>
+		
+		<?php elseif($_product->isSaleable() & $qtyLeft < 1 & isManageStock == 0): ?>  
+		
+		<th class="label">Niet op voorraad:</th>
+		<td><?php echo $_product->getVoorraad_negatief() ?></td>
+		
+		<?php endif; ?>
+	
         </tbody>
     </table>
+	
     <script type="text/javascript">decorateTable('product-attribute-specs-table')</script>
 <?php endif;?>

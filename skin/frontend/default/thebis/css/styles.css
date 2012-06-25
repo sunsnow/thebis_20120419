@@ -2189,6 +2189,12 @@ p.required {
 	color:#071d25;
 }
 
+#col-main-winkelwagen #winkelwagen_container table#shopping-cart-table p.item-msg{
+	color:#FF6D07;
+	float:left;
+    margin-left:35px;
+}
+
 #col-main-winkelwagen #winkelwagen_container table#shopping-cart-table span .price{
 	color:#15566f;
 }
@@ -4694,8 +4700,8 @@ li#password_section_id {
 
 /* Toolbar */
 .toolbar {float:left; overflow:hidden;}
-.toolbar .pager { padding:10px 8px; width:445px; float:left; margin-left:10px;}
-.toolbar .sorter {float:right; /*margin-right:10px;*/ width:231px;}
+.toolbar .pager { padding:10px 8px; width:434px; float:left; margin-left:10px;}
+.toolbar .sorter {float:right; /*margin-right:10px;*/ width:246px;}
 .toolbar-bottom {}
 
 /* Toolbar Top */
@@ -4733,7 +4739,7 @@ li#password_section_id {
 
 /* Pager */
 .pager { font-size:11px; padding:9px 8px; border-top:1px solid #B2DCED; text-align:center; }
-.pager .amount { float:left; margin:0; }
+.pager .amount { float:left; margin:0; line-height:17px; }
 .pager .limiter { float:left; margin-left:15px; }
 .pager .limiter label { vertical-align:middle; }
 .pager .limiter select { padding:0; margin:0 0 1px; vertical-align:middle; }
@@ -4744,9 +4750,10 @@ li#password_section_id {
 .pager .pages .current {}
 
 /* Sorter */
-.sorter { font-size:11px; padding:9px 8px 11px 8px; border-top:1px solid #B2DCED;}
-.sorter .view-mode { float:left;}
-.sorter .sort-by { float:left; margin-left:32px;}
+.sorter { font-size:11px; padding:9px 0 11px 8px; border-top:1px solid #B2DCED; position:relative;}
+.sorter a { color:#1D789A;}
+.sorter .view-mode { position:absolute; right:164px; top:10px;}
+.sorter .sort-by { float:right; margin-left:20px;}
 .sorter .sort-by label { vertical-align:middle; }
 .sorter .sort-by select { padding:0; margin:0 0 1px; vertical-align:middle; }
 .sorter .link-feed {}
@@ -4754,12 +4761,19 @@ li#password_section_id {
 /* ----------------------------------------------
 	Lijstweergave
 ---------------------------------------------- */
-
-#col-main .category-products .products-list .item {
-	width:697px;
+#col-main .category-products .products-list {
+	margin-top:-18px;
 }
 
 #col-main .category-products .products-list .item {
+	width:697px;
+	height:145px;
+	border:none;
+	padding-top:10px;
+	border-bottom:1px solid #B2DCED;
+}
+
+#col-main .category-products .products-list .item.last {
 	border:none;
 }
 
@@ -4769,20 +4783,38 @@ li#password_section_id {
 
 #col-main .category-products .products-list .item .product-shop {
 	float:left;
-	width:562px;
-	font-size:11px;
+	width:552px;
+	font-size:12px;
+	margin-left:10px;
+}
+
+#col-main .category-products .products-list .item .product-shop .button {
+	margin-left:18px;
 }
 
 #col-main .category-products .products-list .item .product-shop .price-box {
-	width:76px;
+	width:auto;
 	height:30px;
+	min-width:68px;
+	line-height:34px;
+}
+
+#col-main .category-products .products-list .item .product-shop .price-box .old-price,
+#col-main .category-products .products-list .item .product-shop .price-box .special-price {
+	float:left;
 	line-height:34px;
 }
 
 #col-main .category-products .products-list .item .product-shop .desc {
 	float:left;
+	width:526px;
 	clear:both;
 	margin-top:20px;
+	line-height:21px;
+}
+
+#col-main .category-products .products-list .item .product-shop .desc a {
+	color:#1D789A;
 }
 
 #col-main .category-products .products-list .item .product-shop .add-to-links{
@@ -4790,7 +4822,11 @@ li#password_section_id {
 	clear:both;
 }
 
-
+#col-main .category-products .products-list .item .product-shop .availability {
+	float:left;
+	color:#FF6D07;
+	margin-left:20px;
+}
 
 /* ----------------------------------------------
 	CMS pagina
