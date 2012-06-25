@@ -4743,8 +4743,8 @@ li#password_section_id {
 .pager .limiter { float:left; margin-left:15px; }
 .pager .limiter label { vertical-align:middle; }
 .pager .limiter select { padding:0; margin:0 0 1px; vertical-align:middle; }
-.pager .pages { margin:0 20px; line-height:17px;}
-.pager .pages a { color:#1D789A;}
+.pager .pages { margin:0 20px; line-height:17px; float:left; }
+.pager .pages a { color:#1D789A; }
 .pager .pages ol { display:inline; }
 .pager .pages li { display:inline; margin:0 2px; }
 .pager .pages .current {}
