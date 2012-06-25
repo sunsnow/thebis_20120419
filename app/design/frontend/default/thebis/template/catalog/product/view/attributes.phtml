@@ -55,8 +55,8 @@
 		
 		<?php if($_product->isSaleable() & $qtyLeft >= 1): ?>
     
-		<th class="label">Op voorraad:(<?php echo ($qtyLeft); ?> stks.)</th>
-		<td><?php echo $_product->getVoorraad_positief() ?></td>
+		<th class="label">Op voorraad:</th>
+		<td><?php echo ($qtyLeft); ?> stks. <?php echo $_product->getVoorraad_positief() ?></td>
 		
 		<?php elseif($_product->isSaleable() & $qtyLeft < 1 & isManageStock == 0): ?>  
 		
