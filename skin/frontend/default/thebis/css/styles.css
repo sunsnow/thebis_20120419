@@ -4699,9 +4699,9 @@ li#password_section_id {
 }
 
 /* Toolbar */
-.toolbar {float:left; overflow:hidden;}
-.toolbar .pager { padding:10px 8px; width:434px; float:left; margin-left:10px;}
-.toolbar .sorter {float:right; /*margin-right:10px;*/ width:246px;}
+.toolbar {float:left;}
+.toolbar .pager { padding:10px 8px; width:495px; float:left; margin-left:10px;}
+.toolbar .sorter {float:right; /*margin-right:10px;*/ width:175px;}
 .toolbar-bottom {}
 
 /* Toolbar Top */
@@ -4752,7 +4752,9 @@ li#password_section_id {
 /* Sorter */
 .sorter { font-size:11px; padding:9px 0 11px 8px; border-top:1px solid #B2DCED; position:relative;}
 .sorter a { color:#1D789A;}
-.sorter .view-mode { position:absolute; right:164px; top:10px;}
+.sorter .view-mode { position:absolute; right:1px; top:-30px;}
+.sorter .view-mode a { color:#dcf1f9;}
+.sorter .view-mode strong { color:#dcf1f9;}
 .sorter .sort-by { float:right; margin-left:20px;}
 .sorter .sort-by label { vertical-align:middle; }
 .sorter .sort-by select { padding:0; margin:0 0 1px; vertical-align:middle; }
@@ -4827,6 +4829,7 @@ li#password_section_id {
 	color:#FF6D07;
 	margin-left:20px;
 }
+
 
 /* ----------------------------------------------
 	CMS pagina
