@@ -915,6 +915,17 @@ display:none;
 }
 
 /* ----------------------------------------------
+	Sidebar > Leveranciers
+---------------------------------------------- */
+
+#main .col-right #leveranciers {
+	float:left;
+	width:217px;
+	margin-top:16px;
+	border:1px solid #b2dced;
+}
+
+/* ----------------------------------------------
 	Sidebar > Cart (Layered Nav)
 ---------------------------------------------- */
 

@@ -94,6 +94,7 @@ Category layered navigation layout
     <catalog_category_layered translate="label">
         <label>Catalog Category (Anchor)</label>
 		<remove name="right.waarom"></remove>
+		<remove name="right.leveranciers"></remove>
         <reference name="right">
             <block type="catalog/layer_view" name="catalog.leftnav" after="cart_sidebar" template="catalog/layer/view.phtml"/>
         </reference>
