@@ -57,6 +57,7 @@
                 </div>
                 <div class="col-right sidebar">
 					<?php echo $this->getChildHtml('right') ?>
+					<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('logos_leveranciers')->toHtml() ?>
 				</div>
         </div>
         <?php echo $this->getChildHtml('footer') ?>

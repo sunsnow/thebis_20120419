@@ -4853,6 +4853,7 @@ li#password_section_id {
 #col-main .category-products .products-list .item .product-shop .desc a {
 	color:#1D789A;
 	text-decoration:underline;
+	float:none;
 }
 
 #col-main .category-products .products-list .item .product-shop .add-to-links{
