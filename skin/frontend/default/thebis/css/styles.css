@@ -391,9 +391,10 @@ legend {
 }
 	
 	#col-main .category-products .item {
+		position:relative;
 		float:left;
 		width:164px;
-		height:204px;
+		height:210px;
 		padding-left:10px;
 		overflow:hidden;
 		border-left:1px solid #b2dced;
@@ -405,6 +406,11 @@ legend {
 		color:#1d789a;
 		font-size:14px;
 		margin-top:3px;
+	}
+	
+	#col-main .category-products .item .actions {
+		position:absolute;
+		bottom:1px;
 	}
 	
 	#col-main .category-products .item .price-box p.old-price{
@@ -425,6 +431,8 @@ legend {
 		color:#071d25;
 		margin:0;
 		padding:0;
+		float:left;
+		margin-bottom:2px;
 	}
 	
 	#col-main .category-products .item h2 {
@@ -923,6 +931,16 @@ display:none;
 	width:217px;
 	margin-top:16px;
 	border:1px solid #b2dced;
+}
+
+#main .col-right #leveranciers .block-title{
+	margin-bottom:8px;
+}
+
+#main .col-right #leveranciers img {
+	float:left;
+	margin-left:21px;
+	margin-bottom:8px;
 }
 
 /* ----------------------------------------------
@@ -4754,7 +4772,7 @@ li#password_section_id {
 .pager .limiter { float:left; margin-left:15px; }
 .pager .limiter label { vertical-align:middle; }
 .pager .limiter select { padding:0; margin:0 0 1px; vertical-align:middle; }
-.pager .pages { margin:0 20px; line-height:17px; float:left; }
+.pager .pages { margin:0 11px; line-height:17px; float:left; }
 .pager .pages a { color:#1D789A; }
 .pager .pages ol { display:inline; }
 .pager .pages li { display:inline; margin:0 2px; }
@@ -4774,13 +4792,14 @@ li#password_section_id {
 /* ----------------------------------------------
 	Lijstweergave
 ---------------------------------------------- */
+
 #col-main .category-products .products-list {
 	margin-top:-18px;
 }
 
 #col-main .category-products .products-list .item {
 	width:697px;
-	height:145px;
+	height:154px;
 	border:none;
 	padding-top:10px;
 	border-bottom:1px solid #B2DCED;
@@ -4802,14 +4821,18 @@ li#password_section_id {
 }
 
 #col-main .category-products .products-list .item .product-shop .button {
+	float:right;
+	margin-right:18px;
 	margin-left:18px;
 }
 
 #col-main .category-products .products-list .item .product-shop .price-box {
 	width:auto;
+	float:right;
 	height:30px;
 	min-width:68px;
 	line-height:34px;
+	text-align:right;
 }
 
 #col-main .category-products .products-list .item .product-shop .price-box .old-price,
@@ -4823,11 +4846,13 @@ li#password_section_id {
 	width:526px;
 	clear:both;
 	margin-top:20px;
+	margin-bottom:7px;
 	line-height:21px;
 }
 
 #col-main .category-products .products-list .item .product-shop .desc a {
 	color:#1D789A;
+	text-decoration:underline;
 }
 
 #col-main .category-products .products-list .item .product-shop .add-to-links{
@@ -4841,10 +4866,10 @@ li#password_section_id {
 	margin-left:20px;
 }
 
-
 /* ----------------------------------------------
 	CMS pagina
 ---------------------------------------------- */
+
 div#pagina_info_container div.std ul.info_pagina_listitems li {
 	line-height: 18px;
     list-style-image: none;
@@ -4890,10 +4915,10 @@ div#pagina_info_container div.std ol li ul li {
 	margin-bottom: 0;
 }
 
-
 /* ----------------------------------------------
 	CMS pagina > Klantenservice
 ---------------------------------------------- */
+
 .clear {
 	clear:both;
 }
@@ -4930,7 +4955,7 @@ body.cms-klantenservice #pagina_info_container .std ul {
 }
 
 body.cms-klantenservice #pagina_info_container .std ul li{
-	list-style:disc;
+	list-style:none;
 }
 
 body.cms-klantenservice #pagina_info_container .std .service_block .bg_service {

@@ -105,9 +105,6 @@ Default layout, loads most of the pages
 				<block type="cms/block" name="right.waarom" after="right.reports.product.viewed">
 					<action method="setBlockId"><block_id>right_column_block</block_id></action>
 				</block>
-				<block type="cms/block" name="right.leveranciers" after="right.reports.product.viewed">
-					<action method="setBlockId"><block_id>logos_leverenaciers</block_id></action>
-				</block>
             </block>
 
             <block type="page/html_footer" name="footer" as="footer" template="page/html/footer.phtml">
