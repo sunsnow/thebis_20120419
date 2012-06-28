@@ -20,35 +20,39 @@
  *
  * @category    design
  * @package     base_default
- * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
 <?php if (!($_shippingRateGroups = $this->getShippingRates())): ?>
     <p><?php echo $this->__('Sorry, no quotes are available for this order at this time.') ?></p>
 <?php else: ?>
-<?php
-// Remove any other shipping methods if free shipping is available
-if ( array_key_exists('freeshipping', $_shippingRateGroups )) {
-    $_shippingRateGroups = array('freeshipping' => $_shippingRateGroups['freeshipping']);
-}
-?> 
-<dl class="sp-methods">
+    <dl class="sp-methods">
+    <?php $shippingCodePrice = array(); ?>
     <?php $_sole = count($_shippingRateGroups) == 1; foreach ($_shippingRateGroups as $code => $_rates): ?>
-		<?php /* <dt><?php echo $this->getCarrierName($code) ?></dt>*/ ?>
+        <dt><?php echo $this->getCarrierName($code) ?></dt>
         <dd>
             <ul>
             <?php $_sole = $_sole && count($_rates) == 1; foreach ($_rates as $_rate): ?>
+                <?php $shippingCodePrice[] = "'".$_rate->getCode()."':".(float)$_rate->getPrice(); ?>
                 <li>
                    <?php if ($_rate->getErrorMessage()): ?>
                     <ul class="messages"><li class="error-msg"><ul><li><?php echo $_rate->getErrorMessage() ?></li></ul></li></ul>
                    <?php else: ?>
                         <?php if ($_sole) : ?>
-                        <span class="no-display"><input name="shipping_method" type="radio" value="<?php echo $_rate->getCode() ?>" id="s_method_<?php echo $_rate->getCode() ?>" checked="checked" onclick="save_shipping_method(shipping_method_url, enable_update_payment);" /></span>
-                        <?php else: ?>												
-                        <input name="shipping_method" type="radio" value="<?php echo $_rate->getCode() ?>" id="s_method_<?php echo $_rate->getCode() ?>"<?php if($_rate->getCode()===$this->getAddressShippingMethod()) echo ' checked="checked"' ?> class="radio" onclick="save_shipping_method(shipping_method_url, enable_update_payment);" />
-                       
-					   <?php endif; ?>
+                        <span class="no-display"><input name="shipping_method" type="radio" value="<?php echo $_rate->getCode() ?>" id="s_method_<?php echo $_rate->getCode() ?>" checked="checked" /></span>
+                        <?php else: ?>
+                        <input name="shipping_method" type="radio" value="<?php echo $_rate->getCode() ?>" id="s_method_<?php echo $_rate->getCode() ?>"<?php if($_rate->getCode()===$this->getAddressShippingMethod()) echo ' checked="checked"' ?> class="radio"/>
+
+                        <?php if ($_rate->getCode() === $this->getAddressShippingMethod()): ?>
+                        <script type="text/javascript">
+                            //<![CDATA[
+                                lastPrice = <?php echo (float)$_rate->getPrice(); ?>;
+                            //]]>
+                        </script>
+                        <?php endif; ?>
+
+                        <?php endif; ?>
                         <label for="s_method_<?php echo $_rate->getCode() ?>"><?php echo $_rate->getMethodTitle() ?>
                         <?php $_excl = $this->getShippingPrice($_rate->getPrice(), $this->helper('tax')->displayShippingPriceIncludingTax()); ?>
                         <?php $_incl = $this->getShippingPrice($_rate->getPrice(), true); ?>
@@ -58,13 +62,38 @@ if ( array_key_exists('freeshipping', $_shippingRateGroups )) {
                         <?php endif; ?>
                         </label>
                    <?php endif ?>
-				  
                 </li>
             <?php endforeach; ?>
-			
             </ul>
         </dd>
     <?php endforeach; ?>
-	<p style="color:#1d789a; margin-top:11px; margin-left:24px; font-style:italic; font-size:11px; ">* Vanaf &euro; 450,- Gratis verzending binnen Nederland!</p>
-</dl>
+    </dl>
+<script type="text/javascript">
+//<![CDATA[
+    <?php if (!empty($shippingCodePrice)): ?>
+        var shippingCodePrice = {<?php echo implode(',',$shippingCodePrice); ?>};
+    <?php endif; ?>
+
+    $$('input[type="radio"][name="shipping_method"]').each(function(el){
+        Event.observe(el, 'click', function(){
+            if (el.checked == true) {
+                var getShippingCode = el.getValue();
+                <?php if (!empty($shippingCodePrice)): ?>
+                    var newPrice = shippingCodePrice[getShippingCode];
+                    if (!lastPrice) {
+                        lastPrice = newPrice;
+                        quoteBaseGrandTotal += newPrice;
+                    }
+                    if (newPrice != lastPrice) {
+                        quoteBaseGrandTotal += (newPrice-lastPrice);
+                        lastPrice = newPrice;
+                    }
+                <?php endif; ?>
+                checkQuoteBaseGrandTotal = quoteBaseGrandTotal;
+                return false;
+            }
+       });
+    });
+//]]>
+</script>
 <?php endif; ?>
