@@ -1358,12 +1358,15 @@ display:none;
 	float:left;
 	width:667px;
 	height:92px;
+	overflow:hidden;
 	border-top:1px solid #b9dfef;
 }
 
 #product_info_container	.box-up-sell #upsell-product-table tr td p {
 	position:absolute;
 	line-height:18px;
+
+
 	top:28px;
 	left:120px;
 	width:360px;
@@ -1433,7 +1436,6 @@ display:none;
     text-align:center;
     width:72px;
 }
-	
 	
 #product_info_container	.box-up-sell #upsell-product-table tr td .add-to-cart:hover {
 		background:#fff;
