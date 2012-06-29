@@ -1324,6 +1324,124 @@ display:none;
 	}
 	
 /* ----------------------------------------------
+	Product Detail Pagina Upsells
+---------------------------------------------- */
+	
+#product_info_container	.box-up-sell {
+	float:left;
+	width:708px;
+	height:214px;
+	margin-top:53px;
+	overflow-y:scroll;
+}
+
+#product_info_container	.box-up-sell h2 {
+	display:block;
+	font-size:16px;
+	margin-bottom:10px;
+	margin-left:10px;
+	color:#1d789a;
+}
+
+#product_info_container	.box-up-sell #upsell-product-table  {
+	margin-left:10px;
+}
+	
+#product_info_container	.box-up-sell #upsell-product-table tr {
+	height:190px;
+	width:690px;
+}
+	
+#product_info_container	.box-up-sell #upsell-product-table tr td {
+	position:relative;
+	display: block;
+	float:left;
+	width:667px;
+	height:92px;
+	border-top:1px solid #b9dfef;
+}
+
+#product_info_container	.box-up-sell #upsell-product-table tr td p {
+	position:absolute;
+	line-height:18px;
+	top:28px;
+	left:120px;
+	width:360px;
+	display:block;
+	font-size:12px;
+}
+
+#product_info_container	.box-up-sell #upsell-product-table tr td h3.product-name,
+#product_info_container	.box-up-sell #upsell-product-table tr td h3.product-name a{
+	display: block;
+	float:left;
+	font-size:12px;
+	font-weight:bold;
+	color:#000;
+	margin-top:6px;
+	margin-left:9px;
+	text-decoration:none;
+}
+
+#product_info_container	.box-up-sell #upsell-product-table tr td a.product-image {
+	display: block;
+	float:left;
+	width:102px;
+	height:92px;
+}
+	
+#product_info_container	.box-up-sell #upsell-product-table tr td img {
+	display: block;
+	float:left;
+	margin-top:12px;
+	margin-left:20px;
+	width:75%;
+	height:75%;
+}	
+
+#product_info_container	.box-up-sell #upsell-product-table tr td .prijsje {
+	position:absolute;
+    right:166px;
+    top:36px;
+	font-size:14px;
+	color:#1d789a;
+}
+	
+
+#product_info_container	.box-up-sell #upsell-product-table tr td .price-box {
+	float:right;
+	margin-top:37px;
+	margin-right:90px;
+	font-size:14px;
+	color:#1d789a;
+}
+	
+	
+#product_info_container	.box-up-sell #upsell-product-table tr td .add-to-cart {
+	position:absolute;
+	top:35px;
+	right:0px;
+	background-image:url("../img/bg_button_kassa.png");
+    background-repeat:repeat-x;
+    border:medium none;
+    color:#FFFFFF;
+    cursor:pointer;
+    float:left;
+    font-family:Tahoma,Arial,Helvetica,sans-serif;
+    font-size:12px;
+    height:27px;
+    text-align:center;
+    width:72px;
+}
+	
+	
+#product_info_container	.box-up-sell #upsell-product-table tr td .add-to-cart:hover {
+		background:#fff;
+		color:#ff6d07;
+		border:1px solid #ff6d07;
+}
+	
+/* ----------------------------------------------
 	Product Detail Pagina Tabs
 ---------------------------------------------- */	
 	
@@ -1857,7 +1975,7 @@ li.category69 {
 	}
 
 /********************** Tabs */
-.product-tabs                   { float:left; margin-top:30px; width:100%; height:33px; background:url(../img/bg_tabs.png) repeat-x; }
+.product-tabs                   { float:left; margin-top:50px; width:100%; height:33px; background:url(../img/bg_tabs.png) repeat-x; }
 .product-tabs-content {float:left; width:698px; font-size:12px; margin-top:30px; clear:both; padding:0 10px 0 10px;} 
 .product-tabs ul{    list-style-image:none;    list-style-position:outside; list-style-type:none;}
 .product-tabs li                { float:left; height:33px;}
