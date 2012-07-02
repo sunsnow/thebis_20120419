@@ -32,7 +32,7 @@
 if ( array_key_exists('freeshipping', $_shippingRateGroups )) {
     $_shippingRateGroups = array('freeshipping' => $_shippingRateGroups['freeshipping']);
 }
-?> 
+?>
 <dl class="sp-methods">
     <?php $_sole = count($_shippingRateGroups) == 1; foreach ($_shippingRateGroups as $code => $_rates): ?>
 		<?php /* <dt><?php echo $this->getCarrierName($code) ?></dt>*/ ?>

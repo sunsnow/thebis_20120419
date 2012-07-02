@@ -149,6 +149,7 @@ abstract class Mage_Sales_Model_Order_Pdf_Abstract extends Varien_Object
         $page->setFillColor(new Zend_Pdf_Color_Html("#d1eaf5"));
         $this->_setFontRegular($page, 5);
         $page->setLineColor(new Zend_Pdf_Color_GrayScale(0.5));
+        $page->drawLine(125, 825, 125, 790);
 
         $page->setLineWidth(0);
         $this->y = 820;
@@ -196,7 +197,7 @@ abstract class Mage_Sales_Model_Order_Pdf_Abstract extends Varien_Object
 
         $page->drawRectangle(25, 790, 570, 755);
 		$page->setFillColor(new Zend_Pdf_Color_Html("#d1eaf5"));
-        $this->_setFontRegular($page);
+        $this->_setFontBold($page);
 
 
         if ($putOrderId) {
@@ -238,51 +239,16 @@ abstract class Mage_Sales_Model_Order_Pdf_Abstract extends Varien_Object
         $page->setFillColor(new Zend_Pdf_Color_Html("#000000"));
         $this->_setFontBold($page);
         $page->drawText(Mage::helper('sales')->__('Verkocht aan:'), 35, 740 , 'UTF-8');
-
-		$page->setFillColor(new Zend_Pdf_Color_Html("#9c9c9c"));
-		$this->_setFontRegular($page, 4);
-		$page->drawText('Triodos Bank: Rekeningnummer: 39.05.33.688', 485, 825); 
-		$page->drawText('BIC: TRIONL2U', 485, 820); 
-		$page->drawText('IBAN: NL21TRIO0390533688 ', 485, 815); 
-
-		$page->setFillColor(new Zend_Pdf_Color_Html("#9c9c9c"));
-		$this->_setFontBold($page, 4);
-		$page->drawText('Bankgegevens:', 415, 830);
-		$this->_setFontRegular($page, 4);
-		$page->drawText('ING: Rekeningnummer: 48.96.995', 415, 823); 
-		$page->drawText('BIC: INGBNL2A', 415, 816); 
-		$page->drawText('IBAN: NL47INGB0004896995 ', 415, 809); 
-	    $page->setFillColor(new Zend_Pdf_Color_Html("#000000"));
-
-		$page->setFillColor(new Zend_Pdf_Color_Html("#9c9c9c"));
-		$this->_setFontBold($page, 4);
-		$page->drawText('Registratiegegevens:', 345, 830);
-		$this->_setFontRegular($page, 4);
-		$page->drawText('KvK: 53512189', 345, 823); 
-		$page->drawText('BTW-nr: NL850908401.B01', 345, 816); 
-	    $page->setFillColor(new Zend_Pdf_Color_Html("#000000"));
-
-		$page->setFillColor(new Zend_Pdf_Color_Html("#9c9c9c"));
-		$this->_setFontBold($page, 4);
-		$page->drawText('Contactgegevens:', 275, 830);
-		$this->_setFontRegular($page, 4);
-		$page->drawText('E. info@thebis.nl', 275, 823); 
-		$page->drawText('M. +31 (0)6 55 86 87 71', 275, 816); 
-		$page->drawText('T. +31 (0)20 260 11 16', 275, 809); 
-	    $page->setFillColor(new Zend_Pdf_Color_Html("#000000"));
-		
-		$page->setFillColor(new Zend_Pdf_Color_Html("#9c9c9c"));
-		$this->_setFontBold($page, 4);
-		$page->drawText('Adres:', 205, 830);
-		$this->_setFontRegular($page, 4);
-		$page->drawText('Thebis B.V.', 205, 823); 
-		$page->drawText('tt. Vasemweg 11', 205, 816); 
-		$page->drawText('1033 SG Amsterdam', 205, 809); 
-	    $page->setFillColor(new Zend_Pdf_Color_Html("#000000"));
+		$this->_setFontBold($page);
+		$page->drawText('Adres:', 100, 520); 
+		$this->_setFontRegular($page);
+		$page->drawText('Thebis B.V.', 100, 510); 
+		$page->drawText('tt. Vasemweg 115', 100, 500); 
+		$page->drawText('1033 SG Amsterdam', 100, 490); 
 		
 		
+
         if (!$order->getIsVirtual()) {
-			$this->_setFontBold($page);
             $page->drawText(Mage::helper('sales')->__('Verzenden aan:'), 285, 740 , 'UTF-8');
         }
         else {
