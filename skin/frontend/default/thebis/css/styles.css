@@ -5040,9 +5040,11 @@ li#password_section_id {
 }
 
 #col-main .category-products .products-list .item .product-shop .desc a {
+	float:left;
 	color:#1D789A;
 	text-decoration:underline;
 	float:none;
+	clear:both;
 }
 
 #col-main .category-products .products-list .item .product-shop .add-to-links{
