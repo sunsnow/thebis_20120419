@@ -1,7 +1,7 @@
 <?php
 /**
  * Magento
- *
+ * 
  * NOTICE OF LICENSE
  *
  * This source file is subject to the Open Software License (OSL 3.0)
@@ -59,10 +59,12 @@ class Mage_Sales_Model_Order_Pdf_Invoice extends Mage_Sales_Model_Order_Pdf_Abst
 
             /* Add address */
             $this->insertAddress($page, $invoice->getStore());
+			
+			 /* Footer */
+            $this->insertFooter($page, $invoice->getStore());
 
             /* Add head */
             $this->insertOrder($page, $order, Mage::getStoreConfigFlag(self::XML_PATH_SALES_PDF_INVOICE_PUT_ORDER_ID, $order->getStoreId()));
-
 
             $page->setFillColor(new Zend_Pdf_Color_Html("#d1eaf5"));
             $this->_setFontRegular($page);
@@ -149,5 +151,7 @@ class Mage_Sales_Model_Order_Pdf_Invoice extends Mage_Sales_Model_Order_Pdf_Abst
         }
 
         return $page;
+		
+		
     }
 }

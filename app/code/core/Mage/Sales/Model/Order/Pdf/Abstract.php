@@ -2,7 +2,7 @@
 /**
  * Magento
  *
- * NOTICE OF LICENSE
+ * NOTICE OF LICENSE 
  *
  * This source file is subject to the Open Software License (OSL 3.0)
  * that is bundled with this package in the file LICENSE.txt.
@@ -161,6 +161,55 @@ abstract class Mage_Sales_Model_Order_Pdf_Abstract extends Varien_Object
         //return $page;
     }
 
+	
+	/**
+ * Insert footer
+ */
+protected function insertFooter(&$page, $store = null) {
+    $this->_setFontRegular($page);
+ 
+    $startX = 50;
+    $startY = 80;
+    $columnWidth = 125;
+    $lineY = 10;
+ 
+    // Footer title
+    $page->setFillColor(new Zend_Pdf_Color_GrayScale(0.25));
+ 
+    $name = 'Deze webwinkel';
+    if($store !== null) {
+        $name = $store->getFrontendName();
+    }
+ 
+    $text = sprintf('%s is onderdeel van Thebis', $name);
+ 
+    $page->drawText($text, $startX, $startY, 'UTF-8');
+ 
+    $startY = $startY - $lineY - $lineY;
+ 
+    // Columns
+    $page->setFillColor(new Zend_Pdf_Color_GrayScale(0.5));
+ 
+    // Column 1
+    $x = $startX;
+    $y = $startY;
+ 
+    $page->drawText('Thebis', $x, $y, 'UTF-8');
+    $y -= $lineY;
+    $page->drawText('Footer info', $x, $y, 'UTF-8');
+    $y -= $lineY;
+    $page->drawText('Footer info', $x, $y, 'UTF-8');
+ 
+    
+}
+	
+	
+	
+	
+	
+	
+	
+	
     /**
      * Format address
      *

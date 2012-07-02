@@ -999,6 +999,7 @@ display:none;
 	width:217px;
 	margin-top:16px;
 	border:1px solid #b2dced;
+	padding-bottom:10px;
 }
 
 #main .col-right #leveranciers .block-title{
@@ -1007,8 +1008,10 @@ display:none;
 
 #main .col-right #leveranciers img {
 	float:left;
-	margin-left:21px;
-	margin-bottom:8px;
+}
+
+#main .col-right #leveranciers img.even {
+	margin-left:7px;
 }
 
 /* ----------------------------------------------
@@ -1365,8 +1368,6 @@ display:none;
 #product_info_container	.box-up-sell #upsell-product-table tr td p {
 	position:absolute;
 	line-height:18px;
-
-
 	top:28px;
 	left:120px;
 	width:360px;
