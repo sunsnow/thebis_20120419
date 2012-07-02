@@ -56,8 +56,6 @@
 				<button type="button" class="form-button add-to-cart" onclick="window.location='<?php echo $this->getAddToCartUrl($_link) ?>';"><span><?php echo $this->__('Bestellen') ?></span></button>  
                 <?php echo $this->getReviewsSummaryHtml($_link) ?>
             </td>
-            <?php else: ?>
-            <td class="empty">&nbsp;</td>
             <?php endif; ?>
         <?php endfor; ?>
         </tr>
