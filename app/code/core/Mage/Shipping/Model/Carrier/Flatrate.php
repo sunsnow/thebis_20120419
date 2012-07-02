@@ -36,10 +36,10 @@ class Mage_Shipping_Model_Carrier_Flatrate
     extends Mage_Shipping_Model_Carrier_Abstract
     implements Mage_Shipping_Model_Carrier_Interface
 {
- 
+
     protected $_code = 'flatrate';
     protected $_isFixed = true;
- 
+
     /**
      * Enter description here...
      *
@@ -51,15 +51,15 @@ class Mage_Shipping_Model_Carrier_Flatrate
         if (!$this->getConfigFlag('active')) {
             return false;
         }
- 
+
         $freeBoxes = 0;
         if ($request->getAllItems()) {
             foreach ($request->getAllItems() as $item) {
- 
+
                 if ($item->getProduct()->isVirtual() || $item->getParentItem()) {
                     continue;
                 }
- 
+
                 if ($item->getHasChildren() && $item->isShipSeparately()) {
                     foreach ($item->getChildren() as $child) {
                         if ($child->getFreeShipping() && !$child->getProduct()->isVirtual()) {
@@ -72,7 +72,7 @@ class Mage_Shipping_Model_Carrier_Flatrate
             }
         }
         $this->setFreeBoxes($freeBoxes);
- 
+
         $result = Mage::getModel('shipping/rate_result');
         if ($this->getConfigData('type') == 'O') { // per order
             $shippingPrice = $this->getConfigData('price');
@@ -81,52 +81,35 @@ class Mage_Shipping_Model_Carrier_Flatrate
         } else {
             $shippingPrice = false;
         }
- 
+
         $shippingPrice = $this->getFinalPriceWithHandlingFee($shippingPrice);
-        $shippingPrice = $this->get_pro_ship();
- 
+
         if ($shippingPrice !== false) {
             $method = Mage::getModel('shipping/rate_result_method');
- 
+
             $method->setCarrier('flatrate');
             $method->setCarrierTitle($this->getConfigData('title'));
- 
+
             $method->setMethod('flatrate');
             $method->setMethodTitle($this->getConfigData('name'));
- 
+
             if ($request->getFreeShipping() === true || $request->getPackageQty() == $this->getFreeBoxes()) {
                 $shippingPrice = '0.00';
             }
- 
+
+
             $method->setPrice($shippingPrice);
             $method->setCost($shippingPrice);
- 
+
             $result->append($method);
         }
- 
+
         return $result;
     }
- 
+
     public function getAllowedMethods()
     {
         return array('flatrate'=>$this->getConfigData('name'));
     }
- 
-    public function get_pro_ship()
-    {
-    Mage::getSingleton('core/session', array('name'=>'frontend'));
-    $session = Mage::getSingleton('checkout/session');
-    $cart_items = $session->getQuote()->getAllItems();
-    $_helper = Mage::helper('catalog/output');
-    $custom_ship=0;
-    foreach( $cart_items as $items ){
- 
-        $cur_fproduct = Mage::getModel('catalog/product')->load($items->getProduct_id());
-    $custom_ship +=($items->getQty())*($_helper->productAttribute($cur_fproduct, $cur_fproduct->getShippingWorld(), 'shipping_world'));
-    }
- 
-    return $custom_ship ;  
- 
-    }// function end
- 
+
 }
