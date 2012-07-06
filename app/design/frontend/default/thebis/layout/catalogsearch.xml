@@ -30,7 +30,7 @@
 
     <default>
         <reference name="right">
-            <block type="core/template" name="top.search" as="topSearch" template="catalogsearch/form.mini.phtml"/>
+            <block type="core/template" name="top.search" as="topSearch" before="-" template="catalogsearch/form.mini.phtml"/>
         </reference>
         <reference name="footer_links">
             <action method="addLink" translate="label title" module="catalogsearch" ifconfig="catalog/seo/search_terms">

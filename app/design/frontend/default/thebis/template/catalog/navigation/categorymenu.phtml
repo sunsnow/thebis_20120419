@@ -1,0 +1,64 @@
+<div class="block right-nav">
+    <div class="block-title">
+        <strong><span><?php echo $this->__('Winkelnavigatie') ?></span></strong>
+    </div>
+    <div class="block-content">
+        <ul id="right-nav">
+            <?php foreach ($this->getStoreCategories() as $_category): ?>
+                <?php if ($_category->getIsActive()): ?>
+                    <?php $isactive      = $this->isCategoryActive($_category); ?>
+                    <?php $hasChildren   = $_category->hasChildren(); ?>
+                    <li class="category <?php if($isactive) echo 'active'; ?>" lang="<?php echo $_category->getId();?>">
+                        <a href="<?php echo $this->getCategoryUrl($_category)?>" >
+                            <span><?php echo $_category->getName();?> <?php echo "<a class='full' href='javascript:void(0)'>+</a>"; ?></span>
+                        </a>
+                        <?php if($isactive) echo " <a class='empty' href='".$this->getCategoryUrl($_category)."'></a>"; ?>
+                    </li>
+                    <?php if($hasChildren): ?>
+                    <li>
+                        <ul class="subcategory_<?php echo $_category->getId();?> subcategory" style="display:<?php echo $isactive? 'block' : 'none'; ?>;">
+                            <?php foreach (Mage::getModel('catalog/category')->load($_category->getId())->getChildrenCategories() as $childCategory):?>
+                                <?php $isactive          = $this->isCategoryActive($childCategory); ?>
+                                <?php $hasmoreChildren   = $childCategory->hasChildren(); ?>
+                                <li class="category" lang="<?php echo $childCategory->getId(); ?>">
+                                    <a href="<?php echo $this->getCategoryUrl($_category)?>" >
+                                        <?php echo $childCategory->getName(); ?>
+                                    </a>
+                                    <?php if($hasmoreChildren) echo " <a class='full' href='javascript:void(0)'>+</a>"; ?>
+                                </li>
+                                <?php if($hasmoreChildren): ?>
+                                <li>                             
+                                    <ul class="subcategory_<?php echo $childCategory->getId(); ?> subcategory" style="display:<?php echo $isactive? 'block' : 'none'; ?>;">
+                                        <?php foreach (Mage::getModel('catalog/category')->load($childCategory->getId())->getChildrenCategories() as $_childCategory):?>
+                                            <?php $isactive  = $this->isCategoryActive($_childCategory);?>
+                                            <li class="category">
+                                                <a href="<?php echo $_childCategory->getUrl(); ?>"  style="padding-left:15px;font-size:11px;" >
+                                                    <?php echo $_childCategory->getName(); ?>
+                                                </a>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </li>
+                                <?php endif ?>
+                            <?php endforeach;?>
+                        </ul>
+                    <?php endif ?>
+                    </li>
+                <?php endif ?>
+            <?php endforeach ?>
+        </ul>
+    </div>
+</div>
+ 
+<script type="text/javascript">
+jQuery.noConflict();
+jQuery(document).ready(function(){ 
+ 
+    // <a title="See also Adding custom sidebar in wordpress" href="http://www.salimsazzad.com/adding-custom-sidebar-in-wordpress">Custom</a> Menu
+    jQuery(".category").click(function() {
+        var open = this.getAttributeNode('lang').value;
+        jQuery(".subcategory_" + open).slideToggle('medium');
+    });
+ 
+});
+</script>

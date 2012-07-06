@@ -388,6 +388,7 @@ legend {
 #top_items_row02 .category-products{
 	float:left;
 	font-size:11px;
+	position:relative;
 }
 	
 	#col-main .category-products .item {
@@ -411,6 +412,8 @@ legend {
 	#col-main .category-products .item .actions {
 		position:absolute;
 		bottom:1px;
+		left:10px;
+		width:147px;
 	}
 	
 	#col-main .category-products .item .price-box p.old-price{
@@ -894,6 +897,43 @@ legend {
 	  	color:#ff6d07;
 	  	border:1px solid #ff6d07;
 	}
+
+	
+/* ----------------------------------------------
+Sidebar > Secondary (category) navigation
+---------------------------------------------- */
+.sidebar .right-nav	{
+	float:left;
+	width:217px;
+	margin-top:16px;
+	border:1px solid #B2DCED;
+}
+		
+.sidebar .right-nav .block-content {
+	float:left;
+	width:206px;
+	font-size:12px;
+	padding:5px 0 6px 10px;
+}
+
+.sidebar .right-nav .block-content ul#right-nav li a {
+	float:left;
+	display:block;
+	line-height:17px;
+}	
+
+.sidebar .right-nav .block-content ul#right-nav li a:link,
+.sidebar .right-nav .block-content ul#right-nav li a:visited,
+.sidebar .right-nav .block-content ul#right-nav li a:active {
+	color:#071D25;
+	text-decoration:none;
+}	
+
+.sidebar .right-nav .block-content ul#right-nav li {
+	float:left;
+	clear:both;
+	width:200px;
+}	
 
 /* ----------------------------------------------
 	Sidebar > Cart (bundled products)
