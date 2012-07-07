@@ -908,12 +908,35 @@ Sidebar > Secondary (category) navigation
 	margin-top:16px;
 	border:1px solid #B2DCED;
 }
-		
+
+.sidebar .right-nav ul li.category {
+	 background-image: url('../img/arrow_secondnav_closed.png');
+	 background-position:14px 3px; 
+	 background-repeat:no-repeat; 
+	 padding-left:27px;
+}
+
+.sidebar .right-nav ul li.category.active {
+	 background-image: url('../img/arrow_secondnav_open.png');
+	 background-position:10px 6px; 
+	 background-repeat:no-repeat; 
+	 background-color:#dcf1f9;
+}
+
+.sidebar .right-nav ul li ul.subcategory li {
+	 background-image:none;
+	 padding-left:none;
+}
+
+.sidebar .right-nav ul.subcategory {
+	padding-left:2px;
+}
+
 .sidebar .right-nav .block-content {
 	float:left;
 	width:206px;
 	font-size:12px;
-	padding:5px 0 6px 10px;
+	padding:5px 0 6px 0px;
 }
 
 .sidebar .right-nav .block-content ul#right-nav li a {
@@ -929,10 +952,17 @@ Sidebar > Secondary (category) navigation
 	text-decoration:none;
 }	
 
+.sidebar .right-nav .block-content ul#right-nav li a.full:link,
+.sidebar .right-nav .block-content ul#right-nav li a.full:visited,
+.sidebar .right-nav .block-content ul#right-nav li a.full:active {
+	color:#1c7292;
+	text-decoration:none;
+}	
+
 .sidebar .right-nav .block-content ul#right-nav li {
 	float:left;
 	clear:both;
-	width:200px;
+	width:190px;
 }	
 
 /* ----------------------------------------------
