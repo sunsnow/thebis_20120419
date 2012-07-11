@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<RapidCommerce_Defaultdestination>
+			<version>1.3.0</version>
+		</RapidCommerce_Defaultdestination>
+	</modules>
+	<global>
+	<models>
+		<defaultdestination>
+			<class>RapidCommerce_Defaultdestination_Model</class>
+		</defaultdestination>
+	</models>
+	    <events>
+		<sales_quote_collect_totals_before>
+		    <observers>
+		        <rapidCommerce_defaultdestination>
+		            <class>defaultdestination/observer</class>
+		            <method>handleCollect</method>
+		        </rapidCommerce_defaultdestination>
+		    </observers>
+		</sales_quote_collect_totals_before>
+	    </events>
+	</global>
+</config>

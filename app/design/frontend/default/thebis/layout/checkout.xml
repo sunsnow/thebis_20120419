@@ -63,6 +63,7 @@ Default layout, loads most of the pages
 			<remove name="right.reports.product.viewed"></remove>
 			<remove name="top.search"></remove>
 			<remove name="right.waarom"></remove>
+			<remove name="catalog.categorymenu"></remove>
 		</reference>
 		
         <!-- Mage_Checkout -->

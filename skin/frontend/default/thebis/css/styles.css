@@ -916,14 +916,17 @@ Sidebar > Secondary (category) navigation
 	 padding-left:27px;
 }
 
-.sidebar .right-nav ul li.category.active {
-	 background-image: url('../img/arrow_secondnav_open.png');
-	 background-position:10px 6px; 
-	 background-repeat:no-repeat; 
-	 background-color:#dcf1f9;
+.sidebar .right-nav  ul li.active a {
+	 background-color:transparent;
+	 font-weight:bold;
 }
 
-.sidebar .right-nav ul li ul.subcategory li {
+.sidebar .right-nav  ul li.active ul li a {
+	 background-color:transparent;
+	 font-weight:normal;
+}
+
+.sidebar .right-nav li ul.subcategory li {
 	 background-image:none;
 	 padding-left:none;
 }

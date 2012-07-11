@@ -59,11 +59,7 @@ Default layout, loads most of the pages
 		
     </default>
 
-	
-	
-	
-	
-	
+
 <!--
 Category default layout
 -->
@@ -174,6 +170,7 @@ Product view
         <!-- Mage_Catalog -->
         <reference name="root">
             <action method="setTemplate"><template>page/product_detail.phtml</template></action>
+			<remove name="catalog.categorymenu"></remove>
         </reference>
         <reference name="head">
             <action method="addJs"><script>varien/product.js</script></action>

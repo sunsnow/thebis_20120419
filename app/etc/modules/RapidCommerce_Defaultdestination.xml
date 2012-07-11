@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<RapidCommerce_Defaultdestination>
+			<active>true</active>
+			<codePool>local</codePool>
+		</RapidCommerce_Defaultdestination>
+	</modules>
+</config>
