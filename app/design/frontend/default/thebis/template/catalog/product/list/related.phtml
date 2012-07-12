@@ -24,13 +24,11 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
+
 <?php if($this->getItems()->getSize()): ?>
 <div class="block block-related">
-    <div class="block-title">
-        <strong><span><?php echo $this->__('Related Products') ?></span></strong>
-    </div>
+        <h2><?php echo $this->__('Bestel mee:') ?></h2>
     <div class="block-content">
-        <p class="block-subtitle"><?php echo $this->__('Check items to add to the cart or') ?>&nbsp;<a href="#" onclick="selectAllRelated(this); return false;"><?php echo $this->__('select all') ?></a></p>
         <ol class="mini-products-list" id="block-related">
         <?php foreach($this->getItems() as $_item): ?>
             <li class="item">
@@ -40,13 +38,13 @@
                     <?php endif; ?>
                 <?php endif; ?>
                 <div class="product">
-                    <a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(50) ?>" width="50" height="50" alt="<?php echo $this->htmlEscape($_item->getName()) ?>" /></a>
+                    <a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(125) ?>" width="125" height="125" alt="<?php echo $this->htmlEscape($_item->getName()) ?>" /></a>
                     <div class="product-details">
-                        <p class="product-name"><a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a></p>
-                        <?php echo $this->getPriceHtml($_item, true, '-related') ?>
-                        <?php if ($this->helper('wishlist')->isAllow()) : ?>
-                            <a href="<?php echo $this->getAddToWishlistUrl($_item) ?>" class="link-wishlist"><?php echo $this->__('Add to Wishlist') ?></a>
-                        <?php endif; ?>
+                        <h3 class="product-name"><a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a></h3>
+						<p>
+						<?php echo substr (($_item->getShortDescription() ),0,120) ?>
+						</p>
+                        <span class="prijsje">+</span><?php echo $this->getPriceHtml($_item, true, '-related')  ?>
                     </div>
                 </div>
             </li>
