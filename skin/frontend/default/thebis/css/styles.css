@@ -1414,7 +1414,7 @@ display:none;
 #product_info_container .block-related p {
 	position:absolute;
 	line-height:18px;
-	top:28px;
+	top:36px;
 	left:120px;
 	width:360px;
 	display:block;
@@ -1454,8 +1454,9 @@ display:none;
 }
 
 #product_info_container	.block-related a.product-image img {
-	width:102px;
-	height:92px;
+	width:70px;
+	height:70px;
+	margin-top:10px;
 }
 
 
@@ -1466,7 +1467,7 @@ display:none;
 	font-size:12px;
 	font-weight:bold;
 	color:#071d25;
-	margin-top:6px;
+	margin-top:10px;
 	margin-left:5px;
 	text-decoration:none;
 }
