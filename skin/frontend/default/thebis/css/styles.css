@@ -5147,6 +5147,10 @@ li#password_section_id {
 	border-bottom:1px solid #B2DCED;
 }
 
+#col-main .category-products .products-list .item h2 a {
+	font-weight:bold;
+}
+
 #col-main .category-products .products-list .item.last {
 	border:none;
 }
