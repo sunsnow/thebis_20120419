@@ -41,6 +41,12 @@
                     <a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(125) ?>" width="125" height="125" alt="<?php echo $this->htmlEscape($_item->getName()) ?>" /></a>
                     <div class="product-details">
                         <h3 class="product-name"><a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a></h3>
+
+<?php $_product = $this->getProduct() ?>
+<?php $stocklevel = (int)Mage::getModel('cataloginventory/stock_item')->loadByProduct($_product)->getQty() ?>
+
+<?php echo $_product->getQty()?>
+
 						<p>
 						<?php echo substr (($_item->getShortDescription() ),0,120) ?>
 						</p>

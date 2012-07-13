@@ -53,7 +53,7 @@ class Mage_Catalog_Block_Product_List_Related extends Mage_Catalog_Block_Product
 		
 		$this->_itemCollection = $product->getRelatedProductCollection()
             ->addAttributeToSelect('required_options')
-			->addAttributeToSelect('short_description') 
+			->addAttributeToSelect('short_description')
             ->addAttributeToSort('position', Varien_Db_Select::SQL_ASC)
             ->addStoreFilter()
         ;
