@@ -29,7 +29,7 @@
  */
 ?>
 <?php if ($this->displayBoth()):?>
-<tr class="shipping">
+<tr>
     <td style="<?php echo $this->getStyle() ?>" class="a-right" colspan="<?php echo $this->getColspan(); ?>">
         <?php echo $this->getExcludeTaxLabel() ?>
     </td>
@@ -37,7 +37,7 @@
         <?php echo $this->helper('checkout')->formatPrice($this->getShippingExcludeTax()) ?>
     </td>
 </tr> 
-<tr class="shipping">
+<tr>
     <td style="<?php echo $this->getStyle() ?>" class="a-right" colspan="<?php echo $this->getColspan(); ?>">
         <?php echo $this->getIncludeTaxLabel() ?>
     </td>
@@ -46,7 +46,7 @@
     </td>
 </tr>
 <?php elseif($this->displayIncludeTax()) : ?>
-<tr class="shipping">
+<tr>
     <td style="<?php echo $this->getStyle() ?>" class="a-right" colspan="<?php echo $this->getColspan(); ?>">
         <?php echo $this->getTotal()->getTitle() ?>
     </td>
@@ -55,7 +55,7 @@
     </td>
 </tr>
 <?php else:?>
-<tr class="shipping">
+<tr>
     <td style="<?php echo $this->getStyle() ?>" class="a-right" colspan="<?php echo $this->getColspan(); ?>">
         <?php echo $this->getTotal()->getTitle() ?>
     </td>

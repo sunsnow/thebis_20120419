@@ -740,6 +740,9 @@ legend {
 /* ----------------------------------------------
 	Sidebar > Cart (simple products)
 ---------------------------------------------- */
+body.checkout-cart-index tr.shipping {
+	display:none;
+}
 
 .block-cart {
 	float:left;
