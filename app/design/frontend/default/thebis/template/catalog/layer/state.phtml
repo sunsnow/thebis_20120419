@@ -38,8 +38,8 @@
     <ol>
     <?php foreach ($_filters as $_filter): ?>
         <li>
-            <a href="<?php echo $_filter->getRemoveUrl() ?>" title="<?php echo $this->__('Filter verwijderen') ?>" class="btn-remove"><?php echo $this->__('Filter verwijderen') ?></a><br />
-            <span class="label"><?php echo $this->__($_filter->getName()) ?>: <?php echo $this->stripTags($_filter->getLabel()) ?></span>
+			<span class="label"><?php echo $this->__($_filter->getName()) ?>: <?php echo $this->stripTags($_filter->getLabel()) ?></span>
+            <a href="<?php echo $_filter->getRemoveUrl() ?>" title="<?php echo $this->__('Filter verwijderen') ?>" class="btn-remove"><img src="<?php echo $this->getSkinUrl('img/cross.png');?>" /></a><br />
         </li>
     <?php endforeach; ?>
     </ol>

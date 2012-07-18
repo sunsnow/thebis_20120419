@@ -53,10 +53,6 @@ Default layout, loads most of the pages
         </reference>
         <block type="catalog/product_price_template" name="catalog_product_price_template" />
 		
-		<reference name="right">
-             <block type="catalog/navigation" name="catalog.categorymenu" before="cart_sidebar" after="top.search" template="catalog/navigation/categorymenu.phtml"/>
-    </reference>
-		
     </default>
 
 

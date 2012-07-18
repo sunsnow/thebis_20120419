@@ -1109,6 +1109,7 @@ display:none;
 
 #main .col-right .block-layered-nav .block-content .block-subtitle {
 	margin-bottom:5px;
+	font-weight:bold;
 }
 
 #main .col-right .block-layered-nav .block-content a {
@@ -1130,7 +1131,7 @@ display:none;
 }
 
 #main .col-right .block-layered-nav .block-content .currently ol li {
-	padding-bottom:8px;
+	line-height:18px;
 }
 
 #main .col-right .block-layered-nav .block-content .currently ol li,
@@ -1152,6 +1153,11 @@ display:none;
 #main .col-right .block-layered-nav .block-content #narrow-by-list ol li {
 	margin:5px 0;
 }
+
+#main .col-right .block-layered-nav .block-content .currently a.btn-remove {
+	margin-left:5px;
+}
+
 
 
 
