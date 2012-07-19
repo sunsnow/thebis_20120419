@@ -1072,7 +1072,9 @@ display:none;
 
 #main .col-right #leveranciers {
 	float:left;
+	position:relative;
 	width:217px;
+	height:206px;
 	margin-top:16px;
 	border:1px solid #b2dced;
 	padding-bottom:10px;
@@ -1082,12 +1084,29 @@ display:none;
 	margin-bottom:8px;
 }
 
-#main .col-right #leveranciers img {
-	float:left;
+
+#main .col-right #leveranciers img.one {
+	position:absolute;
+	left:12px;
+	top:53px;
 }
 
-#main .col-right #leveranciers img.even {
-	margin-left:7px;
+#main .col-right #leveranciers img.two{
+	position:absolute;
+	right:14px;
+	top:83px;
+}
+
+#main .col-right #leveranciers img.three {
+	position:absolute;
+	left:12px;
+	top:135px;
+}
+
+#main .col-right #leveranciers img.four {
+	position:absolute;
+	right:30px;
+    top:146px;
 }
 
 /* ----------------------------------------------
