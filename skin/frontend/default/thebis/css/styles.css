@@ -1275,6 +1275,7 @@ display:none;
 
 	#product_info_container {
 		float:left;
+		position:relative;
 		width:718px;
 		min-height:750px;
 		border:1px solid #b2dced;
@@ -1561,17 +1562,6 @@ display:none;
 	color:#1d789a;
 }
 	
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-
 #product_info_container	.block-related #upsell-product-table  {
 	margin-left:10px;
 }
@@ -2116,6 +2106,14 @@ li.category69 {
 	float:left;
 	line-height:18px;
 	margin:9px 10px 21px 16px;
+}
+
+#product_info_container .messages li.success-msg {
+	font-size:12px;
+    left:19px;
+    position:absolute;
+    top:84px;
+	color:#1D789A;
 }
 
 #product_info_container #category_list_container .category-products {
