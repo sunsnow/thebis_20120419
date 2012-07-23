@@ -1085,7 +1085,7 @@ display:none;
 }
 
 
-#main .col-right #leveranciers img.one {
+#main .col-right #leveranciers a.one {
 	position:absolute;
 	left:12px;
 	top:59px;
@@ -1095,7 +1095,7 @@ display:none;
 	background-repeat:no-repeat;
 }
 
-#main .col-right #leveranciers img.one:hover {
+#main .col-right #leveranciers a.one:hover {
 	position:absolute;
 	width:90px;
 	height:23px;
@@ -1103,7 +1103,7 @@ display:none;
 	background-repeat:no-repeat;
 }
 
-#main .col-right #leveranciers img.two{
+#main .col-right #leveranciers a.two{
 	position:absolute;
 	right:9px;
 	top:51px;
@@ -1113,14 +1113,14 @@ display:none;
 	background-repeat:no-repeat;
 }
 
-#main .col-right #leveranciers img.two:hover {
+#main .col-right #leveranciers a.two:hover {
 	width:101px;
 	height:40px;
 	background-image: url('../img/logos_02_hover.png');
 	background-repeat:no-repeat;
 }
 
-#main .col-right #leveranciers img.three {
+#main .col-right #leveranciers a.three {
 	position:absolute;
 	left:12px;
 	top:117px;
@@ -1130,14 +1130,14 @@ display:none;
 	background-repeat:no-repeat;
 }
 
-#main .col-right #leveranciers img.three:hover {
+#main .col-right #leveranciers a.three:hover {
 	width:90px;
 	height:27px;
 	background-image: url('../img/logos_03_hover.png');
 	background-repeat:no-repeat;
 }
 
-#main .col-right #leveranciers img.four {
+#main .col-right #leveranciers a.four {
 	position:absolute;
 	right:25px;
     top:106px;
@@ -1147,7 +1147,7 @@ display:none;
 	background-repeat:no-repeat;
 }
 
-#main .col-right #leveranciers img.four:hover {
+#main .col-right #leveranciers a.four:hover {
 	width:71px;
 	height:47px;
 	background-image: url('../img/logos_04_hover.png');
