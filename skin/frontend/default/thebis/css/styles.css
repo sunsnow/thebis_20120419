@@ -1084,7 +1084,6 @@ display:none;
 	margin-bottom:8px;
 }
 
-
 #main .col-right #leveranciers a.one {
 	position:absolute;
 	left:12px;
@@ -1143,8 +1142,10 @@ display:none;
 }
 
 #main .col-right .block-layered-nav .block-content .block-subtitle {
+	position:relative;
 	margin-bottom:5px;
 	font-weight:bold;
+	width:140px;
 }
 
 #main .col-right .block-layered-nav .block-content a {
