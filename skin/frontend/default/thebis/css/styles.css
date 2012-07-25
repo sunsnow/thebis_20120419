@@ -1144,7 +1144,7 @@ display:none;
 #main .col-right .block-layered-nav .block-content .block-subtitle {
 	margin-bottom:5px;
 	font-weight:bold;
-	width:140px;
+	width:180px;
 }
 
 #main .col-right .block-layered-nav .block-content a {
@@ -1161,12 +1161,14 @@ display:none;
 }
 
 #main .col-right .block-layered-nav .block-content .currently {
+	display:none;
 	float:left;
 	margin-bottom:15px;
 }
 
 #main .col-right .block-layered-nav .block-content .currently ol li {
 	line-height:18px;
+	width:180px;
 }
 
 #main .col-right .block-layered-nav .block-content .currently ol li,

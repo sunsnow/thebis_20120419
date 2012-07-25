@@ -48,7 +48,7 @@
 <?php $_filters = $this->getFilters() ?>
 
 <?php foreach ($_filters as $_filter): ?>
-<?php if (Mage::helper('catalog')->__($_filter->getName()) == 'Prijs' || Mage::helper('catalog')->__($_filter->getName()) == 'Categorie' || Mage::helper('catalog')->__($_filter->getName()) == 'Merk'): ?>
+<?php if (Mage::helper('catalog')->__($_filter->getName()) == 'Prijs' || Mage::helper('catalog')->__($_filter->getName()) == 'Merk'): ?>
  <dt><?php echo Mage::helper('catalog')->__($_filter->getName()) ?></dt>
  <dd><?php echo $_filter->getHtml() ?></dd>
 <?php endif; ?>
@@ -59,9 +59,3 @@
 </div>
 <?php endif; ?>
 </div> 
-
-
-
-
-
-
