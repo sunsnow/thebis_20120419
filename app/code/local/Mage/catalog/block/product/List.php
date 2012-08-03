@@ -215,7 +215,7 @@ class Mage_Catalog_Block_Product_List extends Mage_Catalog_Block_Product_Abstrac
 		
 		$collection = Mage::getResourceModel('catalog/product_collection')
         ->addAttributeToSort('category_ids', 'ASC')
-        ->addAttributeToSelect(array('categorie'));
+        ->addAttributeToSelect(array('Categorie'));
 
         return $this;
     }
