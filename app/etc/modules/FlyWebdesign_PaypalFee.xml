@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <FlyWebdesign_PaypalFee>
+            <active>true</active>
+            <codePool>local</codePool>            
+        </FlyWebdesign_PaypalFee>
+    </modules>
+</config>

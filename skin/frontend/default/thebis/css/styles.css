@@ -2142,6 +2142,17 @@ li.category69 {
 		clear:both;
 	}
 	
+	#pagina_info_container .std ul.inline {
+		float:left;
+		line-height:16px;
+		margin:-10px 10px 30px 16px;
+		clear:both;
+	}
+	
+	#pagina_info_container .std h3 {
+		font-size:12px;
+	}
+	
 	/*#pagina_info_container .std ul.list_contact {
 		margin-left:16px;
 	}*/
