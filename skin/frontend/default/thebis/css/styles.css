@@ -2144,18 +2144,25 @@ li.category69 {
 	
 	#pagina_info_container .std ul.inline {
 		float:left;
-		line-height:16px;
+		line-height:21px;
+		margin:-10px 10px 30px 16px;
+		clear:both;
+	}
+	
+		#pagina_info_container .std ul.inline2 {
+		float:left;
+		line-height:21px;
 		margin:-10px 10px 30px 16px;
 		clear:both;
 	}
 	
 	#pagina_info_container .std h3.info_pagina {
-		font-size:12px;
+		font-size:13px;
 		float:left;
 		clear:both;
 		color:#15566F;
 		font-family:Tahoma,Arial,Helvetica,sans-serif;
-		font-weight:bold;
+		font-weight:regular;
 		margin-left:16px;
 	}
 	
