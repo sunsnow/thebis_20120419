@@ -5350,6 +5350,14 @@ body.cms-klantenservice #pagina_info_container .std {
 body.cms-klantenservice #pagina_info_container .std .service_block {
 	float:left;
 	width:230px;
+	height:188px;
+	position:relative;
+}
+
+body.cms-klantenservice #pagina_info_container .std .service_block_middle {
+	float:left;
+	width:230px;
+	height:172x;
 	position:relative;
 }
 
@@ -5373,7 +5381,8 @@ body.cms-klantenservice #pagina_info_container .std ul li{
 	list-style:none;
 }
 
-body.cms-klantenservice #pagina_info_container .std .service_block .bg_service {
+body.cms-klantenservice #pagina_info_container .std .service_block .bg_service,
+body.cms-klantenservice #pagina_info_container .std .service_block_middle .bg_service {
 	position:absolute;
 	left:-5px;
 	top:-4px;
