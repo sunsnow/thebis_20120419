@@ -2166,6 +2166,16 @@ li.category69 {
 		margin-left:16px;
 	}
 	
+	#pagina_info_container .std h3.alv_pagina {
+		font-size:12px;
+		float:left;
+		clear:both;
+		color:#15566F;
+		font-family:Tahoma,Arial,Helvetica,sans-serif;
+		font-weight:bold;
+		margin-left:16px;
+	}
+	
 	/*#pagina_info_container .std ul.list_contact {
 		margin-left:16px;
 	}*/
